@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article 115 EPC Third-Party Observation - EP4523100</title>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            color: #1a1a1a;
+            line-height: 1.6;
+            margin: 40px auto;
+            max-width: 960px;
+            padding: 0 20px;
+            background-color: #fdfdfd;
+        }
+        .header-box {
+            border: 2px solid #003366;
+            background-color: #f4f7fa;
+            padding: 24px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+        }
+        .header-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #003366;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .meta-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            font-size: 14px;
+        }
+        .meta-item {
+            margin-bottom: 4px;
+        }
+        .meta-label {
+            font-weight: bold;
+            color: #333;
+        }
+        h2 {
+            font-size: 18px;
+            color: #003366;
+            border-bottom: 2px solid #003366;
+            padding-bottom: 6px;
+            margin-top: 36px;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+        h3 {
+            font-size: 15px;
+            color: #222;
+            margin-top: 24px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 14px;
+            margin-bottom: 14px;
+            text-align: justify;
+        }
+        ul, ol {
+            font-size: 14px;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            padding-left: 24px;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 13px;
+        }
+        th {
+            background-color: #003366;
+            color: #ffffff;
+            font-weight: bold;
+            text-align: left;
+            padding: 10px 12px;
+            border: 1px solid #003366;
+        }
+        td {
+            padding: 9px 12px;
+            border: 1px solid #dcdcdc;
+            vertical-align: top;
+        }
+        tr:nth-child(even) {
+            background-color: #f9fbfd;
+        }
+        .legal-highlight {
+            background-color: #fff9e6;
+            border-left: 4px solid #f0b400;
+            padding: 14px;
+            margin: 18px 0;
+            font-size: 13.5px;
+        }
+        .code-block {
+            font-family: "Courier New", Courier, monospace;
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 10px 14px;
+            font-size: 12.5px;
+            border-radius: 3px;
+            margin: 12px 0;
+            white-space: pre-wrap;
+        }
+        .footer {
+            margin-top: 50px;
+            padding-top: 15px;
+            border-top: 1px solid #ccc;
+            font-size: 12px;
+            color: #666;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-box">
+        <div class="header-title">European Patent Office — Article 115 EPC Submission</div>
+        <div class="meta-grid">
+            <div class="meta-item"><span class="meta-label">Target Application:</span> EP4523100.3 / EP23726210.0</div>
+            <div class="meta-item"><span class="meta-label">International App No:</span> PCT/US2023/019103</div>
+            <div class="meta-item"><span class="meta-label">Applicant:</span> Airbnb, Inc.</div>
+            <div class="meta-item"><span class="meta-label">Target Claim Set:</span> Amended Claims filed 17 June 2025 (CLMS-1.pdf)</div>
+            <div class="meta-item"><span class="meta-label">Priority Date Claimed:</span> 10 May 2022[cite: 1]</div>
+            <div class="meta-item"><span class="meta-label">International Filing Date:</span> 19 April 2023[cite: 1]</div>
+        </div>
+    </div>
+
+    <h2>1. Executive Summary & Legal Framework</h2>
+    <p>
+        This observation presents concrete technical prior art under Article 115 EPC demonstrating that the split-stay accommodation relocation workflow recited in EP4523100 was publicly disclosed, technically implemented, and operationally used by "Hotels-Plus" in 2019[cite: 1]—more than three years prior to the applicant's priority date of 10 May 2022[cite: 1].
+    </p>
+    <p>
+        The submitted evidence specifically targets the amended claim set filed on 17 June 2025 (<code>CLMS-1.pdf</code>). Airbnb's amendments introduced a dual-condition trigger in Claim 1 requiring both: (i) a length-of-stay parameter exceeding a minimum threshold[cite: 1], and (ii) an available inventory count failing to satisfy a minimum inventory threshold[cite: 1].
+    </p>
+    <div class="legal-highlight">
+        <strong>Core Grounding of Invention Defect:</strong>
+        <ul>
+            <li><strong>Lack of Novelty (Art. 54(2) EPC):</strong> Document D-02 ("Hotels-Plus") explicitly discloses both threshold evaluations within its backend logic (<code>check_availability.php</code>)[cite: 1] and admin control interface, directly anticipating the structural limitations of amended Claim 1[cite: 1].</li>
+            <li><strong>Lack of Inventive Step (Art. 56 EPC / COMVIK Principle):</strong> Document D-01 (KAYAK / US2018330283A1) establishes that split-stay matching architectures were state-of-the-art prior to 2018. Under <strong>T 641/00 (COMVIK)</strong>, combining inventory count thresholds with stay-length checks constitutes a non-technical business parameter executed via standard computer logic.</li>
+        </ul>
+    </div>
+
+    <h2>2. Evidentiary Chain Matrix</h2>
+    <p>
+        The evidence establishes a fully corroborated timeline proving public availability, technical implementation, and operational practice prior to 10 May 2022[cite: 1]:
+    </p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Exhibit Ref.</th>
+                <th>Category</th>
+                <th>Disclosure Date</th>
+                <th>Technical Features Disclosed</th>
+                <th>Legal Significance</th>
+            </tr>ؤ
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Exhibit A-01P</strong><br>(Annex-A-009)[cite: 1]</td>
+                <td>Source Code Excerpt[cite: 1]</td>
+                <td>2019[cite: 1]</td>
+                <td>Backend logic (<code>check_availability.php</code>, <code>search_suggestion_ajax.php</code>) for multi-day split-search, stay partitioning, and same-hotel vs. cross-hotel relocation loops[cite: 1].</td>
+                <td>Art. 54(2) EPC direct structural anticipation of Claim 1 processing logic[cite: 1].</td>
+            </tr>
+            <tr>
+                <td><strong>Exhibit A-002</strong><br>(Annex-A-002)[cite: 1]</td>
+                <td>Operational Records[cite: 1]</td>
+                <td>Dec 2016 – Aug 2018[cite: 1]</td>
+                <td>Contemporaneous booking spreadsheets containing booking IDs, stay dates, relocation assignments, and guest WhatsApp confirmation records[cite: 1].</td>
+                <td>Corroborates operational reduction to practice in actual booking transactions[cite: 1].</td>
+            </tr>
+            <tr>
+                <td><strong>Exhibit D-02A / D-03B</strong><br>(Annex-D-012 / D-015)[cite: 1]</td>
+                <td>External Disclosure[cite: 1]</td>
+                <td>3–5 June 2019[cite: 1]</td>
+                <td>Unrestricted transmission to Plug & Play containing Technical Relocation Blueprint and live prototype links ("Room type relocation" & "Next door hotel relocation")[cite: 1].</td>
+                <td>Art. 54(2) EPC public disclosure prior to priority date[cite: 1].</td>
+            </tr>
+            <tr>
+                <td><strong>Exhibit D-05F / D-06G</strong><br>(Annex-D-001)[cite: 1]</td>
+                <td>Public Infrastructure[cite: 1]</td>
+                <td>June – Sept 2019[cite: 1]</td>
+                <td>Wayback Machine capture of <code>www.malindi-dg.com</code> and domain records for <code>www.hotels-plus.net</code> advertising live "Hotel Relocation Program"[cite: 1].</td>
+                <td>Art. 54(2) EPC unrestricted web availability[cite: 1].</td>
+            </tr>
+            <tr>
+                <td><strong>Exhibit D-05D</strong><br>(Annex-D-001 / D-002)[cite: 1]</td>
+                <td>Corporate & WIPO Records[cite: 1]</td>
+                <td>12–14 Sept 2019[cite: 1]</td>
+                <td>Estonian Commercial Register extract for Anuket Digital Group OÜ and formal WIPO IP contact form submission detailing split-stay algorithms[cite: 1].</td>
+                <td>Documentary corroboration of project existence and corporate chronology[cite: 1].</td>
+            </tr>
+            <tr>
+                <td><strong>Exhibit D-08K</strong><br>(Annex-D-003 / D-005)[cite: 1]</td>
+                <td>Public Promotion[cite: 1]</td>
+                <td>Nov 2019 / July 2020[cite: 1]</td>
+                <td>HotelsCombined white-label integration and Google Ads campaign promoting "Smart Algorithm Combines Availability from Room Types"[cite: 1].</td>
+                <td>Corroborates public commercial offering of the service[cite: 1].</td>
+            </tr>
+            <tr>
+                <td><strong>Exhibit V-03B / V-04C</strong><br>(Annex-V-003 / V-005)[cite: 1]</td>
+                <td>Demonstrative Video[cite: 1]</td>
+                <td>7 Sept 2019[cite: 1]</td>
+                <td>Public YouTube screen recordings demonstrating end-to-end split-stay availability search, price calculation, and combined itinerary presentation[cite: 1].</td>
+                <td>Direct visual proof of complete workflow execution[cite: 1].</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>3. Technical Sequence Mapping (Hotels-Plus vs. Claim 1)</h2>
+    <p>
+        The Hotels-Plus evidence documents an identical, automated multi-day accommodation processing sequence[cite: 1]:
+    </p>
+    <ol>
+        <li><strong>Accommodation Request Intake:</strong> The user submits a search specifying check-in date, check-out date, and total length of stay (e.g., 1–10 Feb)[cite: 1].</li>
+        <li><strong>Stay Processing & Threshold Check:</strong> The system evaluates whether the requested stay duration transgresses a defined length-of-stay threshold (<code>check_availability.php</code>)[cite: 1].</li>
+        <li><strong>Continuous-Stay Search & Unavailability Trigger:</strong> The database checks single-property availability[cite: 1]. When continuous availability is insufficient (failing an inventory threshold), the relocation/split-stay generator is invoked[cite: 1].</li>
+        <li><strong>Partitioning of Stay:</strong> The engine splits the requested multi-day stay into successive segments (e.g., 4 nights in Standard Room + 6 nights in Family Room; or Segment 1 in Hotel A + Segment 2 in Hotel B)[cite: 1].</li>
+        <li><strong>Combined Result Compilation & Presentation:</strong> The system compiles the split segments into a unified itinerary and presents the ranked combined listing in the user interface[cite: 1].</li>
+    </ol>
+
+    <h2>4. Element-by-Element Analysis of Amended Claim 1 (CLMS-1.pdf)</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Amended Claim 1 Limitation (17 June 2025)</th>
+                <th>Hotels-Plus Prior Art Disclosure (Document D-02)</th>
+                <th>Legal Conclusion</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>[1.1] Storing:</strong><br>Storing, by a network site, a plurality of listings from a plurality of different posting end-users[cite: 1].</td>
+                <td>Hotels-Plus database stores accommodation listings across multiple properties and room types (Exhibit A-01P)[cite: 1].</td>
+                <td>Anticipated under Art. 54(2) EPC[cite: 1].</td>
+            </tr>
+            <tr>
+                <td><strong>[1.2] Receiving Request:</strong><br>Receiving a listing request specifying a multiple-day length of stay parameter[cite: 1].</td>
+                <td>User search interface receives check-in/check-out dates and total nights parameter (Exhibit D-03B Blueprint)[cite: 1].</td>
+                <td>Anticipated under Art. 54(2) EPC[cite: 1].</td>
+            </tr>
+            <tr>
+                <td><strong>[1.3] Length-of-Stay Threshold:</strong><br>Determining that the multiple-day length of stay parameter transgresses a minimum length of stay threshold[cite: 1].</td>
+                <td>Disclosed in <code>check_availability.php</code> (Lines 42–88) evaluating requested nights against minimum stay conditions[cite: 1].</td>
+                <td>Anticipated under Art. 54(2) EPC[cite: 1].</td>
+            </tr>
+            <tr>
+                <td><strong>[1.4] Inventory Threshold Check:</strong><br>Determining that a quantity of listings in the set of individual listings fails to satisfy a minimum available inventory threshold[cite: 1].</td>
+                <td>Disclosed in <code>search_suggestion_ajax.php</code> checking room availability count (<code>'available_rooms' => 0</code> or below search count)[cite: 1].</td>
+                <td>Anticipated under Art. 54(2) EPC[cite: 1].</td>
+            </tr>
+            <tr>
+                <td><strong>[1.5] Dual Trigger Split Generation:</strong><br>In response to determining BOTH (i) length of stay transgresses threshold AND (ii) inventory fails threshold, generating a combined listing comprising a first and second listing associated with first and second stay portions[cite: 1].</td>
+                <td>Hotels-Plus executes Algorithm I & II, triggering split-stay generation across room types or hotels precisely when continuous single-property inventory is unavailable for the requested multi-day stay (Exhibits A-01P, D-03B)[cite: 1].</td>
+                <td>Anticipated under Art. 54(2) EPC[cite: 1]. Lacks Inventive Step under Art. 56 EPC (COMVIK)[cite: 1].</td>
+            </tr>
+            <tr>
+                <td><strong>[1.6] Presentation:</strong><br>Causing presentation of the combined listing together with one or more other listings in a ranked order[cite: 1].</td>
+                <td>Demonstrated visually in live prototype videos (Exhibits V-03B, V-04C) showing combined itinerary displayed with single listings[cite: 1].</td>
+                <td>Anticipated under Art. 54(2) EPC[cite: 1].</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>5. Inventive Step Attack under Article 56 EPC (COMVIK Principle)</h2>
+    <p>
+        In the event the applicant argues that the specific conjunction of evaluating length-of-stay thresholds alongside inventory counts is not identically disclosed in a single reference, amended Claim 1 remains unpatentable under <strong>Article 56 EPC</strong>:
+    </p>
+    <div class="legal-highlight">
+        <p><strong>Application of T 641/00 (COMVIK) to Amended Claim 1:</strong></p>
+        <ol>
+            <li><strong>Non-Technical Character of Thresholds:</strong> Setting a minimum length-of-stay threshold (e.g., 5 nights) or an inventory threshold is a purely commercial/administrative business decision regarding inventory allocation[cite: 1].</li>
+            <li><strong>Lack of Technical Synergy:</strong> Executing two standard logical conditional statements (<code>IF stay > min_stay AND IF inventory < min_inventory</code>) within a web database search produces no unexpected technical effect across memory, processor, or network hardware.</li>
+            <li><strong>Obvious Implementation:</strong> A software engineer seeking to optimize accommodation search results given the non-technical business requirement of offering split stays when inventory is low would implement this dual conditional trigger as a routine programming step.</li>
+        </ol>
+    </div>
+
+    <h2>6. Conclusion & Requested Action</h2>
+    <p>
+        The submitted prior art documents that every structural element of amended Claim 1 (filed 17 June 2025) was known to the public prior to the 10 May 2022 priority date[cite: 1]. 
+    </p>
+    <p>
+        Accordingly, the Primary Examiner is respectfully requested to refuse European Patent Application No. 23726210.0 in its entirety under <strong>Article 54(2) EPC for lack of novelty</strong> and <strong>Article 56 EPC for lack of inventive step</strong>.
+    </p>
+
+    <div class="footer">
+        Submitted on behalf of Third Party under Article 115 EPC | Target: EP4523100.3 / EP23726210.0
+    </div>
+
+</body>
+</html>
