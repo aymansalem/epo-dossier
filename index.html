@@ -145,9 +145,13 @@
     <p><strong>Target Application:</strong> European Patent Application EP 4523100.3 / PCT/US2023/019103 ("Split Stay Ranking and Matching")</p>
     <p><strong>Applicant:</strong> Airbnb, Inc.</p>
 
-    <div class="dispute-notice">
-        <strong>Prior Dispute Citation:</strong> Kayak Dispute (2024) regarding split-stay accommodation search systems and algorithmic multi-segment itinerary matching.
-    </div>
+    
+    <div class="notice">
+    <strong>Evidence Presentation Note:</strong>
+    The technical evidence is presented chronologically and according to the underlying technical operation documented by each exhibit.
+    The Examiner is invited to assess the evidentiary significance and legal characterization of the individual materials.
+    The evidence is not presented on the assumption that every individual claim limitation must be established by a single exhibit.
+</div>
 
     <h2>Coherent Evidentiary Chain</h2>
     <div class="chain-box">
@@ -535,9 +539,16 @@ T003, T004, T005, T006, T007, T008, T009, T010, T011, T012, T014, T015, T016, T0
             </tr>
         </thead>
 <tbody>
+
+    <!-- =========================
+         CLAIM 1 — COMPLETE CLAIM
+         ========================= -->
+
     <tr>
         <td><strong>Claim 1</strong></td>
-        <td>"A method comprising: storing (905), by a network site, a plurality of listings from a plurality of different posting end-users; receiving (910), from a searching end-user, a listing request for one or more of the listings posted to the network site, the listing request specifying a multiple-day length of stay parameter; determining (915) that the multiple-day length of stay parameter of the listing request transgresses a minimum length of stay threshold; identifying a set of individual listings of the plurality of listings that match the listing request; determining that a quantity of listings in the set of individual listings fails to satisfy a minimum available inventory threshold; in response to determining that (i) the multiple-day length of stay parameter of the listing request transgresses the minimum length of stay threshold and (ii) the quantity of listings in the set of individual listings fails to satisfy the minimum inventory threshold, generating (920) a combined listing (520) comprising a first listing of the plurality of listings associated with a first portion of the multiple-day length of stay parameter and a second listing of the plurality of listings associated with a second portion of the multiple-day length of stay parameter; and causing (925), on a user device of the searching end-user, presentation of the combined listing together with one or more other listings of the plurality of listings that match the listing request in a ranked order."</td>
+        <td>
+            "A method comprising: storing (905), by a network site, a plurality of listings from a plurality of different posting end-users; receiving (910), from a searching end-user, a listing request for one or more of the listings posted to the network site, the listing request specifying a multiple-day length of stay parameter; determining (915) that the multiple-day length of stay parameter of the listing request transgresses a minimum length of stay threshold; identifying a set of individual listings of the plurality of listings that match the listing request; determining that a quantity of listings in the set of individual listings fails to satisfy a minimum available inventory threshold; in response to determining that (i) the multiple-day length of stay parameter of the listing request transgresses the minimum length of stay threshold and (ii) the quantity of listings in the set of individual listings fails to satisfy the minimum inventory threshold, generating (920) a combined listing (520) comprising a first listing of the plurality of listings associated with a first portion of the multiple-day length of stay parameter and a second listing of the plurality of listings associated with a second portion of the multiple-day length of stay parameter; and causing (925), on a user device of the searching end-user, presentation of the combined listing together with one or more other listings of the plurality of listings that match the listing request in a ranked order."
+        </td>
         <td>
             Exhibits T003 / T004 / T005 / T006 / T007 / T008 / T009 / T010 / T011 / T012 / T014 / T015 / T016 / T017
         </td>
@@ -546,90 +557,165 @@ T003, T004, T005, T006, T007, T008, T009, T010, T011, T012, T014, T015, T016, T0
         </td>
     </tr>
 
-    <tr>
-        <td><strong>Claim 1</strong></td>
-        <td>"....receiving (910), from a searching end-user, a listing request for one or more of the listings posted to the network site, the listing request specifying a multiple-day length of stay parameter..."</td>
-        <td>Exhibit T006 — Multi-Day Request Parameters &amp; Normal Reservation Relocation</td>
-        <td>ANNEX-T-006 (p. 6)</td>
-    </tr>
+    <!-- Claim 1 — feature-level evidence -->
 
     <tr>
         <td><strong>Claim 1</strong></td>
-        <td>"...determining (915) that the multiple-day length of stay parameter of the listing request transgresses a minimum length of stay threshold..."</td>
-        <td>Exhibit T013 — Minimum/Maximum Nights Admin Configuration<br>Exhibit T018 — Five-Day Minimum Length-of-Stay Data Schema</td>
-        <td>ANNEX-T-013 (p. 13)<br>ANNEX-T-018 (p. 18)</td>
-    </tr>
-
-    <tr>
-        <td><strong>Claim 1</strong></td>
-        <td>"...identifying a set of individual listings of the plurality of listings that match the listing request..."</td>
-        <td>Exhibit T014 — Identifying Matching Listings</td>
-        <td>ANNEX-T-014 (p. 14)</td>
-    </tr>
-
-    <tr>
-        <td><strong>Claim 1</strong></td>
-        <td>"...determining that a quantity of listings in the set of individual listings fails to satisfy a minimum available inventory threshold..."</td>
-        <td>Exhibit T015 — Minimum-Room Threshold Enforcement</td>
-        <td>ANNEX-T-015 (p. 15)</td>
-    </tr>
-
-    <tr>
-        <td><strong>Claim 1</strong></td>
-        <td>"...generating (920) a combined listing comprising a first listing ... associated with a first portion ... and a second listing ... associated with a second portion..."</td>
-        <td>Exhibit T016 — Relocation Activation, Segment Iteration &amp; Two-Part Parameter Construction</td>
-        <td>ANNEX-T-016 (p. 16)</td>
-    </tr>
-
-    <tr>
-        <td><strong>Claim 1</strong></td>
-        <td>"...causing (925), on a user device ... presentation of the combined listing together with one or more other listings ... in a ranked order..."</td>
-        <td>Exhibit T017 — Presentation of Relocation Results Through Search-Result Renderer</td>
-        <td>ANNEX-T-017 (p. 17)</td>
-    </tr>
-
-    <tr>
-        <td><strong>Claim 2</strong></td>
-        <td>"The method of claim 1, wherein the listing request comprises a destination category, further comprising: determining that the first and second listings match the destination category, wherein the combined listing is generated in response to determining that the first and second listings match the destination category, optionally wherein the destination category comprises at least one of national parks, beaches, surfing, camping, theme parks, or skiing."</td>
         <td>
-            No presently identified exhibit is relied upon as independently establishing the specific destination-category matching and conditional combined-listing generation recited in this claim.
+            "...receiving (910), from a searching end-user, a listing request for one or more of the listings posted to the network site, the listing request specifying a multiple-day length of stay parameter..."
         </td>
         <td>
-           
+            Exhibit T006 — Multi-Day Request Parameters &amp; Normal Reservation Relocation
+        </td>
+        <td>
+            ANNEX-T-006 (p. 6)<br>
+            ANNEX-T-007 (p. 7)
         </td>
     </tr>
 
     <tr>
-        <td><strong>Claim 3</strong></td>
-        <td>"The method of claim 1, wherein the multiple-day length of stay parameter specifies a quantity of days or a flexible duration of stay, and wherein the minimum length of stay threshold comprises five days."</td>
+        <td><strong>Claim 1</strong></td>
+        <td>
+            "...determining (915) that the multiple-day length of stay parameter of the listing request transgresses a minimum length of stay threshold..."
+        </td>
         <td>
             Exhibit T013 — Minimum/Maximum Nights Admin Configuration;<br>
             Exhibit T018 — Five-Day Minimum Length-of-Stay Data Schema
         </td>
         <td>
-            ANNEX-T-013 (p. 13)<br>
-            ANNEX-T-018 (p. 18)
+            ANNEX-T-014 (p. 14)<br>
+            ANNEX-T-019 (p. 19)
         </td>
     </tr>
 
     <tr>
+        <td><strong>Claim 1</strong></td>
+        <td>
+            "...identifying a set of individual listings of the plurality of listings that match the listing request..."
+        </td>
+        <td>
+            Exhibit T014 — Identifying Matching Listings
+        </td>
+        <td>
+            ANNEX-T-015 (p. 15)
+        </td>
+    </tr>
+
+    <tr>
+        <td><strong>Claim 1</strong></td>
+        <td>
+            "...determining that a quantity of listings in the set of individual listings fails to satisfy a minimum available inventory threshold..."
+        </td>
+        <td>
+            Exhibit T015 — Minimum-Room Threshold Enforcement
+        </td>
+        <td>
+            ANNEX-T-016 (p. 16)
+        </td>
+    </tr>
+
+    <tr>
+        <td><strong>Claim 1</strong></td>
+        <td>
+            "...generating (920) a combined listing (520) comprising a first listing of the plurality of listings associated with a first portion of the multiple-day length of stay parameter and a second listing of the plurality of listings associated with a second portion of the multiple-day length of stay parameter..."
+        </td>
+        <td>
+            Exhibit T016 — Relocation Activation, Segment Iteration &amp; Two-Part Parameter Construction
+        </td>
+        <td>
+            ANNEX-T-017 (p. 17)
+        </td>
+    </tr>
+
+    <tr>
+        <td><strong>Claim 1</strong></td>
+        <td>
+            "...causing (925), on a user device of the searching end-user, presentation of the combined listing together with one or more other listings of the plurality of listings that match the listing request in a ranked order."
+        </td>
+        <td>
+            Exhibit T017 — Presentation of Relocation Results Through Search-Result Renderer
+        </td>
+        <td>
+            ANNEX-T-018 (p. 18)
+        </td>
+    </tr>
+
+
+    <!-- =========================
+         CLAIM 2
+         ========================= -->
+
+    <tr>
+        <td><strong>Claim 2</strong></td>
+        <td>
+            "The method of claim 1, wherein the listing request comprises a destination category, further comprising:
+            determining that the first and second listings match the destination category, wherein the combined listing is generated in response to determining that the first and second listings match the destination category,
+            optionally wherein the destination category comprises at least one of national parks, beaches, surfing, camping, theme parks, or skiing."
+        </td>
+        <td>
+            No presently identified exhibit is relied upon as independently establishing the specific destination-category matching and conditional combined-listing generation recited in this claim.
+        </td>
+        <td>
+            —
+        </td>
+    </tr>
+
+
+    <!-- =========================
+         CLAIM 3
+         ========================= -->
+
+    <tr>
+        <td><strong>Claim 3</strong></td>
+        <td>
+            "The method of claim 1, wherein the multiple-day length of stay parameter specifies a quantity of days or a flexible duration of stay, and wherein the minimum length of stay threshold comprises five days."
+        </td>
+        <td>
+            Exhibit T013 — Minimum/Maximum Nights Admin Configuration;<br>
+            Exhibit T018 — Five-Day Minimum Length-of-Stay Data Schema
+        </td>
+        <td>
+            ANNEX-T-014 (p. 14)<br>
+            ANNEX-T-019 (p. 19)
+        </td>
+    </tr>
+
+
+    <!-- =========================
+         CLAIM 4
+         ========================= -->
+
+    <tr>
         <td><strong>Claim 4</strong></td>
-        <td>"The method of claim 1, wherein generating the combined listing comprises: identifying a subset of individual listings of the plurality of listings that satisfies one or more search criteria of the listing request independent of the multiple-day length of stay parameter; for each individual listing in the subset, generating a plurality of groups of stays on which the individual listing is available, each group of stays being associated with availability of the individual listing during different portions of the multiple-day length of stay parameter; refining the plurality of groups using an aggregator based on a user profile of the searching end-user; determining that a first combination of the portion of availability of a first refined group of a first individual listing (522) in the subset with the portion of availability of a second refined group of a second individual listing (524) matches the multiple-day length of stay parameter; and in response to determining that the first combination matches the multiple-day length of stay parameter, forming the combined listing based on the first refined group of the first individual listing and the second refined group of the second individual listing, optionally wherein: each of the different portions comprises a set of days starting from a start date and ending prior to an end date, and wherein each of the different portions comprises a set of days starting from a date later than the start date and ending on the end date, or a first group of the stays on which the individual listing is available comprises a first half of the multiple-day length of stay parameter, and wherein a second group of the stays on which the individual listing is available comprises a second half of the multiple-day length of stay parameter."</td>
+        <td>
+            "The method of claim 1, wherein generating the combined listing comprises:
+            identifying a subset of individual listings of the plurality of listings that satisfies one or more search criteria of the listing request independent of the multiple-day length of stay parameter;
+            for each individual listing in the subset, generating a plurality of groups of stays on which the individual listing is available, each group of stays being associated with availability of the individual listing during different portions of the multiple-day length of stay parameter;
+            refining the plurality of groups using an aggregator based on a user profile of the searching end-user;
+            determining that a first combination of the portion of availability of a first refined group of a first individual listing (522) in the subset with the portion of availability of a second refined group of a second individual listing (524) matches the multiple-day length of stay parameter; and
+            in response to determining that the first combination matches the multiple-day length of stay parameter, forming the combined listing based on the first refined group of the first individual listing and the second refined group of the second individual listing,
+            optionally wherein:
+            each of the different portions comprises a set of days starting from a start date and ending prior to an end date, and wherein each of the different portions comprises a set of days starting from a date later than the start date and ending on the end date, or
+            a first group of the stays on which the individual listing is available comprises a first half of the multiple-day length of stay parameter, and wherein a second group of the stays on which the individual listing is available comprises a second half of the multiple-day length of stay parameter."
+        </td>
         <td>
             Exhibit T014 — Identifying Matching Listings;<br>
             Exhibit T016 — Relocation Activation, Segment Iteration &amp; Two-Part Parameter Construction;<br>
             Exhibits T022 / T023 / T024 — supporting customer/profile/booking functionality
         </td>
         <td>
-            ANNEX-T-014 (p. 14)<br>
-            ANNEX-T-016 (p. 16)<br>
-            Corresponding technical annexes for T022 / T023 / T024
+            ANNEX-T-015 (p. 15)<br>
+            ANNEX-T-017 (p. 17)<br>
+            Corresponding annexes for T022 / T023 / T024
         </td>
     </tr>
 
     <tr>
         <td><strong>Claim 4</strong></td>
-        <td>"The method of claim 1, wherein generating the combined listing comprises: identifying a subset of individual listings ... forming the combined listing based on the first refined group of the first individual listing and the second refined group of the second individual listing, optionally wherein ..."</td>
+        <td>
+            "The method of claim 1, wherein generating the combined listing comprises:
+            identifying a subset of individual listings ... forming the combined listing based on the first refined group of the first individual listing and the second refined group of the second individual listing, optionally wherein ..."
+        </td>
         <td>
             Exhibit T014 — Identifying Matching Listings;<br>
             Exhibit T016 — Relocation Activation, Segment Iteration &amp; Two-Part Parameter Construction;<br>
@@ -640,22 +726,236 @@ T003, T004, T005, T006, T007, T008, T009, T010, T011, T012, T014, T015, T016, T0
         </td>
     </tr>
 
+
+    <!-- =========================
+         CLAIM 5
+         ========================= -->
+
+    <tr>
+        <td><strong>Claim 5</strong></td>
+        <td>
+            "The method of claim 4, further comprising:
+            determining that a second combination of the portion of availability of the first refined group of the first individual listing with the portion of availability of a third refined group of a third individual listing matches the multiple-day length of stay parameter;
+            computing a rank for the first and second combinations; and
+            selecting either the first or second combination to generate the combined listing based on the computed rank of the first and second combinations."
+        </td>
+        <td>
+            Exhibits T016 / T017
+        </td>
+        <td>
+            ANNEX-T-017 (p. 17)<br>
+            ANNEX-T-018 (p. 18)
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="4">
+            <strong>Claim 5 — Evidence Observation:</strong>
+            The evidence documents segmented availability, relocation handling and general result presentation/sorting functionality. The presently identified record does not separately establish the specific multi-combination rank-and-select mechanism for choosing between two combinations.
+        </td>
+    </tr>
+
+
+    <!-- =========================
+         CLAIM 6
+         ========================= -->
+
+    <tr>
+        <td><strong>Claim 6</strong></td>
+        <td>
+            "The method of claim 5, wherein the rank for the first and second combinations is computed based on individual ranks of the first, second and third individual listings."
+        </td>
+        <td>
+            Exhibit T017 — Presentation of Relocation Results Through Search-Result Renderer
+        </td>
+        <td>
+            ANNEX-T-018 (p. 18)
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="4">
+            <strong>Claim 6 — Evidence Observation:</strong>
+            General result sorting/ranking functionality is documented. The presently identified record does not separately establish a rank computed from the individual ranks of the first, second and third listings as specified in this claim.
+        </td>
+    </tr>
+
+
+    <!-- =========================
+         CLAIM 7
+         ========================= -->
+
+    <tr>
+        <td><strong>Claim 7</strong></td>
+        <td>
+            "The method of claim 5, wherein computing the rank for the first and second combinations comprises:
+            computing a first difference between the portion of availability of the first refined group of the first individual listing and the portion of availability of the second refined group of the second individual listing;
+            computing a second difference between the portion of availability of the first refined group of the first individual listing and the portion of availability of the third refined group of the third individual listing; and
+            associating a first rank with the first combination that is greater than a second rank associated with the second combination in response to determining that the first difference is smaller than the second difference."
+        </td>
+        <td>
+            Exhibits T016 / T019 / T020
+        </td>
+        <td>
+            ANNEX-T-017 (p. 17)<br>
+            ANNEX-T-020 (p. 20)<br>
+            ANNEX-T-021 (p. 21)
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="4">
+            <strong>Claim 7 — Evidence Observation:</strong>
+            Availability portions and distance calculations are documented. The presently identified record does not separately establish the specific difference-based ranking formula comparing the first combination with the second combination.
+        </td>
+    </tr>
+
+
+    <!-- =========================
+         CLAIM 8
+         ========================= -->
+
+    <tr>
+        <td><strong>Claim 8</strong></td>
+        <td>
+            "The method of claim 5, wherein computing the rank for the first and second combinations comprises:
+            computing a first compatibility criterion between the first individual listing and the second individual listing;
+            computing a second compatibility criterion between the first individual listing and the third individual listing; and
+            associating a first rank with the first combination that is greater than a second rank associated with the second combination in response to determining that the first compatibility criterion is associated with a higher level of compatibility than the second compatibility criterion,
+            optionally wherein the first and second compatibility criteria represent at least one of: quantity of overlapping listing attributes, quantity of listing attributes that match the user profile, price, image qualities, or distances between locations."
+        </td>
+        <td>
+            Exhibits T017 / T019 / T020
+        </td>
+        <td>
+            ANNEX-T-018 (p. 18)<br>
+            ANNEX-T-020 (p. 20)<br>
+            ANNEX-T-021 (p. 21)
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="4">
+            <strong>Claim 8 — Evidence Observation:</strong>
+            General price/rating sorting and distance calculation/filtering functionality are documented where applicable. The presently identified record does not separately establish the claimed pairwise compatibility-ranking mechanism between listing combinations.
+        </td>
+    </tr>
+
+
+    <!-- =========================
+         CLAIM 9
+         ========================= -->
+
+    <tr>
+        <td><strong>Claim 9</strong></td>
+        <td>
+            "The method of claim 4, further comprising:
+            determining that a given individual listing matches the listing request; and
+            excluding the given individual listing from being used as a basis to form one or more combined listings."
+        </td>
+        <td>
+            Exhibits T014 / T016
+        </td>
+        <td>
+            ANNEX-T-015 (p. 15)<br>
+            ANNEX-T-017 (p. 17)
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="4">
+            <strong>Claim 9 — Evidence Observation:</strong>
+            Search, selection and relocation functionality are documented. The presently identified record does not separately establish the claimed rule excluding a matching individual listing from use as a basis for one or more combined listings.
+        </td>
+    </tr>
+
+
+    <!-- =========================
+         CLAIM 10
+         ========================= -->
+
+    <tr>
+        <td><strong>Claim 10</strong></td>
+        <td>
+            "The method of claim 1, wherein:
+            the combined listing is a first combined listing, and the method further comprises preventing presentation of a second combined listing in response to determining that the second combined listing includes the first listing that is also included in the first combined listing to introduce diversity in the presentation of the combined listing together with the one or more other listings; or
+            the method further comprises applying one or more neural networks to generate the combined listing, to generate the ranked order, to compare a first combined listing with a second combined listing, and to select whether to present a given listing as part of a given combined listing or as an individual listing in the presentation."
+        </td>
+        <td>
+            Exhibit T017 — Presentation of Relocation Results Through Search-Result Renderer
+        </td>
+        <td>
+            ANNEX-T-018 (p. 18)
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="4">
+            <strong>Claim 10 — Evidence Observation:</strong>
+            The presently identified record is not relied upon to establish either the specific diversity rule preventing reuse of a listing across combined listings or the alternative neural-network mechanism.
+        </td>
+    </tr>
+
+
+    <!-- =========================
+         CLAIM 11
+         ========================= -->
+
+    <tr>
+        <td><strong>Claim 11</strong></td>
+        <td>
+            "The method of claim 1, further comprising:
+            determining whether the listing request comprises a destination category; and
+            modifying a level of flexibility in ranking and combining listings to form the combined listing based on determining whether the listing request comprises the destination category,
+            optionally wherein the method further comprises:
+            determining that the level of flexibility in ranking and combining corresponds to an inflexible threshold level; and
+            in response to determining that the level of flexibility in ranking and combining corresponds to the inflexible threshold level, increasing a level of diversity among the listings used to form the combined listing."
+        </td>
+        <td>
+            No presently identified exhibit independently establishes the claimed adaptive flexibility mechanism.
+        </td>
+        <td>
+            —
+        </td>
+    </tr>
+
+
+    <!-- =========================
+         CLAIM 12
+         ========================= -->
+
     <tr>
         <td><strong>Claim 12</strong></td>
-        <td>"The method of claim 1, wherein the plurality of listings includes at least one of locations or experiences, optionally wherein the method further comprises determining that a distance between the first and second listings falls within a threshold range comprising a minimum distance and a maximum distance, wherein the combined listing is generated using the first and second listings in response to the distance between the first and second listings being between the minimum distance and the maximum distance of the threshold range."</td>
+        <td>
+            "The method of claim 1, wherein the plurality of listings includes at least one of locations or experiences, optionally wherein the method further comprises determining that a distance between the first and second listings falls within a threshold range comprising a minimum distance and a maximum distance, wherein the combined listing is generated using the first and second listings in response to the distance between the first and second listings being between the minimum distance and the maximum distance of the threshold range."
+        </td>
         <td>
             Exhibit T019 — Coordinate-Based Distance Calculation;<br>
             Exhibit T020 — Hotel-to-Centre Distance Assignment &amp; Distance-Range Filtering
         </td>
         <td>
-            ANNEX-T-019 (p. 19)<br>
-            ANNEX-T-020 (p. 20)
+            ANNEX-T-020 (p. 20)<br>
+            ANNEX-T-021 (p. 21)
         </td>
     </tr>
 
     <tr>
+        <td colspan="4">
+            <strong>Claim 12 — Evidence Observation:</strong>
+            The evidence establishes coordinate-based distance calculation and minimum/maximum distance filtering. The presently identified record does not independently establish that this distance condition controlled generation of the combined listing between the first and second listings.
+        </td>
+    </tr>
+
+
+    <!-- =========================
+         CLAIM 13
+         ========================= -->
+
+    <tr>
         <td><strong>Claim 13</strong></td>
-        <td>"The method of claim 1, further comprising automatically selecting the destination category based on one or more past interactions of the searching end-user with the network site."</td>
+        <td>
+            "The method of claim 1, further comprising automatically selecting the destination category based on one or more past interactions of the searching end-user with the network site."
+        </td>
         <td>
             Exhibit T022 — Thematic Categories, Customer Retrieval &amp; Customer-Linked Bookings;<br>
             Exhibit T023 — Customer Historical Payment Aggregation &amp; Wishlist;<br>
@@ -663,10 +963,10 @@ T003, T004, T005, T006, T007, T008, T009, T010, T011, T012, T014, T015, T016, T0
             Exhibit T025 — Customer-Linked Booking State / Reservation Monitoring
         </td>
         <td>
-            ANNEX-T-022 (p. 22)<br>
             ANNEX-T-023 (p. 23)<br>
             ANNEX-T-024 (p. 24)<br>
-            ANNEX-T-025 (p. 25)
+            ANNEX-T-025 (p. 25)<br>
+            ANNEX-T-026 (p. 26)
         </td>
     </tr>
 
@@ -677,13 +977,28 @@ T003, T004, T005, T006, T007, T008, T009, T010, T011, T012, T014, T015, T016, T0
         </td>
     </tr>
 
+
+    <!-- =========================
+         CLAIM 14 — FULL SYSTEM CLAIM
+         ========================= -->
+
     <tr>
         <td><strong>Claim 14</strong></td>
         <td>
-            "A system comprising: one or more processors (1110) of a machine (1100); and a memory (1130) storing instruction (1116) that, when executed by the one or more processors, cause the machine to perform operations comprising:" [followed by the Claim 1 operations]
+            "A system comprising:
+            one or more processors (1110) of a machine (1100);
+            and
+            a memory (1130) storing instruction (1116) that, when executed by the one or more processors, cause the machine to perform operations comprising:
+            storing (905), by a network site, a plurality of listings from a plurality of different posting end-users;
+            receiving (910), from a searching end-user, a listing request for one or more of the listings posted to the network site, the listing request specifying a multiple-day length of stay parameter;
+            determining (915) that the multiple-day length of stay parameter of the listing request transgresses a minimum length of stay threshold;
+            identifying a set of individual listings of the plurality of listings that match the listing request;
+            determining that a quantity of listings in the set of individual listings fails to satisfy a minimum available inventory threshold;
+            in response to determining that (i) the multiple-day length of stay parameter of the listing request transgresses the minimum length of stay threshold and (ii) the quantity of listings in the set of individual listings fails to satisfy the minimum available inventory threshold, generating (920) a combined listing (520) comprising a first listing of the plurality of listings associated with a first portion of the multiple-day length of stay parameter and a second listing of the plurality of listings associated with a second portion of the multiple-day length of stay parameter; and
+            causing (925), on a user device of the searching end-user, presentation of the combined listing together with one or more other listings of the plurality of listings that match the listing request in a ranked order."
         </td>
         <td>
-            Exhibits T003, T004, T005, T006, T007, T008, T009, T010, T011, T012, T014, T015, T016, T017 — documenting the corresponding underlying operations
+            Exhibits T003 / T004 / T005 / T006 / T007 / T008 / T009 / T010 / T011 / T012 / T014 / T015 / T016 / T017
         </td>
         <td>
             Corresponding technical annexes for the cited exhibits
@@ -691,17 +1006,44 @@ T003, T004, T005, T006, T007, T008, T009, T010, T011, T012, T014, T015, T016, T0
     </tr>
 
     <tr>
+        <td colspan="4">
+            <strong>Claim 14 — Evidence Observation:</strong>
+            Claim 14 presents the substantive Claim 1 operation in system form, using processors and memory storing instructions. The same historical technical evidence is therefore relevant to the substantive sequence. The system/processor/memory framing does not require a separate historical technical theory.
+        </td>
+    </tr>
+
+
+    <!-- =========================
+         CLAIM 15 — FULL STORAGE DEVICE CLAIM
+         ========================= -->
+
+    <tr>
         <td><strong>Claim 15</strong></td>
         <td>
-            "A machine-readable storage device embodying instructions (1116) that, when executed by a machine (1110), cause a machine to perform operations comprising:" [followed by the Claim 1 operations]
+            "A machine-readable storage device embodying instructions (1116) that, when executed by a machine (1110), cause a machine to perform operations comprising:
+            storing (905), by a network site, a plurality of listings from a plurality of different posting end-users;
+            receiving (910), from a searching end-user, a listing request for one or more of the listings posted to the network site, the listing request specifying a multiple-day length of stay parameter;
+            determining (915) that the multiple-day length of stay parameter of the listing request transgresses a minimum length of stay threshold;
+            identifying a set of individual listings of the plurality of listings that match the listing request;
+            determining that a quantity of listings in the set of individual listings fails to satisfy a minimum available inventory threshold;
+            in response to determining that (i) the multiple-day length of stay parameter of the listing request transgresses the minimum length of stay threshold and (ii) the quantity of listings in the set of individual listings fails to satisfy the minimum available inventory threshold, generating (920) a combined listing (520) comprising a first listing of the plurality of listings associated with a first portion of the multiple-day length of stay parameter and a second listing of the plurality of listings associated with a second portion of the multiple-day length of stay parameter; and
+            causing (925), on a user device of the searching end-user, presentation of the combined listing together with one or more other listings of the plurality of listings that match the listing request in a ranked order."
         </td>
         <td>
-            Exhibits T003, T004, T005, T006, T007, T008, T009, T010, T011, T012, T014, T015, T016, T017 — documenting the corresponding underlying operations
+            Exhibits T003 / T004 / T005 / T006 / T007 / T008 / T009 / T010 / T011 / T012 / T014 / T015 / T016 / T017
         </td>
         <td>
             Corresponding technical annexes for the cited exhibits
         </td>
     </tr>
+
+    <tr>
+        <td colspan="4">
+            <strong>Claim 15 — Evidence Observation:</strong>
+            Claim 15 presents the same substantive operation in machine-readable storage-device form. The same historical software/database evidence is therefore relevant to the substantive sequence. The storage-device framing does not require a separate historical technical theory.
+        </td>
+    </tr>
+
 </tbody>
         </body>
         </html>
