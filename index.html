@@ -197,7 +197,7 @@
             <img src="images-evidences/T003A-B.png" alt="Exhibit T003 - Multi-Hotel Listing Records" class="img-full" onerror="handleImgError(this, 'ANNEX-T-003')">
         </div>
 
-        <p><strong>Corresponds to Claim:</strong> Claim 1.1</p>
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
         <p><strong>Source Text Excerpt:</strong> Multi-Hotel Listing Records in <code>uhb_new_hotels</code>[cite: 19]. Stores individual accommodation records in <code>uhb_new_hotels</code> and maintains multiple hotel-owner accounts in <code>uhb_new_accounts</code>[cite: 19].</p>
     </div>
 
@@ -210,7 +210,7 @@
             <img src="images-evidences/t-004.png" alt="Exhibit T004 - Hotel Owner Registration" class="img-full" onerror="handleImgError(this, 'ANNEX-T-004')">
         </div>
 
-        <p><strong>Corresponds to Claim:</strong> Claim 1.1</p>
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
         <p><strong>Source Text Excerpt:</strong> Search for rooms in one location: <code>$rooms_found && ModulesSettings::Get('rooms', 'allow_relocation_to_other_hotel') == "yes" && !empty($hotel_sel_loc_id)</code>[cite: 20].</p>
     </div>
 
@@ -223,7 +223,7 @@
             <img src="images-evidences/T-005A-B.png" alt="Exhibit T005 - User and Hotel Account Tables" class="img-full" onerror="handleImgError(this, 'ANNEX-T-005')">
         </div>
 
-        <p><strong>Corresponds to Claim:</strong> Claim 1.1</p>
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
         <p><strong>Source Text Excerpt:</strong> Database structure stores hotel-owner accounts and associated property information, supporting the multi-property environment used by the booking system[cite: 21]. Contains <code>room_relocation tinyint(1) NOT NULL DEFAULT '1'</code> and <code>hotel_relocation tinyint(1) NOT NULL DEFAULT '1'</code>[cite: 21].</p>
     </div>
 
@@ -236,7 +236,7 @@
             <img src="images-evidences/t-006A.png" alt="Exhibit T006 - Multi Day Parameters" class="img-full" onerror="handleImgError(this, 'ANNEX-T-006')">
         </div>
 
-        <p><strong>Corresponds to Claim:</strong> Claim 1.2</p>
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
         <p><strong>Source Text Excerpt:</strong> Receiving a Multi-Day Length-of-Stay Request parsing <code>from_date</code>, <code>to_date</code>, check-in, check-out year/month/day, calculating <code>$nights = nights_diff($checkin_date, $checkout_date)</code>[cite: 22]. Live demonstration video dated May 30, 2019[cite: 23].</p>
     <div class="img-container full-width">
             <img src="images-evidences/T-006B.png" alt="Exhibit T006 - Multi Day Parameters" class="img-full" onerror="handleImgError(this, 'ANNEX-T-006')">
@@ -252,7 +252,7 @@
             <img src="images-evidences/T-007A-B.png" alt="Exhibit T007 - Schema Flags and Keys" class="img-full" onerror="handleImgError(this, 'ANNEX-T-008')">
         </div>
 
-        <p><strong>Corresponds to Claim:</strong> Claim 1.3</p>
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
         <p><strong>Source Text Excerpt:</strong> <code>`room_relocation` tinyint(1) NOT NULL DEFAULT '1'</code>, <code>`hotel_relocation` tinyint(1) NOT NULL DEFAULT '1'</code>[cite: 24]. Language keys: <code>_MSN_ALLOW_RELOCATION_TO_OTHER_ROOM</code>, <code>_MSN_ALLOW_RELOCATION_TO_OTHER_HOTEL</code>[cite: 24].</p>
     </div>
 
@@ -265,7 +265,7 @@
             <img src="images-evidences/T-008A-B.png" alt="Exhibit T008 - Conditional Trigger Engine" class="img-full" onerror="handleImgError(this, 'ANNEX-T-008B')">
         </div>
 
-        <p><strong>Corresponds to Claim:</strong> Claim 1.3</p>
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
         <p><strong>Source Text Excerpt:</strong> <code>Specifies whether allow relocation to other room on empty search results</code> and <code>Specifies whether allow relocation to other hotel on empty search results</code>[cite: 25].</p>
     </div>
 
@@ -278,7 +278,7 @@
             <img src="images-evidences/T-008A-B-.png" alt="Exhibit T009 - Frontend Disclosure Constants" class="img-full" onerror="handleImgError(this, 'ANNEX-T-010')">
         </div>
 
-        <p><strong>Corresponds to Claim:</strong> Claim 1.4</p>
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
         <p><strong>Source Text Excerpt:</strong> <code>define("_MS_RELOCATION_HOTEL_PROGRAM", "Enjoy 10% off rate when you choose smart relocation program<br>Now get oriented by splitting your holiday in two hotels, same area, same hotel category.")</code>[cite: 26]. Extraction of <code>$_POST['room_relocation']</code> and <code>$_POST['hotel_relocation']</code>[cite: 26].</p>
     </div>
 
@@ -291,7 +291,7 @@
             <img src="images-evidences/T010.png" alt="Exhibit T010 - Account Hydration and Seeding" class="img-full" onerror="handleImgError(this, 'ANNEX-T-011')">
         </div>
 
-        <p><strong>Corresponds to Claim:</strong> Claim 1.1</p>
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
         <p><strong>Source Text Excerpt:</strong> <code>$this->room_relocation = isset($temp['room_relocation']) ?$temp['room_relocation'] : '0';</code>[cite: 27]. Production seed timestamped <code>2019-06-25 23:26:27</code>[cite: 27].</p>
     </div>
 
@@ -304,7 +304,7 @@
             <img src="images-evidences/t-011A-B.png" alt="Exhibit T011 - System Language Seed Data" class="img-full" onerror="handleImgError(this, 'ANNEX-T-012')">
         </div>
 
-        <p><strong>Corresponds to Claim:</strong> Claim 1.4</p>
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
         <p><strong>Source Text Excerpt:</strong> <code>_MS_RELOCATION_HOTEL_PROGRAM</code> dated <code>28.05.2019</code>[cite: 28]. Hotel coordinates insertion with <code>room_relocation = 1, hotel_relocation = 1</code>[cite: 28].</p>
     </div>
 
@@ -317,7 +317,7 @@
             <img src="images-evidences/T-012A-B.png" alt="Exhibit T012 - Relational DB Architecture" class="img-full" onerror="handleImgError(this, 'ANNEX-T-013')">
         </div>
 
-        <p><strong>Corresponds to Claim:</strong> Claim 1.6</p>
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
         <p><strong>Source Text Excerpt:</strong> <code>CREATE TABLE `uhb_new_bookings_rooms` (`booking_number`, `hotel_id`, `room_id`, `checkin`, `checkout`, `price`)</code>[cite: 29]. Account timestamps June 2019[cite: 29].</p>
     </div>
 
@@ -343,7 +343,7 @@
             <img src="images-evidences/T-014-A-B.png" alt="Exhibit T014 - Matching Listings" class="img-full" onerror="handleImgError(this, 'ANNEX-T-015')">
         </div>
 
-        <p><strong>Corresponds to Claim:</strong> Claim 1.4</p>
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
         <p><strong>Source Text Excerpt:</strong> <code>$rooms_count = $objRooms->SearchFor ($params);</code>[cite: 31]. Public Demonstration of Availability Search and Matching Results (YouTube, 30 May 2019)[cite: 31].</p>
     </div>
 
@@ -356,7 +356,7 @@
             <img src="images-evidences/T-015-A-B.png" alt="Exhibit T015 - Minimum Room Threshold Enforcement" class="img-full" onerror="handleImgError(this, 'ANNEX-T-016')">
         </div>
 
-        <p><strong>Corresponds to Claim:</strong> Claim 1.5</p>
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
         <p><strong>Source Text Excerpt:</strong> <code>Packages::GetMinimumRooms(...)</code>, <code>printError(str_replace('NUM_ROOMS', $minimum_rooms, CONTINUE_MUST_BOOK_MIN));</code>[cite: 32].</p>
     </div>
 
@@ -369,7 +369,7 @@
             <img src="images-evidences/t-016-A-B-C-B.png" alt="Exhibit T016 - Segment Iteration" class="img-full" onerror="handleImgError(this, 'ANNEX-T-017')">
         </div>
 
-        <p><strong>Corresponds to Claim:</strong> Claim 1.6</p>
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
         <p><strong>Source Text Excerpt:</strong> <code>$objRooms->SetRelocationType('room'); for ($i=1; $i <$nights; $i++)</code>[cite: 33]. <code>$params['from_date'] = array(1 => $result_room_1['checkin_date'], 2 =>$result_room_2['checkin_date']);</code>[cite: 33]. Demonstrations: "Relocation to Next Door Hotel", Order Confirmations 1IQK4QUSTG / 7K6ZEQW8YB / VZ1M5OKLKD[cite: 33].</p>
     <div class="exhibit-card">
         <h3>Exhibit T016 (T-016A / T-016B / T-016C / T-016D): Relocation Activation, Segment Iteration & Two-Part Parameter Construction</h3>
@@ -389,7 +389,7 @@
             <img src="images-evidences/t-017-A-B.png" alt="Exhibit T017 - Search Result Renderer" class="img-full" onerror="handleImgError(this, 'ANNEX-T-018')">
         </div>
 
-        <p><strong>Corresponds to Claim:</strong> Claim 1.7</p>
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
         <p><strong>Source Text Excerpt:</strong> <code>$searchResult = $objRooms->DrawSearchResult($params, 2, false, true);</code>[cite: 34]. Sorting parameters array includes <code>sort_by</code>, <code>sort_rating</code>, <code>sort_price</code>[cite: 34].</p>
     </div>
 
@@ -509,43 +509,43 @@
         </thead>
         <tbody>
             <tr>
-                <td><strong>Claim 1.1</strong></td>
+                <td><strong>Claim 1</strong></td>
                 <td>"A system comprising: memory storing listing inventory; and one or more processors configured to execute instructions..."</td>
                 <td>Exhibit T003B / Exhibit T004 / Exhibit T005 / Exhibit T010</td>
                 <td>ANNEX-T-003 (p. 3)<br>ANNEX-T-004 (p. 4)<br>ANNEX-T-005 (p. 5)<br>ANNEX-T-011 (p. 11)[cite: 19, 20, 21, 27]</td>
             </tr>
             <tr>
-                <td><strong>Claim 1.2</strong></td>
+                <td><strong>Claim 1</strong></td>
                 <td>"...receiving a listing request specifying a length of stay..."</td>
                 <td>Exhibit T006 (T-005A)</td>
                 <td>ANNEX-T-006 (p. 6)[cite: 22]</td>
             </tr>
             <tr>
-                <td><strong>Claim 1.3</strong></td>
+                <td><strong>Claim 1</strong></td>
                 <td>"...determining that available inventory fails to satisfy a minimum availability threshold for the continuous length of stay..."</td>
                 <td>Exhibit T007 / Exhibit T008</td>
                 <td>ANNEX-T-008 (p. 8, p. 9)[cite: 24, 25]</td>
             </tr>
             <tr>
-                <td><strong>Claim 1.4</strong></td>
+                <td><strong>Claim 1</strong></td>
                 <td>"...generating a combined listing comprising a first portion for a first stay duration at a first listing and a second portion for a second stay duration at a second listing..."</td>
                 <td>Exhibit T009 / Exhibit T011 / Exhibit T014</td>
                 <td>ANNEX-T-010 (p. 10)<br>ANNEX-T-012 (p. 12)<br>ANNEX-T-015 (p. 15)[cite: 26, 28, 31]</td>
             </tr>
             <tr>
-                <td><strong>Claim 1.5</strong></td>
+                <td><strong>Claim 1</strong></td>
                 <td>"...causing presentation of the combined listing in ranked order."</td>
                 <td>Exhibit T015 (T015A / T015B)</td>
                 <td>ANNEX-T-016 (p. 16)[cite: 32]</td>
             </tr>
             <tr>
-                <td><strong>Claim 1.6</strong></td>
+                <td><strong>Claim 1</strong></td>
                 <td>"...processing booking requests for multi-leg stay segments."</td>
                 <td>Exhibit T012 / Exhibit T016</td>
                 <td>ANNEX-T-013 (p. 13)<br>ANNEX-T-017 (p. 17)[cite: 29, 33]</td>
             </tr>
             <tr>
-                <td><strong>Claim 1.7</strong></td>
+                <td><strong>Claim 1</strong></td>
                 <td>"...rendering search results in ranked order based on specified parameters."</td>
                 <td>Exhibit T017 (T017A / T017B)</td>
                 <td>ANNEX-T-018 (p. 18)[cite: 34]</td>
