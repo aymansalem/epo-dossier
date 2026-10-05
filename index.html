@@ -3,302 +3,587 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Article 115 EPC Third-Party Observation - EP4523100</title>
+    <title>Article 115 EPC Third-Party Observation Dossier - EP 4523100.3</title>
     <style>
         body {
-            font-family: "Helvetica Neue", Arial, sans-serif;
-            color: #1a1a1a;
+            font-family: Arial, Helvetica, sans-serif;
             line-height: 1.6;
-            margin: 40px auto;
-            max-width: 960px;
-            padding: 0 20px;
-            background-color: #fdfdfd;
-        }
-        .header-box {
-            border: 2px solid #003366;
-            background-color: #f4f7fa;
-            padding: 24px;
-            margin-bottom: 30px;
-            border-radius: 4px;
-        }
-        .header-title {
-            font-size: 20px;
-            font-weight: bold;
-            color: #003366;
-            text-align: center;
-            margin-top: 0;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .meta-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            font-size: 14px;
-        }
-        .meta-item {
-            margin-bottom: 4px;
-        }
-        .meta-label {
-            font-weight: bold;
-            color: #333;
-        }
-        h2 {
-            font-size: 18px;
-            color: #003366;
-            border-bottom: 2px solid #003366;
-            padding-bottom: 6px;
-            margin-top: 36px;
-            margin-bottom: 16px;
-            text-transform: uppercase;
-        }
-        h3 {
-            font-size: 15px;
             color: #222;
-            margin-top: 24px;
-            margin-bottom: 10px;
+            margin: 20px;
+            background-color: #f9f9f9;
         }
-        p {
-            font-size: 14px;
-            margin-bottom: 14px;
-            text-align: justify;
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
         }
-        ul, ol {
-            font-size: 14px;
-            margin-top: 6px;
-            margin-bottom: 16px;
-            padding-left: 24px;
+        h1, h2, h3 {
+            color: #111;
+            border-bottom: 2px solid #003366;
+            padding-bottom: 5px;
         }
-        li {
-            margin-bottom: 6px;
+        h1 { font-size: 24px; }
+        h2 { font-size: 18px; margin-top: 30px; }
+        h3 { font-size: 15px; border-bottom: none; margin-top: 15px; color: #003366; }
+        
+        /* STRICT IMAGE CONTAINER & SIZING CONTROL */
+        .img-container {
+            margin: 15px 0;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            overflow: hidden;
+            display: block;
+            box-sizing: border-box;
+            position: relative;
         }
-        table {
+
+        /* Standard Sizing Rules */
+        .img-container.full-width {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .img-container.half-width {
+            width: 50%;
+            max-width: 50%;
+            margin: 15px auto; /* Centered layout for half-width exhibits */
+        }
+
+        /* Forced Image Boundaries */
+        .img-full {
+            width: 100% !important;
+            max-width: 100% !important;
+            height: auto !important;
+            display: block !important;
+            object-fit: contain;
+        }
+
+        .img-fallback {
+            padding: 15px;
+            text-align: center;
+            color: #666;
+            font-size: 12px;
+            font-weight: bold;
+            background: #eef2f5;
+            border: 1px dashed #999;
+        }
+
+        .meta-table, .matrix-table {
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
             font-size: 13px;
         }
-        th {
-            background-color: #003366;
-            color: #ffffff;
-            font-weight: bold;
+        .meta-table th, .meta-table td, .matrix-table th, .matrix-table td {
+            border: 1px solid #ccc;
+            padding: 8px 10px;
             text-align: left;
-            padding: 10px 12px;
-            border: 1px solid #003366;
-        }
-        td {
-            padding: 9px 12px;
-            border: 1px solid #dcdcdc;
             vertical-align: top;
         }
-        tr:nth-child(even) {
-            background-color: #f9fbfd;
+        .meta-table th, .matrix-table th {
+            background-color: #003366;
+            color: #fff;
         }
-        .legal-highlight {
-            background-color: #fff9e6;
-            border-left: 4px solid #f0b400;
-            padding: 14px;
-            margin: 18px 0;
-            font-size: 13.5px;
+        .matrix-table tr:nth-child(even) {
+            background-color: #f2f2f2;
         }
-        .code-block {
-            font-family: "Courier New", Courier, monospace;
-            background-color: #f4f4f4;
-            border: 1px solid #ddd;
-            padding: 10px 14px;
-            font-size: 12.5px;
-            border-radius: 3px;
-            margin: 12px 0;
-            white-space: pre-wrap;
+        .exhibit-card {
+            border: 1px solid #bbb;
+            background: #fafafa;
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 4px;
         }
-        .footer {
-            margin-top: 50px;
-            padding-top: 15px;
-            border-top: 1px solid #ccc;
-            font-size: 12px;
-            color: #666;
-            text-align: center;
+        .chain-box {
+            background-color: #eef4f8;
+            border-left: 4px solid #003366;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+        .chain-box ol {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .dispute-notice {
+            background-color: #fff8e7;
+            border: 1px solid #ffe0b2;
+            border-left: 4px solid #ff9800;
+            padding: 12px;
+            margin: 15px 0;
+            font-size: 13px;
+        }
+
+        @media (max-width: 768px) {
+            .img-container.half-width {
+                width: 100%;
+                max-width: 100%;
+            }
         }
     </style>
+    <script>
+        // Prevents page hanging or infinite loading spinners if local image files are missing
+        function handleImgError(image, annexId) {
+            image.style.display = 'none';
+            var container = image.parentElement;
+            var fallback = document.createElement('div');
+            fallback.className = 'img-fallback';
+            fallback.innerHTML = 'Image File: <code>images-evidences/' + annexId + '.png</code><br><small>(File unreadable or path mismatched)</small>';
+            container.appendChild(fallback);
+        }
+    </script>
 </head>
 <body>
 
-    <div class="header-box">
-        <div class="header-title">European Patent Office — Article 115 EPC Submission</div>
-        <div class="meta-grid">
-            <div class="meta-item"><span class="meta-label">Target Application:</span> EP4523100.3 / EP23726210.0</div>
-            <div class="meta-item"><span class="meta-label">International App No:</span> PCT/US2023/019103</div>
-            <div class="meta-item"><span class="meta-label">Applicant:</span> Airbnb, Inc.</div>
-            <div class="meta-item"><span class="meta-label">Target Claim Set:</span> Amended Claims filed 17 June 2025 (CLMS-1.pdf)</div>
-            <div class="meta-item"><span class="meta-label">Priority Date Claimed:</span> 10 May 2022[cite: 1]</div>
-            <div class="meta-item"><span class="meta-label">International Filing Date:</span> 19 April 2023[cite: 1]</div>
-        </div>
+<div class="container">
+
+    <h1>EVIDENTIARY DOSSIER UNDER ARTICLE 115 EPC</h1>
+    <p><strong>Target Application:</strong> European Patent Application EP 4523100.3 / PCT/US2023/019103 ("Split Stay Ranking and Matching")</p>
+    <p><strong>Applicant:</strong> Airbnb, Inc.</p>
+
+    <div class="dispute-notice">
+        <strong>Prior Dispute Citation:</strong> Kayak Dispute (2024) regarding split-stay accommodation search systems and algorithmic multi-segment itinerary matching.
     </div>
 
-    <h2>1. Executive Summary & Legal Framework</h2>
-    <p>
-        This observation presents concrete technical prior art under Article 115 EPC demonstrating that the split-stay accommodation relocation workflow recited in EP4523100 was publicly disclosed, technically implemented, and operationally used by "Hotels-Plus" in 2019[cite: 1]—more than three years prior to the applicant's priority date of 10 May 2022[cite: 1].
-    </p>
-    <p>
-        The submitted evidence specifically targets the amended claim set filed on 17 June 2025 (<code>CLMS-1.pdf</code>). Airbnb's amendments introduced a dual-condition trigger in Claim 1 requiring both: (i) a length-of-stay parameter exceeding a minimum threshold[cite: 1], and (ii) an available inventory count failing to satisfy a minimum inventory threshold[cite: 1].
-    </p>
-    <div class="legal-highlight">
-        <strong>Core Grounding of Invention Defect:</strong>
-        <ul>
-            <li><strong>Lack of Novelty (Art. 54(2) EPC):</strong> Document D-02 ("Hotels-Plus") explicitly discloses both threshold evaluations within its backend logic (<code>check_availability.php</code>)[cite: 1] and admin control interface, directly anticipating the structural limitations of amended Claim 1[cite: 1].</li>
-            <li><strong>Lack of Inventive Step (Art. 56 EPC / COMVIK Principle):</strong> Document D-01 (KAYAK / US2018330283A1) establishes that split-stay matching architectures were state-of-the-art prior to 2018. Under <strong>T 641/00 (COMVIK)</strong>, combining inventory count thresholds with stay-length checks constitutes a non-technical business parameter executed via standard computer logic.</li>
-        </ul>
-    </div>
-
-    <h2>2. Evidentiary Chain Matrix</h2>
-    <p>
-        The evidence establishes a fully corroborated timeline proving public availability, technical implementation, and operational practice prior to 10 May 2022[cite: 1]:
-    </p>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Exhibit Ref.</th>
-                <th>Category</th>
-                <th>Disclosure Date</th>
-                <th>Technical Features Disclosed</th>
-                <th>Legal Significance</th>
-            </tr>ؤ
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>Exhibit A-01P</strong><br>(Annex-A-009)[cite: 1]</td>
-                <td>Source Code Excerpt[cite: 1]</td>
-                <td>2019[cite: 1]</td>
-                <td>Backend logic (<code>check_availability.php</code>, <code>search_suggestion_ajax.php</code>) for multi-day split-search, stay partitioning, and same-hotel vs. cross-hotel relocation loops[cite: 1].</td>
-                <td>Art. 54(2) EPC direct structural anticipation of Claim 1 processing logic[cite: 1].</td>
-            </tr>
-            <tr>
-                <td><strong>Exhibit A-002</strong><br>(Annex-A-002)[cite: 1]</td>
-                <td>Operational Records[cite: 1]</td>
-                <td>Dec 2016 – Aug 2018[cite: 1]</td>
-                <td>Contemporaneous booking spreadsheets containing booking IDs, stay dates, relocation assignments, and guest WhatsApp confirmation records[cite: 1].</td>
-                <td>Corroborates operational reduction to practice in actual booking transactions[cite: 1].</td>
-            </tr>
-            <tr>
-                <td><strong>Exhibit D-02A / D-03B</strong><br>(Annex-D-012 / D-015)[cite: 1]</td>
-                <td>External Disclosure[cite: 1]</td>
-                <td>3–5 June 2019[cite: 1]</td>
-                <td>Unrestricted transmission to Plug & Play containing Technical Relocation Blueprint and live prototype links ("Room type relocation" & "Next door hotel relocation")[cite: 1].</td>
-                <td>Art. 54(2) EPC public disclosure prior to priority date[cite: 1].</td>
-            </tr>
-            <tr>
-                <td><strong>Exhibit D-05F / D-06G</strong><br>(Annex-D-001)[cite: 1]</td>
-                <td>Public Infrastructure[cite: 1]</td>
-                <td>June – Sept 2019[cite: 1]</td>
-                <td>Wayback Machine capture of <code>www.malindi-dg.com</code> and domain records for <code>www.hotels-plus.net</code> advertising live "Hotel Relocation Program"[cite: 1].</td>
-                <td>Art. 54(2) EPC unrestricted web availability[cite: 1].</td>
-            </tr>
-            <tr>
-                <td><strong>Exhibit D-05D</strong><br>(Annex-D-001 / D-002)[cite: 1]</td>
-                <td>Corporate & WIPO Records[cite: 1]</td>
-                <td>12–14 Sept 2019[cite: 1]</td>
-                <td>Estonian Commercial Register extract for Anuket Digital Group OÜ and formal WIPO IP contact form submission detailing split-stay algorithms[cite: 1].</td>
-                <td>Documentary corroboration of project existence and corporate chronology[cite: 1].</td>
-            </tr>
-            <tr>
-                <td><strong>Exhibit D-08K</strong><br>(Annex-D-003 / D-005)[cite: 1]</td>
-                <td>Public Promotion[cite: 1]</td>
-                <td>Nov 2019 / July 2020[cite: 1]</td>
-                <td>HotelsCombined white-label integration and Google Ads campaign promoting "Smart Algorithm Combines Availability from Room Types"[cite: 1].</td>
-                <td>Corroborates public commercial offering of the service[cite: 1].</td>
-            </tr>
-            <tr>
-                <td><strong>Exhibit V-03B / V-04C</strong><br>(Annex-V-003 / V-005)[cite: 1]</td>
-                <td>Demonstrative Video[cite: 1]</td>
-                <td>7 Sept 2019[cite: 1]</td>
-                <td>Public YouTube screen recordings demonstrating end-to-end split-stay availability search, price calculation, and combined itinerary presentation[cite: 1].</td>
-                <td>Direct visual proof of complete workflow execution[cite: 1].</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <h2>3. Technical Sequence Mapping (Hotels-Plus vs. Claim 1)</h2>
-    <p>
-        The Hotels-Plus evidence documents an identical, automated multi-day accommodation processing sequence[cite: 1]:
-    </p>
-    <ol>
-        <li><strong>Accommodation Request Intake:</strong> The user submits a search specifying check-in date, check-out date, and total length of stay (e.g., 1–10 Feb)[cite: 1].</li>
-        <li><strong>Stay Processing & Threshold Check:</strong> The system evaluates whether the requested stay duration transgresses a defined length-of-stay threshold (<code>check_availability.php</code>)[cite: 1].</li>
-        <li><strong>Continuous-Stay Search & Unavailability Trigger:</strong> The database checks single-property availability[cite: 1]. When continuous availability is insufficient (failing an inventory threshold), the relocation/split-stay generator is invoked[cite: 1].</li>
-        <li><strong>Partitioning of Stay:</strong> The engine splits the requested multi-day stay into successive segments (e.g., 4 nights in Standard Room + 6 nights in Family Room; or Segment 1 in Hotel A + Segment 2 in Hotel B)[cite: 1].</li>
-        <li><strong>Combined Result Compilation & Presentation:</strong> The system compiles the split segments into a unified itinerary and presents the ranked combined listing in the user interface[cite: 1].</li>
-    </ol>
-
-    <h2>4. Element-by-Element Analysis of Amended Claim 1 (CLMS-1.pdf)</h2>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Amended Claim 1 Limitation (17 June 2025)</th>
-                <th>Hotels-Plus Prior Art Disclosure (Document D-02)</th>
-                <th>Legal Conclusion</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>[1.1] Storing:</strong><br>Storing, by a network site, a plurality of listings from a plurality of different posting end-users[cite: 1].</td>
-                <td>Hotels-Plus database stores accommodation listings across multiple properties and room types (Exhibit A-01P)[cite: 1].</td>
-                <td>Anticipated under Art. 54(2) EPC[cite: 1].</td>
-            </tr>
-            <tr>
-                <td><strong>[1.2] Receiving Request:</strong><br>Receiving a listing request specifying a multiple-day length of stay parameter[cite: 1].</td>
-                <td>User search interface receives check-in/check-out dates and total nights parameter (Exhibit D-03B Blueprint)[cite: 1].</td>
-                <td>Anticipated under Art. 54(2) EPC[cite: 1].</td>
-            </tr>
-            <tr>
-                <td><strong>[1.3] Length-of-Stay Threshold:</strong><br>Determining that the multiple-day length of stay parameter transgresses a minimum length of stay threshold[cite: 1].</td>
-                <td>Disclosed in <code>check_availability.php</code> (Lines 42–88) evaluating requested nights against minimum stay conditions[cite: 1].</td>
-                <td>Anticipated under Art. 54(2) EPC[cite: 1].</td>
-            </tr>
-            <tr>
-                <td><strong>[1.4] Inventory Threshold Check:</strong><br>Determining that a quantity of listings in the set of individual listings fails to satisfy a minimum available inventory threshold[cite: 1].</td>
-                <td>Disclosed in <code>search_suggestion_ajax.php</code> checking room availability count (<code>'available_rooms' => 0</code> or below search count)[cite: 1].</td>
-                <td>Anticipated under Art. 54(2) EPC[cite: 1].</td>
-            </tr>
-            <tr>
-                <td><strong>[1.5] Dual Trigger Split Generation:</strong><br>In response to determining BOTH (i) length of stay transgresses threshold AND (ii) inventory fails threshold, generating a combined listing comprising a first and second listing associated with first and second stay portions[cite: 1].</td>
-                <td>Hotels-Plus executes Algorithm I & II, triggering split-stay generation across room types or hotels precisely when continuous single-property inventory is unavailable for the requested multi-day stay (Exhibits A-01P, D-03B)[cite: 1].</td>
-                <td>Anticipated under Art. 54(2) EPC[cite: 1]. Lacks Inventive Step under Art. 56 EPC (COMVIK)[cite: 1].</td>
-            </tr>
-            <tr>
-                <td><strong>[1.6] Presentation:</strong><br>Causing presentation of the combined listing together with one or more other listings in a ranked order[cite: 1].</td>
-                <td>Demonstrated visually in live prototype videos (Exhibits V-03B, V-04C) showing combined itinerary displayed with single listings[cite: 1].</td>
-                <td>Anticipated under Art. 54(2) EPC[cite: 1].</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <h2>5. Inventive Step Attack under Article 56 EPC (COMVIK Principle)</h2>
-    <p>
-        In the event the applicant argues that the specific conjunction of evaluating length-of-stay thresholds alongside inventory counts is not identically disclosed in a single reference, amended Claim 1 remains unpatentable under <strong>Article 56 EPC</strong>:
-    </p>
-    <div class="legal-highlight">
-        <p><strong>Application of T 641/00 (COMVIK) to Amended Claim 1:</strong></p>
+    <h2>Coherent Evidentiary Chain</h2>
+    <div class="chain-box">
         <ol>
-            <li><strong>Non-Technical Character of Thresholds:</strong> Setting a minimum length-of-stay threshold (e.g., 5 nights) or an inventory threshold is a purely commercial/administrative business decision regarding inventory allocation[cite: 1].</li>
-            <li><strong>Lack of Technical Synergy:</strong> Executing two standard logical conditional statements (<code>IF stay > min_stay AND IF inventory < min_inventory</code>) within a web database search produces no unexpected technical effect across memory, processor, or network hardware.</li>
-            <li><strong>Obvious Implementation:</strong> A software engineer seeking to optimize accommodation search results given the non-technical business requirement of offering split stays when inventory is low would implement this dual conditional trigger as a routine programming step.</li>
+            <li><strong>ANNEX-T-002, ANNEX-T-003, ANNEX-T-005</strong> — The database stores account-level and hotel-level relocation permissions[cite: 18, 19, 21].</li>
+            <li><strong>ANNEX-T-004, ANNEX-T-008, ANNEX-T-014</strong> — The system has database fields and administrator settings to enable relocation[cite: 20, 25, 30].</li>
+            <li><strong>ANNEX-T-007, ANNEX-T-010, ANNEX-T-012, ANNEX-T-023</strong> — The user-facing interface describes room relocation and hotel relocation[cite: 24, 26, 28].</li>
+            <li><strong>ANNEX-T-006, ANNEX-T-011</strong> — The backend reads relocation parameters and applies account-level permissions[cite: 22, 27].</li>
+            <li><strong>ANNEX-T-015, ANNEX-T-016, ANNEX-T-017</strong> — The system activates relocation, searches segments, and builds a combined booking[cite: 31, 32, 33].</li>
+            <li><strong>ANNEX-T-013, ANNEX-T-024, ANNEX-T-025, ANNEX-T-026, ANNEX-T-027</strong> — Booking records and public demonstrations corroborate the transactional workflow[cite: 29].</li>
+            <li><strong>ANNEX-T-018, ANNEX-T-020, ANNEX-T-021, ANNEX-T-022</strong> — The result is presented through the search-result renderer[cite: 34, 36, 37, 38].</li>
         </ol>
     </div>
 
-    <h2>6. Conclusion & Requested Action</h2>
-    <p>
-        The submitted prior art documents that every structural element of amended Claim 1 (filed 17 June 2025) was known to the public prior to the 10 May 2022 priority date[cite: 1]. 
-    </p>
-    <p>
-        Accordingly, the Primary Examiner is respectfully requested to refuse European Patent Application No. 23726210.0 in its entirety under <strong>Article 54(2) EPC for lack of novelty</strong> and <strong>Article 56 EPC for lack of inventive step</strong>.
-    </p>
+    <h2>Evidentiary Annex Grouping & Claims Mapping</h2>
 
-    <div class="footer">
-        Submitted on behalf of Third Party under Article 115 EPC | Target: EP4523100.3 / EP23726210.0
+    <!-- EXHIBIT T002 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T002: SQL Dump Metadata and Generation Dates</h3>
+        <p><strong>Page Reference:</strong> Page 2 of 27 | <strong>Annex Reference:</strong> ANNEX-T-002</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/SQL-1.png" alt="Exhibit T002 - SQL Dump Metadata" class="img-full" onerror="handleImgError(this, 'ANNEX-T-002')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> System Date Baseline Verification</p>
+        <p><strong>Source Text Excerpt:</strong> phpMyAdmin SQL Dump version 4.8.5, Host: mysql.hotels-plus.net, Generation Time: Aug 25, 2019 at 04:19 PM[cite: 18]. Host: nakada.canvasback.dreamhost.com, Generation Time: Sep 07, 2020[cite: 18].</p>
     </div>
+<!--Newdiv-->
+<div class="exhibit-card">
+        <h3>Exhibit T002: SQL Dump Metadata and Generation Dates</h3>
+        <p><strong>Page Reference:</strong> Page 2 of 27 | <strong>Annex Reference:</strong> ANNEX-T-002</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/SQL-2.png" alt="Exhibit T002 - SQL Dump Metadata" class="img-full" onerror="handleImgError(this, 'ANNEX-T-002')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> System Date Baseline Verification</p>
+        <p><strong>Source Text Excerpt:</strong> phpMyAdmin SQL Dump version 4.8.5, Host: mysql.hotels-plus.net, Generation Time: Aug 25, 2019 at 04:19 PM[cite: 18]. Host: nakada.canvasback.dreamhost.com, Generation Time: Sep 07, 2020[cite: 18].</p>
+    </div>
+    <!-- EXHIBIT T003 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T003 (T-003A / T-003B): Multi-Hotel Listing Records & Owner Registration</h3>
+        <p><strong>Page Reference:</strong> Page 3 of 27 | <strong>Annex Reference:</strong> ANNEX-T-003</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/T003A-B.png" alt="Exhibit T003 - Multi-Hotel Listing Records" class="img-full" onerror="handleImgError(this, 'ANNEX-T-003')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1.1</p>
+        <p><strong>Source Text Excerpt:</strong> Multi-Hotel Listing Records in <code>uhb_new_hotels</code>[cite: 19]. Stores individual accommodation records in <code>uhb_new_hotels</code> and maintains multiple hotel-owner accounts in <code>uhb_new_accounts</code>[cite: 19].</p>
+    </div>
+
+    <!-- EXHIBIT T004 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T004: Hotel-Owner Registration and Association with hotel_id</h3>
+        <p><strong>Page Reference:</strong> Page 4 of 27 | <strong>Annex Reference:</strong> ANNEX-T-004</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/T-004.png" alt="Exhibit T004 - Hotel Owner Registration" class="img-full" onerror="handleImgError(this, 'ANNEX-T-004')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1.1</p>
+        <p><strong>Source Text Excerpt:</strong> Search for rooms in one location: <code>$rooms_found && ModulesSettings::Get('rooms', 'allow_relocation_to_other_hotel') == "yes" && !empty($hotel_sel_loc_id)</code>[cite: 20].</p>
+    </div>
+
+    <!-- EXHIBIT T005 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T005: User and Hotel Account Tables Multi-Property Data Model</h3>
+        <p><strong>Page Reference:</strong> Page 5 of 27 | <strong>Annex Reference:</strong> ANNEX-T-005</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/T-005A-B.png" alt="Exhibit T005 - User and Hotel Account Tables" class="img-full" onerror="handleImgError(this, 'ANNEX-T-005')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1.1</p>
+        <p><strong>Source Text Excerpt:</strong> Database structure stores hotel-owner accounts and associated property information, supporting the multi-property environment used by the booking system[cite: 21]. Contains <code>room_relocation tinyint(1) NOT NULL DEFAULT '1'</code> and <code>hotel_relocation tinyint(1) NOT NULL DEFAULT '1'</code>[cite: 21].</p>
+    </div>
+
+    <!-- EXHIBIT T006 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T006 (T-005A / T-005B): Multi-Day Request Parameters & Normal Reservation Relocation</h3>
+        <p><strong>Page References:</strong> Page 6 of 27, Page 7 of 27 | <strong>Annex References:</strong> ANNEX-T-006, ANNEX-T-007</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/T-006A.png" alt="Exhibit T006 - Multi Day Parameters" class="img-full" onerror="handleImgError(this, 'ANNEX-T-006')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1.2</p>
+        <p><strong>Source Text Excerpt:</strong> Receiving a Multi-Day Length-of-Stay Request parsing <code>from_date</code>, <code>to_date</code>, check-in, check-out year/month/day, calculating <code>$nights = nights_diff($checkin_date, $checkout_date)</code>[cite: 22]. Live demonstration video dated May 30, 2019[cite: 23].</p>
+    <div class="img-container full-width">
+            <img src="images-evidences/T-006B.png" alt="Exhibit T006 - Multi Day Parameters" class="img-full" onerror="handleImgError(this, 'ANNEX-T-006')">
+        </div>
+    </div>
+
+    <!-- EXHIBIT T007 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T007 (T-007A / T-007B): Database Schema Flags & User Interface Language Keys</h3>
+        <p><strong>Page Reference:</strong> Page 8 of 27 | <strong>Annex Reference:</strong> ANNEX-T-008</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/T-007A-B.png" alt="Exhibit T007 - Schema Flags and Keys" class="img-full" onerror="handleImgError(this, 'ANNEX-T-008')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1.3</p>
+        <p><strong>Source Text Excerpt:</strong> <code>`room_relocation` tinyint(1) NOT NULL DEFAULT '1'</code>, <code>`hotel_relocation` tinyint(1) NOT NULL DEFAULT '1'</code>[cite: 24]. Language keys: <code>_MSN_ALLOW_RELOCATION_TO_OTHER_ROOM</code>, <code>_MSN_ALLOW_RELOCATION_TO_OTHER_HOTEL</code>[cite: 24].</p>
+    </div>
+
+    <!-- EXHIBIT T008 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T008 (T-008B): Conditional Trigger Engine for Continuous Availability Gaps</h3>
+        <p><strong>Page Reference:</strong> Page 9 of 27 | <strong>Annex Reference:</strong> ANNEX-T-008</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/T-008A-B.png" alt="Exhibit T008 - Conditional Trigger Engine" class="img-full" onerror="handleImgError(this, 'ANNEX-T-008B')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1.3</p>
+        <p><strong>Source Text Excerpt:</strong> <code>Specifies whether allow relocation to other room on empty search results</code> and <code>Specifies whether allow relocation to other hotel on empty search results</code>[cite: 25].</p>
+    </div>
+
+    <!-- EXHIBIT T009 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T009 (T-008C / T-009A): Frontend Disclosure Constants & Search Controller Evaluation</h3>
+        <p><strong>Page Reference:</strong> Page 10 of 27 | <strong>Annex Reference:</strong> ANNEX-T-010</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/T-008A-B-.png" alt="Exhibit T009 - Frontend Disclosure Constants" class="img-full" onerror="handleImgError(this, 'ANNEX-T-010')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1.4</p>
+        <p><strong>Source Text Excerpt:</strong> <code>define("_MS_RELOCATION_HOTEL_PROGRAM", "Enjoy 10% off rate when you choose smart relocation program<br>Now get oriented by splitting your holiday in two hotels, same area, same hotel category.")</code>[cite: 26]. Extraction of <code>$_POST['room_relocation']</code> and <code>$_POST['hotel_relocation']</code>[cite: 26].</p>
+    </div>
+
+    <!-- EXHIBIT T010 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T010 (T-009A / T-0010): User/Host Account Model Hydration & Production Account Seeding</h3>
+        <p><strong>Page Reference:</strong> Page 11 of 27 | <strong>Annex Reference:</strong> ANNEX-T-011</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/T010.png" alt="Exhibit T010 - Account Hydration and Seeding" class="img-full" onerror="handleImgError(this, 'ANNEX-T-011')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1.1</p>
+        <p><strong>Source Text Excerpt:</strong> <code>$this->room_relocation = isset($temp['room_relocation']) ?$temp['room_relocation'] : '0';</code>[cite: 27]. Production seed timestamped <code>2019-06-25 23:26:27</code>[cite: 27].</p>
+    </div>
+
+    <!-- EXHIBIT T011 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T011 (T-0011A / T-0011B): System Language Seed Data (28.05.2019) & Property Database Seeding</h3>
+        <p><strong>Page Reference:</strong> Page 12 of 27 | <strong>Annex Reference:</strong> ANNEX-T-012</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/t-011A-B.png" alt="Exhibit T011 - System Language Seed Data" class="img-full" onerror="handleImgError(this, 'ANNEX-T-012')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1.4</p>
+        <p><strong>Source Text Excerpt:</strong> <code>_MS_RELOCATION_HOTEL_PROGRAM</code> dated <code>28.05.2019</code>[cite: 28]. Hotel coordinates insertion with <code>room_relocation = 1, hotel_relocation = 1</code>[cite: 28].</p>
+    </div>
+
+    <!-- EXHIBIT T012 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T012: Relational Database Table Architecture (uhb_new_bookings_rooms) & June 2019 Log</h3>
+        <p><strong>Page Reference:</strong> Page 13 of 27 | <strong>Annex Reference:</strong> ANNEX-T-013</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/T-012A-B.png" alt="Exhibit T012 - Relational DB Architecture" class="img-full" onerror="handleImgError(this, 'ANNEX-T-013')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1.6</p>
+        <p><strong>Source Text Excerpt:</strong> <code>CREATE TABLE `uhb_new_bookings_rooms` (`booking_number`, `hotel_id`, `room_id`, `checkin`, `checkout`, `price`)</code>[cite: 29]. Account timestamps June 2019[cite: 29].</p>
+    </div>
+
+    <!-- EXHIBIT T013 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T013 (T013A / T013B / T013C): Minimum/Maximum Nights Admin Configuration</h3>
+        <p><strong>Page Reference:</strong> Page 14 of 27 | <strong>Annex Reference:</strong> ANNEX-T-014</p>
+        
+        <div class="img-container half-width">
+            <img src="images-evidences/T-013-A-B.png" alt="Exhibit T013 - Stay Duration Thresholds" class="img-full" onerror="handleImgError(this, 'ANNEX-T-014')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 3</p>
+        <p><strong>Source Text Excerpt:</strong> Admin panel for Minimum Nights / Maximum Nights[cite: 30]. <code>Packages::GetMinimumNights(...)</code>[cite: 30].</p>
+    </div>
+
+    <!-- EXHIBIT T014 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T014: Identifying Matching Listings</h3>
+        <p><strong>Page Reference:</strong> Page 15 of 27 | <strong>Annex Reference:</strong> ANNEX-T-015</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/T-014-A-B.png" alt="Exhibit T014 - Matching Listings" class="img-full" onerror="handleImgError(this, 'ANNEX-T-015')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1.4</p>
+        <p><strong>Source Text Excerpt:</strong> <code>$rooms_count = $objRooms->SearchFor ($params);</code>[cite: 31]. Public Demonstration of Availability Search and Matching Results (YouTube, 30 May 2019)[cite: 31].</p>
+    </div>
+
+    <!-- EXHIBIT T015 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T015 (T015A / T015B): Minimum-Room Threshold Enforcement</h3>
+        <p><strong>Page Reference:</strong> Page 16 of 27 | <strong>Annex Reference:</strong> ANNEX-T-016</p>
+        
+        <div class="img-container half-width">
+            <img src="images-evidences/T-015-A-B.png" alt="Exhibit T015 - Minimum Room Threshold Enforcement" class="img-full" onerror="handleImgError(this, 'ANNEX-T-016')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1.5</p>
+        <p><strong>Source Text Excerpt:</strong> <code>Packages::GetMinimumRooms(...)</code>, <code>printError(str_replace('NUM_ROOMS', $minimum_rooms, CONTINUE_MUST_BOOK_MIN));</code>[cite: 32].</p>
+    </div>
+
+    <!-- EXHIBIT T016 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T016 (T-016A / T-016B / T-016C / T-016D): Relocation Activation, Segment Iteration & Two-Part Parameter Construction</h3>
+        <p><strong>Page Reference:</strong> Page 17 of 27 | <strong>Annex Reference:</strong> ANNEX-T-017</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/T-016-A-B-C-B.png" alt="Exhibit T016 - Segment Iteration" class="img-full" onerror="handleImgError(this, 'ANNEX-T-017')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1.6</p>
+        <p><strong>Source Text Excerpt:</strong> <code>$objRooms->SetRelocationType('room'); for ($i=1; $i <$nights; $i++)</code>[cite: 33]. <code>$params['from_date'] = array(1 => $result_room_1['checkin_date'], 2 =>$result_room_2['checkin_date']);</code>[cite: 33]. Demonstrations: "Relocation to Next Door Hotel", Order Confirmations 1IQK4QUSTG / 7K6ZEQW8YB / VZ1M5OKLKD[cite: 33].</p>
+    <div class="exhibit-card">
+        <h3>Exhibit T016 (T-016A / T-016B / T-016C / T-016D): Relocation Activation, Segment Iteration & Two-Part Parameter Construction</h3>
+        <p><strong>Page Reference:</strong> Page 17 of 27 | <strong>Annex Reference:</strong> ANNEX-T-017</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/T-016 room.png" alt="Exhibit T016 - Segment Iteration" class="img-full" onerror="handleImgError(this, 'ANNEX-T-017')">
+        </div>
+    </div>
+
+    <!-- EXHIBIT T017 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T017 (T017A / T017B): Presentation of Relocation Results Through Search-Result Renderer</h3>
+        <p><strong>Page Reference:</strong> Page 18 of 27 | <strong>Annex Reference:</strong> ANNEX-T-018</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/T-017-A-B.png" alt="Exhibit T017 - Search Result Renderer" class="img-full" onerror="handleImgError(this, 'ANNEX-T-018')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1.7</p>
+        <p><strong>Source Text Excerpt:</strong> <code>$searchResult = $objRooms->DrawSearchResult($params, 2, false, true);</code>[cite: 34]. Sorting parameters array includes <code>sort_by</code>, <code>sort_rating</code>, <code>sort_price</code>[cite: 34].</p>
+    </div>
+
+    <!-- EXHIBIT T018 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T018: Five-Day Minimum Length-of-Stay Data Schema</h3>
+        <p><strong>Page Reference:</strong> Page 19 of 27 | <strong>Annex Reference:</strong> ANNEX-T-019</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/T-018.png" alt="Exhibit T018 - Five Day Minimum Schema" class="img-full" onerror="handleImgError(this, 'ANNEX-T-019')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 3</p>
+        <p><strong>Source Text Excerpt:</strong> <code>CREATE TABLE IF NOT EXISTS `<DB_PREFIX>packages` (`minimum_nights` tinyint(1) NOT NULL DEFAULT '0', `maximum_nights` smallint(6) unsigned NOT NULL DEFAULT '0')</code>[cite: 35].</p>
+    </div>
+
+    <!-- EXHIBIT T019 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T019: Coordinate-Based Distance Calculation Function</h3>
+        <p><strong>Page Reference:</strong> Page 20 of 27 | <strong>Annex Reference:</strong> ANNEX-T-020</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/T-019.png" alt="Exhibit T019 - Distance Calculation" class="img-full" onerror="handleImgError(this, 'ANNEX-T-020')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 12</p>
+        <p><strong>Source Text Excerpt:</strong> <code>function calculateTheDistance(latA, longA, latB, longB) { var EARTH_RADIUS = 6372.795; ... return dist; }</code>[cite: 36].</p>
+    </div>
+
+    <!-- EXHIBIT T020 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T020 (T020A / T020B): Hotel-to-Centre Distance Assignment & Distance-Range Filtering</h3>
+        <p><strong>Page Reference:</strong> Page 21 of 27 | <strong>Annex Reference:</strong> ANNEX-T-021</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/T-020-A-B-C.png" alt="Exhibit T020 - Distance Range Filtering" class="img-full" onerror="handleImgError(this, 'ANNEX-T-021')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 12</p>
+        <p><strong>Source Text Excerpt:</strong> <code>function Hotel_GetDistantionCenterPoint()</code> extracting latitude and longitude center points[cite: 37]. <code>$filter_start_distance = 0; $filter_end_distance = 1000;</code>[cite: 37].</p>
+    </div>
+
+    <!-- EXHIBIT T021 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T021: Public AJAX Endpoint Capture and Deployment Evidence</h3>
+        <p><strong>Page Reference:</strong> Page 22 of 27 | <strong>Annex Reference:</strong> ANNEX-T-022</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/T-021.png" alt="Exhibit T021 - Public AJAX Endpoint" class="img-full" onerror="handleImgError(this, 'ANNEX-T-022')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 13</p>
+        <p><strong>Source Text Excerpt:</strong> Internet Archive capture of <code>/ajax/hotel_location.ajax.php</code> dated 9 June 2019 corroborating public endpoint deployment[cite: 38].</p>
+    </div>
+
+    <!-- EXHIBIT T022 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T022 (T022 / T022A / T022B): Thematic Categories, Customer Retrieval & Customer-Linked Bookings</h3>
+        <p><strong>Page References:</strong> Page 23 of 27, Page 24 of 27 | <strong>Annex References:</strong> ANNEX-T-023, ANNEX-T-024</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/T-22 all.png" alt="Exhibit T022 - Thematic Categories" class="img-full" onerror="handleImgError(this, 'ANNEX-T-023')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 2</p>
+        <p><strong>Source Text Excerpt:</strong> Customer group settings ("Kiting"). <code>GetCustomerInfo($customer_id)</code> joining customer groups. Booking query joining customer records: <code>LEFT OUTER JOIN `.TABLE_CUSTOMERS.` c ON b.customer_id = c.id</code>.</p>
+    </div>
+
+    <!-- EXHIBIT T023 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T023 (T-023A / T-023B): Customer Historical Payment Aggregation & Wishlist</h3>
+        <p><strong>Page Reference:</strong> Page 25 of 27 | <strong>Annex Reference:</strong> ANNEX-T-025</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/t-23-A-B.png" alt="Exhibit T023 - Payment Aggregation" class="img-full" onerror="handleImgError(this, 'ANNEX-T-025')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 4</p>
+        <p><strong>Source Text Excerpt:</strong> <code>Bookings::GetTotalPayments($customer_ids, 'status IN (1,2,3)')</code>. <code>Wishlist::AddToList($item_type, $item_id,$customer_id)</code>.</p>
+    </div>
+
+    <!-- EXHIBIT T024 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T024 (T-024A / T-024B): Customer Award-Point Structure and Management</h3>
+        <p><strong>Page Reference:</strong> Page 26 of 27 | <strong>Annex Reference:</strong> ANNEX-T-026</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/T-24-A-B.png" alt="Exhibit T024 - Award Points Class" class="img-full" onerror="handleImgError(this, 'ANNEX-T-026')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 4</p>
+        <p><strong>Source Text Excerpt:</strong> <code>class CustomerAwardPoints extends MicroGrid</code> instantiated with <code>$customer_id</code>. Handling customer funds, vouchers, and award points.</p>
+    </div>
+
+    <!-- EXHIBIT T025 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T025: Customer-Linked Booking State and Reservation Monitoring</h3>
+        <p><strong>Page Reference:</strong> Page 27 of 27 | <strong>Annex Reference:</strong> ANNEX-T-027</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/T-25.png" alt="Exhibit T025 - Reservation Monitoring" class="img-full" onerror="handleImgError(this, 'ANNEX-T-027')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 13</p>
+        <p><strong>Source Text Excerpt:</strong> Expired reservation monitor joining bookings and customer records: <code>LEFT OUTER JOIN `.TABLE_CUSTOMERS.` ON `.TABLE_BOOKINGS.`.customer_id = `.TABLE_CUSTOMERS.`.id</code>.</p>
+    </div>
+
+    <h2>Claim Mapping Matrix</h2>
+    <table class="matrix-table">
+        <thead>
+            <tr>
+                <th>Target Claim No.</th>
+                <th>Claim Text (Verbatim)</th>
+                <th>Corresponding Prior Art Exhibit</th>
+                <th>Annex Page Ref</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Claim 1.1</strong></td>
+                <td>"A system comprising: memory storing listing inventory; and one or more processors configured to execute instructions..."</td>
+                <td>Exhibit T003B / Exhibit T004 / Exhibit T005 / Exhibit T010</td>
+                <td>ANNEX-T-003 (p. 3)<br>ANNEX-T-004 (p. 4)<br>ANNEX-T-005 (p. 5)<br>ANNEX-T-011 (p. 11)[cite: 19, 20, 21, 27]</td>
+            </tr>
+            <tr>
+                <td><strong>Claim 1.2</strong></td>
+                <td>"...receiving a listing request specifying a length of stay..."</td>
+                <td>Exhibit T006 (T-005A)</td>
+                <td>ANNEX-T-006 (p. 6)[cite: 22]</td>
+            </tr>
+            <tr>
+                <td><strong>Claim 1.3</strong></td>
+                <td>"...determining that available inventory fails to satisfy a minimum availability threshold for the continuous length of stay..."</td>
+                <td>Exhibit T007 / Exhibit T008</td>
+                <td>ANNEX-T-008 (p. 8, p. 9)[cite: 24, 25]</td>
+            </tr>
+            <tr>
+                <td><strong>Claim 1.4</strong></td>
+                <td>"...generating a combined listing comprising a first portion for a first stay duration at a first listing and a second portion for a second stay duration at a second listing..."</td>
+                <td>Exhibit T009 / Exhibit T011 / Exhibit T014</td>
+                <td>ANNEX-T-010 (p. 10)<br>ANNEX-T-012 (p. 12)<br>ANNEX-T-015 (p. 15)[cite: 26, 28, 31]</td>
+            </tr>
+            <tr>
+                <td><strong>Claim 1.5</strong></td>
+                <td>"...causing presentation of the combined listing in ranked order."</td>
+                <td>Exhibit T015 (T015A / T015B)</td>
+                <td>ANNEX-T-016 (p. 16)[cite: 32]</td>
+            </tr>
+            <tr>
+                <td><strong>Claim 1.6</strong></td>
+                <td>"...processing booking requests for multi-leg stay segments."</td>
+                <td>Exhibit T012 / Exhibit T016</td>
+                <td>ANNEX-T-013 (p. 13)<br>ANNEX-T-017 (p. 17)[cite: 29, 33]</td>
+            </tr>
+            <tr>
+                <td><strong>Claim 1.7</strong></td>
+                <td>"...rendering search results in ranked order based on specified parameters."</td>
+                <td>Exhibit T017 (T017A / T017B)</td>
+                <td>ANNEX-T-018 (p. 18)[cite: 34]</td>
+            </tr>
+            <tr>
+                <td><strong>Claim 2</strong></td>
+                <td>"The system of claim 1, wherein listings are categorized by thematic attributes or user groups."</td>
+                <td>Exhibit T022 (T022 / T022A / T022B)</td>
+                <td>ANNEX-T-023 (p. 23)<br>ANNEX-T-024 (p. 24)</td>
+            </tr>
+            <tr>
+                <td><strong>Claim 3</strong></td>
+                <td>"The system of claim 1, wherein the minimum length of stay threshold is configured as a minimum night duration constraint."</td>
+                <td>Exhibit T013 / Exhibit T018</td>
+                <td>ANNEX-T-014 (p. 14)<br>ANNEX-T-019 (p. 19)[cite: 30, 35]</td>
+            </tr>
+            <tr>
+                <td><strong>Claim 4</strong></td>
+                <td>"The system of claim 1, wherein split availability is evaluated using stored user profiles and historical booking activity."</td>
+                <td>Exhibit T023 / Exhibit T024</td>
+                <td>ANNEX-T-025 (p. 25)<br>ANNEX-T-026 (p. 26)</td>
+            </tr>
+            <tr>
+                <td><strong>Claim 12</strong></td>
+                <td>"The system of claim 1, wherein the second listing is selected within a maximum geographic distance limit from the first listing."</td>
+                <td>Exhibit T019 / Exhibit T020</td>
+                <td>ANNEX-T-020 (p. 20)<br>ANNEX-T-021 (p. 21)[cite: 36, 37]</td>
+            </tr>
+            <tr>
+                <td><strong>Claim 13</strong></td>
+                <td>"The system of claim 1, wherein behavioral inferences or session parameters are monitored dynamically via endpoint requests."</td>
+                <td>Exhibit T021 / Exhibit T025</td>
+                <td>ANNEX-T-022 (p. 22)<br>ANNEX-T-027 (p. 27)[cite: 38]</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
 
 </body>
 </html>
