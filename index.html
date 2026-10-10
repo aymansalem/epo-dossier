@@ -172,37 +172,11 @@ The Examiner is invited to assess this evidence against the relevant claims, the
 
     <h2>Evidentiary Annex Grouping & Claims Mapping</h2>
     <!--New One-->
-    <!-- EXHIBIT T002 -->
     
-
-    <!-- EXHIBIT T002 -->
-    <div class="exhibit-card">
-        <h3>Exhibit T001-A: Source note: T001-A and T001-B are retained as two source versions of the Hotels Plus database/schema environment. They are presented as source-reference material for the technical exhibits that follow and are not asserted to represent two separate implementations</h3>
-        <p><strong>Page Reference:</strong> Page 1 of 27 | <strong>Annex Reference:</strong> ANNEX-T-001</p>
-        
-        <div class="img-container full-width">
-            <img src="images-evidences/SQL-1.png" alt="Exhibit T001 - SQL Dump Metadata" class="img-full" onerror="handleImgError(this, 'ANNEX-T-002')">
-        </div>
-
-        <p><strong>Corresponds to Claim:</strong> System Date Baseline Verification</p>
-        <p><strong>Source Text Excerpt:</strong> phpMyAdmin SQL Dump version 4.8.5; Host: mysql.hotels-plus.net; Generation Time: Aug 25, 2019 at 04:19 PM; Host: nakada.canvasback.dreamhost.com; Generation Time: Sep 07, 2020.</p>
-    </div>
-<!--Newdiv-->
-<div class="exhibit-card">
-        <h3>Exhibit T001-B: SQL Dump Metadata and Generation Dates</h3>
-        <p><strong>Page Reference:</strong> Page 1 of 27 | <strong>Annex Reference:</strong> ANNEX-T-001</p>
-        
-        <div class="img-container full-width">
-            <img src="images-evidences/SQL-2.png" alt="Exhibit T002 - SQL Dump Metadata" class="img-full" onerror="handleImgError(this, 'ANNEX-T-002')">
-        </div>
-
-        <p><strong>Corresponds to Claim:</strong> System Date Baseline Verification</p>
-        <p><strong>Source Text Excerpt:</strong> phpMyAdmin SQL Dump version 4.8.5, Host: mysql.hotels-plus.net, Generation Time: Aug 25, 2019 at 04:19 PM. Host: nakada.canvasback.dreamhost.com, Generation Time: Sep 07, 2020.</p>
-    </div>
     <!--Multi listing-->
     <div class="exhibit-card">
-        <h3>Exhibit T-002 : Multi-Property Account and Hotel-Owner Data Structure</h3>
-        <p><strong>Page Reference:</strong> Page 2 of 27 | <strong>Annex Reference:</strong> ANNEX-T-002</p>
+        <h3>Exhibit T-001 : Multi-Property Account and Hotel-Owner Data Structure</h3>
+        <p><strong>Page Reference:</strong> Page 1 of 27 | <strong>Annex Reference:</strong> ANNEX-T-001</p>
         
         <div class="img-container full-width">
             <img src="images-evidences/Exh-t02.png" alt="Exhibit T002 - Storing Listings from Multiple Posting End-Users" class="img-full" onerror="handleImgError(this, 'ANNEX-T-002')">
@@ -215,49 +189,48 @@ The Examiner is invited to assess this evidence against the relevant claims, the
         <p><strong>Source Text Excerpt:</strong> Distinct hotelowner accounts with separate companies fields. The associated hotel-management records show individual hotel records and management functions..</p>
 
     </div>
-    <!-- EXHIBIT T003 -->
-    <div class="exhibit-card">
-        <h3>Exhibit T003 (T-003A / T-003B): Multi-Hotel Listing Records & Owner Registration</h3>
-        <p><strong>Page Reference:</strong> Page 3 of 27 | <strong>Annex Reference:</strong> ANNEX-T-003</p>
+    <!--Rearranging-->
+    <!--Intro-->
+
+
+<div class="exhibit-card">
+        <h3>Exhibit T002-A : Split-Stay Segmentation and Construction of Separate Stay-Period Parameters</h3>
+        <p><strong>Page Reference:</strong> Page 2 of 27 | <strong>Annex Reference:</strong> ANNEX-T-002</p>
         
         <div class="img-container full-width">
-            <img src="images-evidences/T003A-B.png" alt="Exhibit T003 - Multi-Hotel Listing Records" class="img-full" onerror="handleImgError(this, 'ANNEX-T-003')">
+            <img src="images-evidences/t-016-A-B-C-B.png" alt="Exhibit T016 - Segment Iteration" class="img-full" onerror="handleImgError(this, 'ANNEX-T-017')">
         </div>
 
         <p><strong>Corresponds to Claim:</strong> Claim 1</p>
-        <p><strong>Source Text Excerpt:</strong> <code>uhb_new_hotels</code> stores individual accommodation records, while uhb_new_accounts maintains hotel-owner account records</p>
-    </div>
-
-    <!-- EXHIBIT T004 -->
+        <p><strong>Source Text Excerpt:</strong> <code>$objRooms->SetRelocationType('room'); for ($i=1; $i <$nights; $i++)</code> <code>$params['from_date'] = array(1 => $result_room_1['checkin_date'], 2 =>$result_room_2['checkin_date']);</code>. Demonstrations: "Relocation to Next Door Hotel", Order Confirmations 1IQK4QUSTG / 7K6ZEQW8YB / VZ1M5OKLKD</p>
     <div class="exhibit-card">
-        <h3>Exhibit T004: Hotel-Owner Registration and Association with hotel_id</h3>
+        <h3>Exhibit T002-B(T-016A / T-016B / T-016C / T-016D): Relocation Activation, Segment Iteration & Two-Part Parameter Construction</h3>
+        <p><strong>Page Reference:</strong> Page 17 of 27 | <strong>Annex Reference:</strong> ANNEX-T-002</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/T-016_Room.png" alt="Exhibit T016 - Segment Iteration" class="img-full" onerror="handleImgError(this, 'ANNEX-T-017')">
+        </div>
+    </div>
+    <!--Search-->
+
+      <!-- EXHIBIT T014 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T003: Availability Search and Identification of Matching Accommodation</h3>
         <p><strong>Page Reference:</strong> Page 4 of 27 | <strong>Annex Reference:</strong> ANNEX-T-004</p>
         
         <div class="img-container full-width">
-            <img src="images-evidences/t-004.png" alt="Exhibit T004 - Hotel Owner Registration" class="img-full" onerror="handleImgError(this, 'ANNEX-T-004')">
+            <img src="images-evidences/T-014-A-B.png" alt="Exhibit T014 - Matching Listings" class="img-full" onerror="handleImgError(this, 'ANNEX-T-015')">
         </div>
 
         <p><strong>Corresponds to Claim:</strong> Claim 1</p>
-        <p><strong>Source Text Excerpt:</strong> Hotel-Owner Registration and Association with <code>hotel_id<)</code></p>
+        <p><strong>Source Text Excerpt:</strong> <code>$rooms_count = $objRooms->SearchFor($params);</code> invokes the room-search function using the supplied search parameters.</p>
     </div>
 
-    <!-- EXHIBIT T005 -->
-    <div class="exhibit-card">
-        <h3>Exhibit T005: User and Hotel Account Tables Multi-Property Data Model</h3>
-        <p><strong>Page Reference:</strong> Page 5 of 27 | <strong>Annex Reference:</strong> ANNEX-T-005</p>
-        
-        <div class="img-container full-width">
-            <img src="images-evidences/T-005A-B.png" alt="Exhibit T005 - User and Hotel Account Tables" class="img-full" onerror="handleImgError(this, 'ANNEX-T-005')">
-        </div>
+    <!--Multi Days Request-->
 
-        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
-        <p><strong>Source Text Excerpt:</strong> The database defines <code><strong>room_relocation</strong></code> and <code><strong>hotel_relocation</strong></code> flags, providing configuration fields for room-level and hotel-level relocation</p>   
-    </div>
-<!--Part-1 Exh 06-->
-    <!-- EXHIBIT T006 -->
     <div class="exhibit-card">
-        <h3>Exhibit T006-A (T-005A / T-005B): Multi-Day Stay Request and Date-Range Processing</h3>
-        <p><strong>Page References:</strong> Page 6 of 27, Page 7 of 27 | <strong>Annex References:</strong> ANNEX-T-006, ANNEX-T-007</p>
+        <h3>Exhibit T005-A (T-005A / T-005B): Multi-Day Stay Request and Date-Range Processing</h3>
+        <p><strong>Page References:</strong> Page 6 of 27, Page 6 of 27 | <strong>Annex References:</strong> ANNEX-T-006, ANNEX-T-007</p>
         
         <div class="img-container full-width">
             <img src="images-evidences/t-006A.png" alt="Exhibit T006 - Multi Day Parameters" class="img-full" onerror="handleImgError(this, 'ANNEX-T-006')">
@@ -271,7 +244,7 @@ The Examiner is invited to assess this evidence against the relevant claims, the
     </div>
 <!--Part-1 Exh 06-->
 <div class="exhibit-card">
-        <h3>Exhibit T006-B (T-005A / T-005B): Multi-Day Request Parameters and Stay-Duration Processing</h3>
+        <h3>Exhibit T005-B (T-005A / T-005B): Multi-Day Request Parameters and Stay-Duration Processing</h3>
         <p><strong>Page References:</strong> Page 6 of 27, Page 7 of 27 | <strong>Annex References:</strong> ANNEX-T-006, ANNEX-T-007</p>
         
         <div class="img-container full-width">
@@ -301,146 +274,11 @@ The Examiner is invited to assess this evidence against the relevant claims, the
     <div class="img-container full-width">
             <img src="images-evidences/hotel-relocation.png" alt="Exhibit T006 - Multi Day Parameters" class="img-full" onerror="handleImgError(this, 'ANNEX-T-006')">
         </div>
-    <!-- EXHIBIT T007 -->
+
+    <!--Relocation Result-->
+
     <div class="exhibit-card">
-        <h3>Exhibit T007 (T-007A / T-007B): oom and Hotel Relocation Parameters</h3>
-        <p><strong>Page Reference:</strong> Page 8 of 27 | <strong>Annex Reference:</strong> ANNEX-T-008</p>
-        
-        <div class="img-container full-width">
-            <img src="images-evidences/T-007A-B.png" alt="Exhibit T007 - Schema Flags and Keys" class="img-full" onerror="handleImgError(this, 'ANNEX-T-008')">
-        </div>
-
-        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
-        <p><strong>Source Text Excerpt:</strong> <code>`room_relocation` tinyint(1) NOT NULL DEFAULT '1'</code>, <code>`hotel_relocation` tinyint(1) NOT NULL DEFAULT '1'</code>. Language keys: <code>_MSN_ALLOW_RELOCATION_TO_OTHER_ROOM</code>, <code>_MSN_ALLOW_RELOCATION_TO_OTHER_HOTEL</code>.</p>
-    </div>
-
-    <!-- EXHIBIT T008 -->
-    <div class="exhibit-card">
-        <h3>Exhibit T008 (T-008B): Database Relocation Flags and Interface Language Keys</h3>
-        <p><strong>Page Reference:</strong> Page 9 of 27 | <strong>Annex Reference:</strong> ANNEX-T-008</p>
-        
-        <div class="img-container full-width">
-            <img src="images-evidences/T-008A-B.png" alt="Exhibit T008 - Conditional Trigger Engine" class="img-full" onerror="handleImgError(this, 'ANNEX-T-008B')">
-        </div>
-
-        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
-        <p><strong>Source Text Excerpt:</strong> <code>Database fields <code><strong>room_relocation</strong></code> and <code><strong>hotel_relocation</strong></code> store relocation settings. Corresponding language keys include <code><strong>_MSN_ALLOW_RELOCATION_TO_OTHER_ROOM</strong></code> and <code><strong>>_MSN_ALLOW_RELOCATION_TO_OTHER_HOTEL</strong></code.</p>
-    </div>
-
-    <!-- EXHIBIT T009 -->
-    <div class="exhibit-card">
-        <h3>Exhibit T009 (T-008C / T-009A): Conditional Relocation Trigger When Availability Search Returns No Rooms</h3>
-        <p><strong>Page Reference:</strong> Page 10 of 27 | <strong>Annex Reference:</strong> ANNEX-T-010</p>
-        
-        <div class="img-container full-width">
-            <img src="images-evidences/T-008A-B-.png" alt="Exhibit T009 - Frontend Disclosure Constants" class="img-full" onerror="handleImgError(this, 'ANNEX-T-010')">
-        </div>
-
-        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
-        <p><strong>Source Text Excerpt:</strong> <code>The relocation settings specify whether the system may allow relocation to another room or another hotel when the availability search returns no rooms.</p>
-    </div>
-
-    <!-- EXHIBIT T010 -->
-    <div class="exhibit-card">
-        <h3>Exhibit T010 (T-009A / T-0010): Relocation-Program Interface Text and Search Parameters</h3>
-        <p><strong>Page Reference:</strong> Page 11 of 27 | <strong>Annex Reference:</strong> ANNEX-T-011</p>
-        
-        <div class="img-container full-width">
-            <img src="images-evidences/T010.png" alt="Exhibit T010 - Account Hydration and Seeding" class="img-full" onerror="handleImgError(this, 'ANNEX-T-011')">
-        </div>
-
-        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
-        <p><strong>Source Text Excerpt:</strong> <code>$this->room_relocation = isset($temp['room_relocation']) ?$temp['room_relocation'] : '0';</code>. Production seed timestamped <code>2019-06-25 23:26:27</code>.</p>
-    </div>
-
-    <!-- EXHIBIT T011 -->
-    <div class="exhibit-card">
-        <h3>Exhibit T011 (T-0011A / T-0011B): System Language Seed Data (28.05.2019) & Property Database Seeding</h3>
-        <p><strong>Page Reference:</strong> Page 12 of 27 | <strong>Annex Reference:</strong> ANNEX-T-012</p>
-        
-        <div class="img-container full-width">
-            <img src="images-evidences/t-011A-B.png" alt="Exhibit T011 - System Language Seed Data" class="img-full" onerror="handleImgError(this, 'ANNEX-T-012')">
-        </div>
-
-        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
-        <p><strong>Source Text Excerpt:</strong> <code>_MS_RELOCATION_HOTEL_PROGRAM</code> dated <code>28.05.2019</code>. Hotel coordinates insertion with <code>room_relocation = 1, hotel_relocation = 1</code></p>
-    </div>
-
-    <!-- EXHIBIT T012 -->
-    <div class="exhibit-card">
-        <h3>Exhibit T012: Relational Database Table Architecture (uhb_new_bookings_rooms) & June 2019 Log</h3>
-        <p><strong>Page Reference:</strong> Page 13 of 27 | <strong>Annex Reference:</strong> ANNEX-T-013</p>
-        
-        <div class="img-container full-width">
-            <img src="images-evidences/T-012A-B.png" alt="Exhibit T012 - Relational DB Architecture" class="img-full" onerror="handleImgError(this, 'ANNEX-T-013')">
-        </div>
-
-        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
-        <p><strong>Source Text Excerpt:</strong> <code>The uhb_new_bookings_rooms</code>table records booking number, hotel, room, check-in, check-out, and price fields, documenting the database structure for room-level booking records.</code>. Account timestamps June 2019</p>
-    </div>
-
-    <!-- EXHIBIT T013 -->
-    <div class="exhibit-card">
-        <h3>Exhibit T013 (T013A / T013B / T013C): Minimum/Maximum Nights Admin Configuration</h3>
-        <p><strong>Page Reference:</strong> Page 14 of 27 | <strong>Annex Reference:</strong> ANNEX-T-014</p>
-        
-        <div class="img-container half-width">
-            <img src="images-evidences/T-013-A-B.png" alt="Exhibit T013 - Stay Duration Thresholds" class="img-full" onerror="handleImgError(this, 'ANNEX-T-014')">
-        </div>
-
-        <p><strong>Corresponds to Claim:</strong> Claim 3</p>
-        <p><strong>Source Text Excerpt:</strong> The administration interface exposes minimum-night and maximum-night settings. The associated source identifies the minimum-night configuration used in stay-duration processing. <code>Packages::GetMinimumNights(...)</code></p>
-    </div>
-
-    <!-- EXHIBIT T014 -->
-    <div class="exhibit-card">
-        <h3>Exhibit T014: Availability Search and Identification of Matching Accommodation</h3>
-        <p><strong>Page Reference:</strong> Page 15 of 27 | <strong>Annex Reference:</strong> ANNEX-T-015</p>
-        
-        <div class="img-container full-width">
-            <img src="images-evidences/T-014-A-B.png" alt="Exhibit T014 - Matching Listings" class="img-full" onerror="handleImgError(this, 'ANNEX-T-015')">
-        </div>
-
-        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
-        <p><strong>Source Text Excerpt:</strong> <code>$rooms_count = $objRooms->SearchFor($params);</code> invokes the room-search function using the supplied search parameters.</p>
-    </div>
-
-    <!-- EXHIBIT T015 -->
-    <div class="exhibit-card">
-        <h3>Exhibit T015 (T015A / T015B): Minimum-Room Constraint in Availability Processing</h3>
-        <p><strong>Page Reference:</strong> Page 16 of 27 | <strong>Annex Reference:</strong> ANNEX-T-016</p>
-        
-        <div class="img-container half-width">
-            <img src="images-evidences/T-015-A-B.png" alt="Exhibit T015 - Minimum Room Threshold Enforcement" class="img-full" onerror="handleImgError(this, 'ANNEX-T-016')">
-        </div>
-
-        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
-        <p><strong>Source Text Excerpt:</strong> <code>Packages::GetMinimumRooms(...)</code> retrieves the configured minimum-room requirement. The associated validation displays an error when the minimum booking requirement is not met.</p>
-    </div>
-
-    <!-- EXHIBIT T016 -->
-    <div class="exhibit-card">
-        <h3>Exhibit T016-A (T-016A / T-016B / T-016C / T-016D): Split-Stay Segmentation and Construction of Separate Stay-Period Parameters</h3>
-        <p><strong>Page Reference:</strong> Page 17 of 27 | <strong>Annex Reference:</strong> ANNEX-T-017</p>
-        
-        <div class="img-container full-width">
-            <img src="images-evidences/t-016-A-B-C-B.png" alt="Exhibit T016 - Segment Iteration" class="img-full" onerror="handleImgError(this, 'ANNEX-T-017')">
-        </div>
-
-        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
-        <p><strong>Source Text Excerpt:</strong> <code>$objRooms->SetRelocationType('room'); for ($i=1; $i <$nights; $i++)</code> <code>$params['from_date'] = array(1 => $result_room_1['checkin_date'], 2 =>$result_room_2['checkin_date']);</code>. Demonstrations: "Relocation to Next Door Hotel", Order Confirmations 1IQK4QUSTG / 7K6ZEQW8YB / VZ1M5OKLKD</p>
-    <div class="exhibit-card">
-        <h3>Exhibit T016 -B(T-016A / T-016B / T-016C / T-016D): Relocation Activation, Segment Iteration & Two-Part Parameter Construction</h3>
-        <p><strong>Page Reference:</strong> Page 17 of 27 | <strong>Annex Reference:</strong> ANNEX-T-017</p>
-        
-        <div class="img-container full-width">
-            <img src="images-evidences/T-016_Room.png" alt="Exhibit T016 - Segment Iteration" class="img-full" onerror="handleImgError(this, 'ANNEX-T-017')">
-        </div>
-    </div>
-
-    <!-- EXHIBIT T017 -->
-    <div class="exhibit-card">
-        <h3>Exhibit T017 (T017A / T017B): Presentation of Relocation Results and Search-Result Sorting</h3>
+        <h3>Exhibit T006 (T017A / T017B): Presentation of Relocation Results and Search-Result Sorting</h3>
         <p><strong>Page Reference:</strong> Page 18 of 27 | <strong>Annex Reference:</strong> ANNEX-T-018</p>
         
         <div class="img-container full-width">
@@ -451,9 +289,108 @@ The Examiner is invited to assess this evidence against the relevant claims, the
         <p><strong>Source Text Excerpt:</strong> <code>$objRooms->DrawSearchResult($params, 2, false, true)</code>invokes the search-result renderer. The sorting parameters include <code>sort_by, sort_rating, and sort_price</code> </p>
     </div>
 
-    <!-- EXHIBIT T018 -->
     <div class="exhibit-card">
-        <h3>Exhibit T018: Five-Day Minimum Length-of-Stay Data Schema</h3>
+        <h3>Exhibit T007 (T-008B): Database Relocation Flags and Interface Language Keys</h3>
+        <p><strong>Page Reference:</strong> Page 9 of 27 | <strong>Annex Reference:</strong> ANNEX-T-008</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/T-008A-B.png" alt="Exhibit T008 - Conditional Trigger Engine" class="img-full" onerror="handleImgError(this, 'ANNEX-T-008B')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
+        <p><strong>Source Text Excerpt:</strong> <code>Database fields <code><strong>room_relocation</strong></code> and <code><strong>hotel_relocation</strong></code> store relocation settings. Corresponding language keys include <code><strong>_MSN_ALLOW_RELOCATION_TO_OTHER_ROOM</strong></code> and <code><strong>>_MSN_ALLOW_RELOCATION_TO_OTHER_HOTEL</strong></code.</p>
+    </div>
+
+    <!--End Of Core-->-->
+
+    
+
+    <!--Supporting technical path
+    <!--1-->
+    <!-- EXHIBIT T003 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T008 (T-003A / T-003B): Multi-Hotel Listing Records & Owner Registration</h3>
+        <p><strong>Page Reference:</strong> Page 3 of 27 | <strong>Annex Reference:</strong> ANNEX-T-003</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/T003A-B.png" alt="Exhibit T003 - Multi-Hotel Listing Records" class="img-full" onerror="handleImgError(this, 'ANNEX-T-003')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
+        <p><strong>Source Text Excerpt:</strong> <code>uhb_new_hotels</code> stores individual accommodation records, while uhb_new_accounts maintains hotel-owner account records</p>
+    </div>
+
+    <!--Supporting 2-->
+    <div class="exhibit-card">
+        <h3>Exhibit T009: User and Hotel Account Tables Multi-Property Data Model</h3>
+        <p><strong>Page Reference:</strong> Page 5 of 27 | <strong>Annex Reference:</strong> ANNEX-T-005</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/T-005A-B.png" alt="Exhibit T005 - User and Hotel Account Tables" class="img-full" onerror="handleImgError(this, 'ANNEX-T-005')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
+        <p><strong>Source Text Excerpt:</strong> The database defines <code><strong>room_relocation</strong></code> and <code><strong>hotel_relocation</strong></code> flags, providing configuration fields for room-level and hotel-level relocation</p>   
+    </div>
+    <!--Support-3-->
+
+    <div class="exhibit-card">
+        <h3>Exhibit T010 (T-007A / T-007B): oom and Hotel Relocation Parameters</h3>
+        <p><strong>Page Reference:</strong> Page 8 of 27 | <strong>Annex Reference:</strong> ANNEX-T-008</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/T-007A-B.png" alt="Exhibit T007 - Schema Flags and Keys" class="img-full" onerror="handleImgError(this, 'ANNEX-T-008')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
+        <p><strong>Source Text Excerpt:</strong> <code>`room_relocation` tinyint(1) NOT NULL DEFAULT '1'</code>, <code>`hotel_relocation` tinyint(1) NOT NULL DEFAULT '1'</code>. Language keys: <code>_MSN_ALLOW_RELOCATION_TO_OTHER_ROOM</code>, <code>_MSN_ALLOW_RELOCATION_TO_OTHER_HOTEL</code>.</p>
+    </div>
+
+    <!--Suporting 4-->
+
+    <div class="exhibit-card">
+        <h3>Exhibit T011: Relational Database Table Architecture (uhb_new_bookings_rooms) & June 2019 Log</h3>
+        <p><strong>Page Reference:</strong> Page 13 of 27 | <strong>Annex Reference:</strong> ANNEX-T-013</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/T-012A-B.png" alt="Exhibit T012 - Relational DB Architecture" class="img-full" onerror="handleImgError(this, 'ANNEX-T-013')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
+        <p><strong>Source Text Excerpt:</strong> <code>The uhb_new_bookings_rooms</code>table records booking number, hotel, room, check-in, check-out, and price fields, documenting the database structure for room-level booking records.</code>. Account timestamps June 2019</p>
+    </div>
+
+    <!--Supporting 5-->
+    <div class="exhibit-card">
+        <h3>Exhibit T012 (T013A / T013B / T013C): Minimum/Maximum Nights Admin Configuration</h3>
+        <p><strong>Page Reference:</strong> Page 14 of 27 | <strong>Annex Reference:</strong> ANNEX-T-014</p>
+        
+        <div class="img-container half-width">
+            <img src="images-evidences/T-013-A-B.png" alt="Exhibit T013 - Stay Duration Thresholds" class="img-full" onerror="handleImgError(this, 'ANNEX-T-014')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 3</p>
+        <p><strong>Source Text Excerpt:</strong> The administration interface exposes minimum-night and maximum-night settings. The associated source identifies the minimum-night configuration used in stay-duration processing. <code>Packages::GetMinimumNights(...)</code></p>
+    </div>
+
+    <!--Spporting 6-->
+
+     <div class="exhibit-card">
+        <h3>Exhibit T013 (T015A / T015B): Minimum-Room Constraint in Availability Processing</h3>
+        <p><strong>Page Reference:</strong> Page 16 of 27 | <strong>Annex Reference:</strong> ANNEX-T-016</p>
+        
+        <div class="img-container half-width">
+            <img src="images-evidences/T-015-A-B.png" alt="Exhibit T015 - Minimum Room Threshold Enforcement" class="img-full" onerror="handleImgError(this, 'ANNEX-T-016')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
+        <p><strong>Source Text Excerpt:</strong> <code>Packages::GetMinimumRooms(...)</code> retrieves the configured minimum-room requirement. The associated validation displays an error when the minimum booking requirement is not met.</p>
+    </div>
+
+    <!--Supporting 7-->
+
+    <div class="exhibit-card">
+        <h3>Exhibit T014: Five-Day Minimum Length-of-Stay Data Schema</h3>
         <p><strong>Page Reference:</strong> Page 19 of 27 | <strong>Annex Reference:</strong> ANNEX-T-019</p>
         
         <div class="img-container full-width">
@@ -464,9 +401,52 @@ The Examiner is invited to assess this evidence against the relevant claims, the
         <p><strong>Source Text Excerpt:</strong> <code>CREATE TABLE IF NOT EXISTS `<DB_PREFIX>packages` (`minimum_nights` tinyint(1) NOT NULL DEFAULT '0', `maximum_nights` smallint(6) unsigned NOT NULL DEFAULT '0')</code></p>
     </div>
 
-    <!-- EXHIBIT T019 -->
-    <div class="exhibit-card">
-        <h3>Exhibit T019: Coordinate-Based Distance Calculation Function</h3>
+
+   
+
+
+
+              <div class="exhibit-card">
+        <h3>Exhibit T015-A: Source note: T001-A and T001-B are retained as two source versions of the Hotels Plus database/schema environment. They are presented as source-reference material for the technical exhibits that follow and are not asserted to represent two separate implementations</h3>
+        <p><strong>Page Reference:</strong> Page 1 of 27 | <strong>Annex Reference:</strong> ANNEX-T-001</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/SQL-1.png" alt="Exhibit T001 - SQL Dump Metadata" class="img-full" onerror="handleImgError(this, 'ANNEX-T-002')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> System Date Baseline Verification</p>
+        <p><strong>Source Text Excerpt:</strong> phpMyAdmin SQL Dump version 4.8.5; Host: mysql.hotels-plus.net; Generation Time: Aug 25, 2019 at 04:19 PM; Host: nakada.canvasback.dreamhost.com; Generation Time: Sep 07, 2020.</p>
+ <!--SQL-2-->
+                  <div class="exhibit-card">
+        <h3>Exhibit T015-B: SQL Dump Metadata and Generation Dates</h3>
+        <p><strong>Page Reference:</strong> Page 1 of 27 | <strong>Annex Reference:</strong> ANNEX-T-001</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/SQL-2.png" alt="Exhibit T002 - SQL Dump Metadata" class="img-full" onerror="handleImgError(this, 'ANNEX-T-002')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> System Date Baseline Verification</p>
+        <p><strong>Source Text Excerpt:</strong> phpMyAdmin SQL Dump version 4.8.5, Host: mysql.hotels-plus.net, Generation Time: Aug 25, 2019 at 04:19 PM. Host: nakada.canvasback.dreamhost.com, Generation Time: Sep 07, 2020.</p>
+    </div>
+              </div>
+
+     <div class="exhibit-card">
+        <h3>Exhibit T016: Hotel-Owner Registration and Association with hotel_id</h3>
+        <p><strong>Page Reference:</strong> Page 4 of 27 | <strong>Annex Reference:</strong> ANNEX-T-004</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/t-004.png" alt="Exhibit T004 - Hotel Owner Registration" class="img-full" onerror="handleImgError(this, 'ANNEX-T-004')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
+        <p><strong>Source Text Excerpt:</strong> Hotel-Owner Registration and Association with <code>hotel_id<)</code></p>
+    </div>
+    <!--End Of Suppoirting-->
+
+            <!--Additional functionality / separate claim limitations-->
+
+             <div class="exhibit-card">
+        <h3>Exhibit T017: Coordinate-Based Distance Calculation Function</h3>
         <p><strong>Page Reference:</strong> Page 20 of 27 | <strong>Annex Reference:</strong> ANNEX-T-020</p>
         
         <div class="img-container full-width">
@@ -524,9 +504,9 @@ The Examiner is invited to assess this evidence against the relevant claims, the
         <p><strong>Source Text Excerpt:</strong> <code>fHotel_GetDistantionCenterPoint()</code> Hotels Plus calculates the distance between the hotel's coordinates and the configured centre-point coordinates and stores the resulting value in distance_center, rounded to two decimal places/
 Hotel and centre-point coordinates are supplied to the distance calculation; result is stored as distance_center <code>$filter_start_distance = 0; $filter_end_distance = 1000;</code>.</p>
     </div>
-        
-    <!-- EXHIBIT T021 -->
-    <div class="exhibit-card">
+<!--End of Additional-->
+
+            <div class="exhibit-card">
         <h3>Exhibit T021: Public AJAX Endpoint Capture and Deployment Evidence</h3>
         <p><strong>Page Reference:</strong> Page 22 of 27 | <strong>Annex Reference:</strong> ANNEX-T-022</p>
         
@@ -538,8 +518,8 @@ Hotel and centre-point coordinates are supplied to the distance calculation; res
         <p><strong>Source Text Excerpt:</strong> Internet Archive capture of <code>/ajax/hotel_location.ajax.php</code> dated 9 June 2019 corroborating public endpoint deployment.</p>
     </div>
 
-    <!-- EXHIBIT T022 -->
-    <div class="exhibit-card">
+            <!--End of Adtional-->
+             <div class="exhibit-card">
         <h3>Exhibit T022 (T022 / T022A / T022B): Thematic Categories, Customer Retrieval & Customer-Linked Bookings</h3>
         <p><strong>Page References:</strong> Page 23 of 27, Page 24 of 27 | <strong>Annex References:</strong> ANNEX-T-023, ANNEX-T-024</p>
         
@@ -550,8 +530,65 @@ Hotel and centre-point coordinates are supplied to the distance calculation; res
         <p><strong>Corresponds to Claim:</strong> Claim 2</p>
         <p><strong>Source Text Excerpt:</strong> Customer group settings ("Kiting"). <code>GetCustomerInfo($customer_id)</code> joining customer groups. Booking query joining customer records: <code>LEFT OUTER JOIN `.TABLE_CUSTOMERS.` c ON b.customer_id = c.id</code>.</p>
     </div>
+            
+   
 
-    <!-- EXHIBIT T023 -->
+
+             <div class="exhibit-card">
+        <h3>Exhibit T023: Customer-Linked Booking State and Reservation Monitoring</h3>
+        <p><strong>Page Reference:</strong> Page 27 of 27 | <strong>Annex Reference:</strong> ANNEX-T-027</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/t-25.png" alt="Exhibit T025 - Reservation Monitoring" class="img-full" onerror="handleImgError(this, 'ANNEX-T-027')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 13</p>
+        <p><strong>Source Text Excerpt:</strong> Expired reservation monitor joining bookings and customer records: <code>LEFT OUTER JOIN `.TABLE_CUSTOMERS.` ON `.TABLE_BOOKINGS.`.customer_id = `.TABLE_CUSTOMERS.`.id</code>.</p>
+    </div>
+<!--Newdiv-->
+
+
+   
+    <!-- EXHIBIT T009 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T009 (T-008C / T-009A): Conditional Relocation Trigger When Availability Search Returns No Rooms</h3>
+        <p><strong>Page Reference:</strong> Page 10 of 27 | <strong>Annex Reference:</strong> ANNEX-T-010</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/T-008A-B-.png" alt="Exhibit T009 - Frontend Disclosure Constants" class="img-full" onerror="handleImgError(this, 'ANNEX-T-010')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
+        <p><strong>Source Text Excerpt:</strong> <code>The relocation settings specify whether the system may allow relocation to another room or another hotel when the availability search returns no rooms.</p>
+    </div>
+
+    <!-- EXHIBIT T010 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T010 (T-009A / T-0010): Relocation-Program Interface Text and Search Parameters</h3>
+        <p><strong>Page Reference:</strong> Page 11 of 27 | <strong>Annex Reference:</strong> ANNEX-T-011</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/T010.png" alt="Exhibit T010 - Account Hydration and Seeding" class="img-full" onerror="handleImgError(this, 'ANNEX-T-011')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
+        <p><strong>Source Text Excerpt:</strong> <code>$this->room_relocation = isset($temp['room_relocation']) ?$temp['room_relocation'] : '0';</code>. Production seed timestamped <code>2019-06-25 23:26:27</code>.</p>
+    </div>
+
+    <!-- EXHIBIT T011 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T011 (T-0011A / T-0011B): System Language Seed Data (28.05.2019) & Property Database Seeding</h3>
+        <p><strong>Page Reference:</strong> Page 12 of 27 | <strong>Annex Reference:</strong> ANNEX-T-012</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/t-011A-B.png" alt="Exhibit T011 - System Language Seed Data" class="img-full" onerror="handleImgError(this, 'ANNEX-T-012')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
+        <p><strong>Source Text Excerpt:</strong> <code>_MS_RELOCATION_HOTEL_PROGRAM</code> dated <code>28.05.2019</code>. Hotel coordinates insertion with <code>room_relocation = 1, hotel_relocation = 1</code></p>
+    </div>
+
+    
     <div class="exhibit-card">
         <h3>Exhibit T023 (T-023A / T-023B): Customer Historical Payment Aggregation & Wishlist</h3>
         <p><strong>Page Reference:</strong> Page 25 of 27 | <strong>Annex Reference:</strong> ANNEX-T-025</p>
@@ -578,17 +615,7 @@ Hotel and centre-point coordinates are supplied to the distance calculation; res
     </div>
 
     <!-- EXHIBIT T025 -->
-    <div class="exhibit-card">
-        <h3>Exhibit T025: Customer-Linked Booking State and Reservation Monitoring</h3>
-        <p><strong>Page Reference:</strong> Page 27 of 27 | <strong>Annex Reference:</strong> ANNEX-T-027</p>
-        
-        <div class="img-container full-width">
-            <img src="images-evidences/t-25.png" alt="Exhibit T025 - Reservation Monitoring" class="img-full" onerror="handleImgError(this, 'ANNEX-T-027')">
-        </div>
-
-        <p><strong>Corresponds to Claim:</strong> Claim 13</p>
-        <p><strong>Source Text Excerpt:</strong> Expired reservation monitor joining bookings and customer records: <code>LEFT OUTER JOIN `.TABLE_CUSTOMERS.` ON `.TABLE_BOOKINGS.`.customer_id = `.TABLE_CUSTOMERS.`.id</code>.</p>
-    </div>
+   
 <!--claim 14-->
     <div class="exhibit-card">
         <h3>Exhibit T0: Claim 14</h3>
