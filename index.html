@@ -148,21 +148,25 @@
     
     <div class="notice">
     <strong>Evidence Presentation Note:</strong>
-    The technical evidence is presented chronologically and according to the underlying technical operation documented by each exhibit.
-    The Examiner is invited to assess the evidentiary significance and legal characterization of the individual materials.
-    The evidence is not presented on the assumption that every individual claim limitation must be established by a single exhibit.
+   Technical Evidence: Earlier Split-Stay and Relocation Mechanism
+This technical annex presents historical Hotels Plus database, source-code, interface, and operational evidence concerning the handling of multi-day accommodation requests when continuous availability is insufficient.
+The central technical operation is the division of a requested stay into successive portions, the identification of accommodation for those portions, and the construction and presentation of a relocation or combined-stay result. The evidence is presented in chronological and functional context so that the Examiner can assess what the historical system implemented and what the contemporaneous records establish about its existence.
+The evidence is not presented on the assumption that every limitation of every claim is independently disclosed by every exhibit. The specific technical operations supported by each exhibit, and the limitations not independently established by the present record, are identified in the claim-mapping matrix.
+The Examiner is invited to assess this evidence against the relevant claims, the applicable priority date, and the requirements of the EPC..
 </div>
 
     <h2>Coherent Evidentiary Chain</h2>
     <div class="chain-box">
+        <p><strong>The following exhibits are presented together to document the Hotels Plus split-stay and relocation mechanism and its supporting technical path. They should be read in conjunction with the dated documentary and visual evidence in the separate documentary annex.</strong></p>
         <ol>
-            <li><strong>ANNEX-T-002, ANNEX-T-003, ANNEX-T-005</strong> — The database stores account-level and hotel-level relocation permissions.</li>
-            <li><strong>ANNEX-T-004, ANNEX-T-008, ANNEX-T-014</strong> — The system has database fields and administrator settings to enable relocation.</li>
-            <li><strong>ANNEX-T-007, ANNEX-T-010, ANNEX-T-012, ANNEX-T-023</strong> — The user-facing interface describes room relocation and hotel relocation.</li>
-            <li><strong>ANNEX-T-006, ANNEX-T-011</strong> — The backend reads relocation parameters and applies account-level permissions.</li>
-            <li><strong>ANNEX-T-015, ANNEX-T-016, ANNEX-T-017</strong> — The system activates relocation, searches segments, and builds a combined booking.</li>
-            <li><strong>ANNEX-T-013, ANNEX-T-024, ANNEX-T-025, ANNEX-T-026, ANNEX-T-027</strong> — Booking records and public demonstrations corroborate the transactional workflow.</li>
-            <li><strong>ANNEX-T-018, ANNEX-T-020, ANNEX-T-021, ANNEX-T-022</strong> — The result is presented through the search-result renderer.</li>
+            <li><strong>ANNEX-T-003, ANNEX-T-006, ANNEX-T-013</strong> Multi-day request and accommodation recordsThe system stores individual hotel records and processes check-in/check-out dates and stay-duration parameters</li>
+            <li><strong>ANNEX-T-004, ANNEX-T-008, ANNEX-T-010, ANNEX-T-011:</strong> Relocation configuration and activation, Database flags, administrator settings, and application parameters document the availability of room-relocation and hotel-relocation operations.</li>
+            <li><strong>ANNEX-T-015, ANNEX-T-016</strong> Availability search and inventory checksThe system searches for available rooms and applies a minimum-room constraint. The latter is relevant to inventory handling but is not, by itself, equated with Airbnb’s distinct minimum available-listing inventory threshold.</li>
+            <li><strong>ANNEX-T-017:</strong> Stay segmentation and relocation-result construction, The code iterates across portions of the requested stay and constructs separate date parameters for the resulting portions. This is the principal technical exhibit for the segmentation operation.</li>
+           <li><strong>ANNEX-T-018</strong>Result presentation and sorting, The search-result renderer presents relocation results and supports general result-sorting parameters</li>
+            <li><strong>ANNEX-T-012, ANNEX-T-013, ANNEX-T-022, ANNEX-T-027</strong> Contemporaneous deployment and operational corroboration, read with the relevant documentary and visual exhibits: These materials provide supporting database, deployment, booking, or demonstration context, subject to the date and scope established by each source.</li>
+            <li><strong>ANNEX-T-020, ANNEX-T-021, ANNEX-T-023, ANNEX-T-024, ANNEX-T-025, ANNEX-T-026</strong> Supporting distance and customer-data functions.These exhibits document additional system functions. They are not presented as independently establishing Airbnb’s particular distance-controlled combination, profile-based aggregation, or automatic destination-category-selection limitations.</li>
+           <p><strong>The central issue is the earlier split-stay operation: a multi-day accommodation request is processed into separate stay portions, with relocation functionality used to identify and present an alternative accommodation result. The individual exhibits establish different parts of that technical path; their evidentiary significance must be assessed alongside their dates, provenance, and the corresponding contemporaneous records.</strong></p>
         </ol>
     </div>
 
@@ -177,7 +181,7 @@
         <p><strong>Page Reference:</strong> Page 1 of 27 | <strong>Annex Reference:</strong> ANNEX-T-001</p>
         
         <div class="img-container full-width">
-            <img src="images-evidences/SQL-1.png" alt="Exhibit T002 - SQL Dump Metadata" class="img-full" onerror="handleImgError(this, 'ANNEX-T-002')">
+            <img src="images-evidences/SQL-1.png" alt="Exhibit T001 - SQL Dump Metadata" class="img-full" onerror="handleImgError(this, 'ANNEX-T-002')">
         </div>
 
         <p><strong>Corresponds to Claim:</strong> System Date Baseline Verification</p>
@@ -252,7 +256,7 @@
 <!--Part-1 Exh 06-->
     <!-- EXHIBIT T006 -->
     <div class="exhibit-card">
-        <h3>Exhibit T006 (T-005A / T-005B): Multi-Day Request Parameters & Normal Reservation Relocation</h3>
+        <h3>Exhibit T006 (T-005A / T-005B): Multi-Day Stay Request and Date-Range Processing</h3>
         <p><strong>Page References:</strong> Page 6 of 27, Page 7 of 27 | <strong>Annex References:</strong> ANNEX-T-006, ANNEX-T-007</p>
         
         <div class="img-container full-width">
@@ -390,7 +394,7 @@
 
     <!-- EXHIBIT T014 -->
     <div class="exhibit-card">
-        <h3>Exhibit T014: Identifying Matching Listings</h3>
+        <h3>Exhibit T014: Availability Search and Identification of Matching Accommodation</h3>
         <p><strong>Page Reference:</strong> Page 15 of 27 | <strong>Annex Reference:</strong> ANNEX-T-015</p>
         
         <div class="img-container full-width">
@@ -403,7 +407,7 @@
 
     <!-- EXHIBIT T015 -->
     <div class="exhibit-card">
-        <h3>Exhibit T015 (T015A / T015B): Minimum-Room Threshold Enforcement</h3>
+        <h3>Exhibit T015 (T015A / T015B): Minimum-Room Constraint in Availability Processing</h3>
         <p><strong>Page Reference:</strong> Page 16 of 27 | <strong>Annex Reference:</strong> ANNEX-T-016</p>
         
         <div class="img-container half-width">
@@ -416,7 +420,7 @@
 
     <!-- EXHIBIT T016 -->
     <div class="exhibit-card">
-        <h3>Exhibit T016 (T-016A / T-016B / T-016C / T-016D): Relocation Activation, Segment Iteration & Two-Part Parameter Construction</h3>
+        <h3>Exhibit T016 (T-016A / T-016B / T-016C / T-016D): Split-Stay Segmentation and Construction of Separate Stay-Period Parameters</h3>
         <p><strong>Page Reference:</strong> Page 17 of 27 | <strong>Annex Reference:</strong> ANNEX-T-017</p>
         
         <div class="img-container full-width">
@@ -436,7 +440,7 @@
 
     <!-- EXHIBIT T017 -->
     <div class="exhibit-card">
-        <h3>Exhibit T017 (T017A / T017B): Presentation of Relocation Results Through Search-Result Renderer</h3>
+        <h3>Exhibit T017 (T017A / T017B): Presentation of Relocation Results and General Search-Result Sorting</h3>
         <p><strong>Page Reference:</strong> Page 18 of 27 | <strong>Annex Reference:</strong> ANNEX-T-018</p>
         
         <div class="img-container full-width">
@@ -629,6 +633,14 @@ T003, T004, T005, T006, T007, T008, T009, T010, T011, T012, T014, T015, T016, T0
          CLAIM 1 — COMPLETE CLAIM
          ========================= -->
 
+<div class="exhibit-card">
+        <h3>Claim 1</h3>
+        <p><strong>The exhibits below document different operations within the historical Hotels Plus search and relocation path<strong>AExhibit T016</strong> is the principal exhibit for stay segmentation and the construction of separate stay-period parameters; T006 and T014 document request processing and availability search, while T015 and T017 document the associated inventory constraint and result-presentation functions. The evidence is not presented as asserting that each exhibit, considered individually, discloses every limitation of Claim 1.</p>
+        
+        <div class="img-container full-width">
+        </div>
+    
+
     <tr>
         <td><strong>Claim 1</strong></td>
         <td>
@@ -768,8 +780,7 @@ T003, T004, T005, T006, T007, T008, T009, T010, T011, T012, T014, T015, T016, T0
      <tr>
         <td colspan="4">
             <strong>Claim 3 — Evidence Observation:</strong>
-            The cited evidence establishes an operational minimum/maximum-nights constraint within the availability-processing path. The application evaluates the requested stay against configured nights constraints before proceeding with the corresponding processing. This is relevant to the claimed stay-duration threshold as an additional constraint surrounding the underlying split-stay/availability-processing CORE. The evidence is relied upon for the disclosed technical operation, rather than on a requirement that the earlier implementation use the same numerical threshold subsequently recited in the claim.
-        </td>
+            Exhibits T013 and T018 document minimum/maximum-night configuration and the associated stay-duration data structure. This evidence is relevant to the use of stay-duration constraints in the availability-processing path. The presence of a configurable constraint does not, by itself, establish that the historical system applied the specific five-day threshold in the same conditional sequence recited in Claim 1. The five-day limitation is therefore treated as an additional condition, distinct from the underlying split-stay segmentation mechanism documented in Exhibit T016</td>
     </tr>
 
     <!-- =========================
@@ -820,8 +831,7 @@ T003, T004, T005, T006, T007, T008, T009, T010, T011, T012, T014, T015, T016, T0
      <tr>
         <td colspan="4">
             <strong>Claim 4 — Evidence Observation:</strong>
-            Evidence Observation: The cited evidence documents matching/search operations, segmented availability, relocation handling, and customer/profile/booking-related data structures. The presently identified exhibits do not, however, independently establish the specific claimed operation of refining groups of stays using an aggregator based on the searching end-user's user profile, nor the claimed combination-selection operation..
-        </td>
+Exhibits T014 and T016 document availability search and segmented relocation operations. Exhibits T022–T024 document customer-linked records and related account or booking functions. The latter provide contextual evidence of customer-related data structures; they do not, by themselves, establish the specific claimed operation of refining groups of available stay portions through an aggregator based on the searching end-user’s profile. That additional limitation must be assessed separately from the underlying split-stay mechanism.        </td>
     </tr>
 
     <!-- =========================
@@ -837,7 +847,7 @@ T003, T004, T005, T006, T007, T008, T009, T010, T011, T012, T014, T015, T016, T0
             selecting either the first or second combination to generate the combined listing based on the computed rank of the first and second combinations."
         </td>
         <td>
-            Exhibits T016 / T017
+            Exhibits T-017 and ANNEX-T-018.
         </td>
         <td>
             ANNEX-T-017 (p. 17)<br>
@@ -863,7 +873,7 @@ T003, T004, T005, T006, T007, T008, T009, T010, T011, T012, T014, T015, T016, T0
             "The method of claim 5, wherein the rank for the first and second combinations is computed based on individual ranks of the first, second and third individual listings."
         </td>
         <td>
-            Exhibit T017 — Presentation of Relocation Results Through Search-Result Renderer
+            Exhibit T017 — General Search-Result Sorting,” and distinguish it from ranking alternative combined-stay combinations.
         </td>
         <td>
             ANNEX-T-018 (p. 18)
@@ -873,7 +883,7 @@ T003, T004, T005, T006, T007, T008, T009, T010, T011, T012, T014, T015, T016, T0
     <tr>
         <td colspan="4">
             <strong>Claim 6 — Evidence Observation:</strong>
-            General result sorting/ranking functionality is documented. The presently identified record does not separately establish a rank computed from the individual ranks of the first, second and third listings as specified in this claim.
+            General Search-Result Sorting,. The presently identified record does not separately establish a rank computed from the individual ranks of the first, second and third listings as specified in this claim.
         </td>
     </tr>
 
