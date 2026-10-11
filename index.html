@@ -175,77 +175,76 @@ The Examiner is invited to assess this evidence against the relevant claims, the
     
     <!--Multi listing-->
     <div class="exhibit-card">
-        <h3>Exhibit T-001 : Multi-Property Account Structure and Hotel-Owner Records</h3>
-        <p><strong>Page Reference:</strong> Page 1 of 27 | <strong>Annex Reference:</strong> ANNEX-T-001</p>
+        <h3>Exhibit T-001 : Multi-Property Database Architecture & Host Account Storage</h3>
+        <p><strong>Page Reference:</strong> Page  of 27 | <strong>Annex Reference:</strong> ANNEX-T-001</p>
         
         <div class="img-container full-width">
-            <img src="images-evidences/Exh-t02.png" alt="Exhibit T002 - Storing Listings from Multiple Posting End-Users" class="img-full" onerror="handleImgError(this, 'ANNEX-T-002')">
+            <img src="images-evidences/Exh-t02.png" alt="Exhibit T001 - Storing Listings from Multiple Posting End-Users" class="img-full" onerror="handleImgError(this, 'ANNEX-T-002')">
         </div>
 
-        <p><strong>Corresponds to Claim:</strong>  Claim 1 Storing Listings from Multiple Posting End-Users</p>
+        <p><strong>Corresponds to Claim:</strong>  Claim 1, 14, 15</p>
        
-        <p><strong>Source Text Excerpt:</strong> Distinct hotelowner accounts each with separate `companies` field.</p>
+        <p><strong>Source Text Excerpt:</strong> Storing a plurality of listings and host accounts from different posting end-users (hotel_id, owner_id, companies), corresponding to the database storage requirements of Claim 1, Claim 14, and Claim 15</p>
         
-        <p><strong>Source Text Excerpt:</strong> Distinct hotelowner accounts with separate companies fields. The associated hotel-management records show individual hotel records and management functions..</p>
-
     </div>
     <!--Rearranging-->
     <!--Intro-->
 
 
 <div class="exhibit-card">
-        <h3>Exhibit T002-A : Split-Stay Segmentation and Construction of Separate Stay-Period Parameters</h3>
-        <p><strong>Page Reference:</strong> Page 2 of 27 | <strong>Annex Reference:</strong> ANNEX-T-002</p>
+        <h3>Exhibit T002-A : Split-Stay Code Logic & Parameter Array Construction</h3>
+        <p><strong>Page Reference:</strong> Page  of 27 | <strong>Annex Reference:</strong> ANNEX-T-002</p>
         
         <div class="img-container full-width">
-            <img src="images-evidences/t-016-A-B-C-B.png" alt="Exhibit T016 - Segment Iteration" class="img-full" onerror="handleImgError(this, 'ANNEX-T-017')">
+            <img src="images-evidences/t-016-A-B-C-B.png" alt="Exhibit T002-A - Segment Iteration" class="img-full" onerror="handleImgError(this, 'ANNEX-T-017')">
         </div>
 
         <p><strong>Corresponds to Claim:</strong> Claim 1</p>
-        <p><strong>Source Text Excerpt:</strong> <code>$objRooms->SetRelocationType('room'); for ($i=1; $i <$nights; $i++)</code> <code>$params['from_date'] = array(1 => $result_room_1['checkin_date'], 2 =>$result_room_2['checkin_date']);</code>. Demonstrations: "Relocation to Next Door Hotel", Order Confirmations 1IQK4QUSTG / 7K6ZEQW8YB / VZ1M5OKLKD</p>
+        <p><strong>Source Text Excerpt:</strong> <code>Core PHP controller logic evaluating relocation activation, iterating across stay segments, and constructing two-part parameter arrays <code><strong>($params['from_date']</strong></code>, and <code><strong>$params['to_date']) </strong></code>for combined listings under Claim 1</p>
     <div class="exhibit-card">
-        <h3>Exhibit T002-B(T-016A / T-016B / T-016C / T-016D): Relocation Activation, Segment Iteration & Two-Part Parameter Construction</h3>
-        <p><strong>Page Reference:</strong> Page 17 of 27 | <strong>Annex Reference:</strong> ANNEX-T-002</p>
+        <h3>Exhibit T002-B:Segment Iteration & Two-Part Parameter Construction (Visual Code & Logic Flow</h3>
+        <p><strong>Page Reference:</strong> Page  of 27 | <strong>Annex Reference:</strong> ANNEX-T-003</p>
         
         <div class="img-container full-width">
             <img src="images-evidences/T-016_Room.png" alt="Exhibit T016 - Segment Iteration" class="img-full" onerror="handleImgError(this, 'ANNEX-T-017')">
+        <p><strong>Visual flow illustrating the iterative breakdown of a single multi-day request into two consecutive reservation segments within the same hotel or across neighboring properties.</strong></p>     
         </div>
     </div>
     <!--Search-->
 
       <!-- EXHIBIT T014 -->
     <div class="exhibit-card">
-        <h3>Exhibit T003: Availability Search and Identification of Matching Accommodation</h3>
-        <p><strong>Page Reference:</strong> Page 4 of 27 | <strong>Annex Reference:</strong> ANNEX-T-004</p>
+        <h3>Exhibit T003: Availability Search Function & Identification of Matching Listing Sets</h3>
+        <p><strong>Page Reference:</strong> Page  of 27 | <strong>Annex Reference:</strong> ANNEX-T-004</p>
         
         <div class="img-container full-width">
             <img src="images-evidences/T-014-A-B.png" alt="Exhibit T014 - Matching Listings" class="img-full" onerror="handleImgError(this, 'ANNEX-T-015')">
         </div>
 
         <p><strong>Corresponds to Claim:</strong> Claim 1</p>
-        <p><strong>Source Text Excerpt:</strong> <code>$rooms_count = $objRooms->SearchFor($params);</code> invokes the room-search function using the supplied search parameters.</p>
+        <p><strong>Source Text Excerpt:</strong> dentifying a set of individual listings matching the search request by executing query routines <code>(SearchFor($params))</code> against available room inventories prior to inventory threshold evaluation</p>
     </div>
 
     <!--Multi Days Request-->
 
     <div class="exhibit-card">
-        <h3>Exhibit T005-A (T-005A / T-005B): Multi-Day Stay Request and Date-Range Processing</h3>
-        <p><strong>Page References:</strong> Page 6 of 27, Page 6 of 27 | <strong>Annex References:</strong> ANNEX-T-006, ANNEX-T-007</p>
+        <h3>Exhibit T004 : Receiving Multi-Day Length-of-Stay Parameters & Date Calculation</h3>
+        <p><strong>Page References:</strong> Page  of 27, Page  of 27 | <strong>Annex References:</strong> ANNEX-T-005, ANNEX-T-007</p>
         
         <div class="img-container full-width">
             <img src="images-evidences/t-006A.png" alt="Exhibit T006 - Multi Day Parameters" class="img-full" onerror="handleImgError(this, 'ANNEX-T-006')">
         </div>
 
         <p><strong>Corresponds to Claim:</strong> Claim 1</p>
-        <p><strong>Source Text Excerpt:</strong> The search request processes <code><strong>from_date, to_date</strong></code> check-in, and check-out date components, and calculates the requested number of nights using <code><strong>$nights = nights_diff($checkin_date, $checkout_date</strong></code>)</p>
+        <p><strong>Source Text Excerpt:</strong> Receiving from a searching end-user a listing request specifying a multiple-day length of stay parameter, parsing check-in and check-out dates, and computing total requested stay duration ($nights)</strong></code> check-in, and check-out date components, and calculates the requested number of nights using <code><strong>$nights = nights_diff($checkin_date, $checkout_date</strong></code>)</p>
     <div class="img-container full-width">
             <img src="images-evidences/t-006B.png" alt="Exhibit T006 - Multi Day Parameters" class="img-full" onerror="handleImgError(this, 'ANNEX-T-006')">
         </div>
     </div>
 <!--Part-1 Exh 06-->
 <div class="exhibit-card">
-        <h3>Exhibit T005-B (T-005A / T-005B): Multi-Day Request Parameters and Stay-Duration Processing</h3>
-        <p><strong>Page References:</strong> Page 6 of 27, Page 7 of 27 | <strong>Annex References:</strong> ANNEX-T-006, ANNEX-T-007</p>
+        <h3>Exhibit T005: Multi-Day Stay Parameter Parsing & Threshold Comparison Logic</h3>
+        <p><strong>Page References:</strong> Page of 27, Page 7 of 27 | <strong>Annex References:</strong> ANNEX-T-006, ANNEX-T-007</p>
         
         <div class="img-container full-width">
             <img src="images-evidences/Part-B.png" alt="Exhibit T006 - Multi Day Parameters" class="img-full" onerror="handleImgError(this, 'ANNEX-T-006')">
@@ -257,11 +256,11 @@ The Examiner is invited to assess this evidence against the relevant claims, the
             <img src="images-evidences/Part A — short first block.png" alt="Exhibit T006 - Multi Day Parameters" class="img-full" onerror="handleImgError(this, 'ANNEX-T-006')">
         </div>
     <div class="img-container full-width">
-            <img src="images-evidences/Part-B.png" alt="Exhibit T006 - Multi Day Parameters" class="img-full" onerror="handleImgError(this, 'ANNEX-T-006')">
+            <img src="images-evidences/Part-B.png" alt="Exhibit T005 - Multi Day Parameters" class="img-full" onerror="handleImgError(this, 'ANNEX-T-006')">
         </div>
 
         <p><strong>Corresponds to Claim:</strong> Claim 1</p>
-        <p><strong>Source Text Excerpt:</strong> Receiving a Multi-Day Length-of-Stay Request parsing <code>from_date</code>, <code>to_date</code>, check-in, check-out year/month/day, calculating <code>$nights = nights_diff($checkin_date, $checkout_date)</code>. Live demonstration video dated May 30, 2019.</p>
+        <p><strong>Source Text Excerpt:</strong> Execution path demonstrating parameter array initialization ($params) for multi-day stay requests, feeding directly into minimum length-of-stay threshold comparisons under Claim 1 and Claim 3 <code>from_date</code>, <code>to_date</code>, check-in, check-out year/month/day, calculating <code>$nights = nights_diff($checkin_date, $checkout_date)</code>. Live demonstration video dated May 30, 2019.</p>
     <div class="img-container full-width">
             <img src="images-evidences/Part-C-Exh-05.png" alt="Exhibit T006 - Multi Day Parameters" class="img-full" onerror="handleImgError(this, 'ANNEX-T-006')">
         </div>
