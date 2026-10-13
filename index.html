@@ -145,290 +145,65 @@
     <p><strong>Target Application:</strong> European Patent Application EP 4523100.3 / PCT/US2023/019103 ("Split Stay Ranking and Matching")</p>
     <p><strong>Applicant:</strong> Airbnb, Inc.</p>
 
-    
-    <div class="notice">
-    <strong>Evidence Presentation Note:</strong>
-   Technical Evidence: Earlier Split-Stay and Relocation Mechanism
-This technical annex presents historical Hotels Plus database, source-code, interface, and operational evidence concerning the handling of multi-day accommodation requests when continuous availability is insufficient.
-The central technical operation is the division of a requested stay into successive portions, the identification of accommodation for those portions, and the construction and presentation of a relocation or combined-stay result. The evidence is presented in chronological and functional context so that the Examiner can assess what the historical system implemented and what the contemporaneous records establish about its existence.
-The evidence is not presented on the assumption that every limitation of every claim is independently disclosed by every exhibit. The specific technical operations supported by each exhibit, and the limitations not independently established by the present record, are identified in the claim-mapping matrix.
-The Examiner is invited to assess this evidence against the relevant claims, the applicable priority date, and the requirements of the EPC..
-</div>
+    <div class="dispute-notice">
+        <strong>Prior Dispute Citation:</strong> Kayak Dispute (2024) regarding split-stay accommodation search systems and algorithmic multi-segment itinerary matching.
+    </div>
 
     <h2>Coherent Evidentiary Chain</h2>
     <div class="chain-box">
-        <p><strong>The following exhibits are presented together to document the Hotels Plus split-stay and relocation mechanism and its supporting technical path. They should be read in conjunction with the dated documentary and visual evidence in the separate documentary annex.</strong></p>
         <ol>
-            <li><strong>ANNEX-T-006 / ANNEX-T-007</strong> Multi-day request parameters and the processing of requested stay dates.</li>
-            <li><strong>ANNEX-T-015:</strong> Identification of matching accommodation through the availability-search function.</li>
-            <li><strong>ANNEX-T-016</strong> Minimum-room constraint applied during availability processing.</li>
-            <li><strong>ANNEX-T-017</strong> CORE operation: relocation activation, iteration across portions of the requested stay, and construction of separate stay-period parameters.</li>
-           <li><strong>ANNEX-T-018</strong>Presentation of relocation results through the search-result renderer.</li>
-            <li><strong>ANNEX-T-002 / ANNEX-T-003 / ANNEX-T-005 / ANNEX-T-008 / ANNEX-T-011</strong> Supporting database structures, multi-property records, and relocation configuration.</li>            
-            <li><strong>ANNEX-T-012 / ANNEX-T-013 / ANNEX-T-022 / ANNEX-T-023 / ANNEX-T-024 / ANNEX-T-025 / ANNEX-T-026 / ANNEX-T-027</strong> Supporting deployment, booking, customer-data, and demonstration context.</li>
-           <p><strong>The central technical evidence is the processing of a multi-day request into separate stay portions and the construction and presentation of a relocation result. The other exhibits document the supporting system environment and its operation</strong></p>
+            <li><strong>ANNEX-T-002, ANNEX-T-003, ANNEX-T-005</strong> — The database stores account-level and hotel-level relocation permissions[cite: 18, 19, 21].</li>
+            <li><strong>ANNEX-T-004, ANNEX-T-008, ANNEX-T-014</strong> — The system has database fields and administrator settings to enable relocation[cite: 20, 25, 30].</li>
+            <li><strong>ANNEX-T-007, ANNEX-T-010, ANNEX-T-012, ANNEX-T-023</strong> — The user-facing interface describes room relocation and hotel relocation[cite: 24, 26, 28].</li>
+            <li><strong>ANNEX-T-006, ANNEX-T-011</strong> — The backend reads relocation parameters and applies account-level permissions[cite: 22, 27].</li>
+            <li><strong>ANNEX-T-015, ANNEX-T-016, ANNEX-T-017</strong> — The system activates relocation, searches segments, and builds a combined booking[cite: 31, 32, 33].</li>
+            <li><strong>ANNEX-T-013, ANNEX-T-024, ANNEX-T-025, ANNEX-T-026, ANNEX-T-027</strong> — Booking records and public demonstrations corroborate the transactional workflow[cite: 29].</li>
+            <li><strong>ANNEX-T-018, ANNEX-T-020, ANNEX-T-021, ANNEX-T-022</strong> — The result is presented through the search-result renderer[cite: 34, 36, 37, 38].</li>
         </ol>
     </div>
 
     <h2>Evidentiary Annex Grouping & Claims Mapping</h2>
-    <!--New One-->
-    <!--SQL-->
 
-
+    <!-- EXHIBIT T002 -->
     <div class="exhibit-card">
-        <h3>Exhibit T01-A&B: Source note: T0015-A and T0015-B are retained as two source versions of the Hotels Plus database/schema environment. They are presented as source-reference material for the technical exhibits that follow and are not asserted to represent two separate implementations</h3>
-        <p><strong>Page Reference:</strong> Page 1 of 27 | <strong>Annex Reference:</strong> ANNEX-T-001</p>
+        <h3>Exhibit T002: SQL Dump Metadata and Generation Dates</h3>
+        <p><strong>Page Reference:</strong> Page 2 of 27 | <strong>Annex Reference:</strong> ANNEX-T-002</p>
         
         <div class="img-container full-width">
-            <img src="images-evidences/SQL-1.png" alt="Exhibit T001 - SQL Dump Metadata" class="img-full" onerror="handleImgError(this, 'ANNEX-T-002')">
+            <img src="images-evidences/SQL-1.png" alt="Exhibit T002 - SQL Dump Metadata" class="img-full" onerror="handleImgError(this, 'ANNEX-T-002')">
         </div>
 
         <p><strong>Corresponds to Claim:</strong> System Date Baseline Verification</p>
-        <p><strong>Source Text Excerpt:</strong> phpMyAdmin SQL Dump version 4.8.5; Host: mysql.hotels-plus.net; Generation Time: Aug 25, 2019 at 04:19 PM; Host: nakada.canvasback.dreamhost.com; Generation Time: Sep 07, 2020.</p>
- <!--SQL-2-->
-                  
+        <p><strong>Source Text Excerpt:</strong> phpMyAdmin SQL Dump version 4.8.5, Host: mysql.hotels-plus.net, Generation Time: Aug 25, 2019 at 04:19 PM[cite: 18]. Host: nakada.canvasback.dreamhost.com, Generation Time: Sep 07, 2020[cite: 18].</p>
+    </div>
+<!--Newdiv-->
+<div class="exhibit-card">
+        <h3>Exhibit T002: SQL Dump Metadata and Generation Dates</h3>
+        <p><strong>Page Reference:</strong> Page 2 of 27 | <strong>Annex Reference:</strong> ANNEX-T-002</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/SQL-2.png" alt="Exhibit T002 - SQL Dump Metadata" class="img-full" onerror="handleImgError(this, 'ANNEX-T-002')">
+        </div>
 
         <p><strong>Corresponds to Claim:</strong> System Date Baseline Verification</p>
-        <p><strong>Source Text Excerpt:</strong> phpMyAdmin SQL Dump version 4.8.5, Host: mysql.hotels-plus.net, Generation Time: Aug 25, 2019 at 04:19 PM. Host: nakada.canvasback.dreamhost.com, Generation Time: Sep 07, 2020.</p>
+        <p><strong>Source Text Excerpt:</strong> phpMyAdmin SQL Dump version 4.8.5, Host: mysql.hotels-plus.net, Generation Time: Aug 25, 2019 at 04:19 PM[cite: 18]. Host: nakada.canvasback.dreamhost.com, Generation Time: Sep 07, 2020[cite: 18].</p>
     </div>
-              </div>
-    
-    <!--Multi listing-->
-    <div class="exhibit-card">
-        <h3>Exhibit T-001 : Multi-Property Database Architecture & Host Account Storage</h3>
-        <p><strong>Page Reference:</strong> Page  of 27 | <strong>Annex Reference:</strong> ANNEX-T-001</p>
-        
-        <div class="img-container full-width">
-            <img src="images-evidences/Exh-t02.png" alt="Exhibit T001 - Storing Listings from Multiple Posting End-Users" class="img-full" onerror="handleImgError(this, 'ANNEX-T-002')">
-        </div>
-
-        <p><strong>Corresponds to Claim:</strong>  Claim 1, 14, 15</p>
-       
-        <p><strong>Source Text Excerpt:</strong> Storing a plurality of listings and host accounts from different posting end-users (hotel_id, owner_id, companies), corresponding to the database storage requirements of Claim 1, Claim 14, and Claim 15</p>
-        
-    </div>
-    <!--Rearranging-->
-    <!--Intro-->
-
-
-<div class="exhibit-card">
-        <h3>Exhibit T002-A : Split-Stay Code Logic & Parameter Array Construction</h3>
-        <p><strong>Page Reference:</strong> Page  of 27 | <strong>Annex Reference:</strong> ANNEX-T-002</p>
-        
-        <div class="img-container full-width">
-            <img src="images-evidences/t-016-A-B-C-B.png" alt="Exhibit T002-A - Segment Iteration" class="img-full" onerror="handleImgError(this, 'ANNEX-T-017')">
-        </div>
-
-        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
-        <p><strong>Source Text Excerpt:</strong> <code>Core PHP controller logic evaluating relocation activation, iterating across stay segments, and constructing two-part parameter arrays <code><strong>($params['from_date']</strong></code>, and <code><strong>$params['to_date']) </strong></code>for combined listings under Claim 1</p>
-    <div class="exhibit-card">
-        <h3>Exhibit T002-B:Segment Iteration & Two-Part Parameter Construction (Visual Code & Logic Flow</h3>
-        <p><strong>Page Reference:</strong> Page  of 27 | <strong>Annex Reference:</strong> ANNEX-T-003</p>
-        
-        <div class="img-container full-width">
-            <img src="images-evidences/T-016_Room.png" alt="Exhibit T016 - Segment Iteration" class="img-full" onerror="handleImgError(this, 'ANNEX-T-017')">
-        <p><strong>Visual flow illustrating the iterative breakdown of a single multi-day request into two consecutive reservation segments within the same hotel or across neighboring properties.</strong></p>     
-        </div>
-    </div>
-    <!--Search-->
-
-      <!-- EXHIBIT T014 -->
-    <div class="exhibit-card">
-        <h3>Exhibit T003: Availability Search Function & Identification of Matching Listing Sets</h3>
-        <p><strong>Page Reference:</strong> Page  of 27 | <strong>Annex Reference:</strong> ANNEX-T-004</p>
-        
-        <div class="img-container full-width">
-            <img src="images-evidences/T-014-A-B.png" alt="Exhibit T014 - Matching Listings" class="img-full" onerror="handleImgError(this, 'ANNEX-T-015')">
-        </div>
-
-        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
-        <p><strong>Source Text Excerpt:</strong> dentifying a set of individual listings matching the search request by executing query routines <code>(SearchFor($params))</code> against available room inventories prior to inventory threshold evaluation</p>
-    </div>
-
-    <!--Multi Days Request-->
-
-    <div class="exhibit-card">
-        <h3>Exhibit T004 : Receiving Multi-Day Length-of-Stay Parameters & Date Calculation</h3>
-        <p><strong>Page References:</strong> Page  of 27, Page  of 27 | <strong>Annex References:</strong> ANNEX-T-005, ANNEX-T-007</p>
-        
-        <div class="img-container full-width">
-            <img src="images-evidences/t-006A.png" alt="Exhibit T006 - Multi Day Parameters" class="img-full" onerror="handleImgError(this, 'ANNEX-T-006')">
-        </div>
-
-        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
-        <p><strong>Source Text Excerpt:</strong> Receiving from a searching end-user a listing request specifying a multiple-day length of stay parameter, parsing check-in and check-out dates, and computing total requested stay duration ($nights)</strong></code> check-in, and check-out date components, and calculates the requested number of nights using <code><strong>$nights = nights_diff($checkin_date, $checkout_date</strong></code>)</p>
-    <div class="img-container full-width">
-            <img src="images-evidences/t-006B.png" alt="Exhibit T006 - Multi Day Parameters" class="img-full" onerror="handleImgError(this, 'ANNEX-T-006')">
-        </div>
-    </div>
-<!--Part-1 Exh 06-->
-<div class="exhibit-card">
-        <h3>Exhibit T005: Multi-Day Stay Parameter Parsing & Threshold Comparison Logic</h3>
-        <p><strong>Page References:</strong> Page of 27, Page 7 of 27 | <strong>Annex References:</strong> ANNEX-T-006, ANNEX-T-007</p>
-        
-        <div class="img-container full-width">
-            <img src="images-evidences/Part-B.png" alt="Exhibit T006 - Multi Day Parameters" class="img-full" onerror="handleImgError(this, 'ANNEX-T-006')">
-        </div>
-
-        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
-        <p><strong>Source Text Excerpt:</strong> Receiving a Multi-Day Length-of-Stay Request parsing <code>from_date</code>, <code>to_date</code>, check-in, check-out year/month/day, calculating <code>$nights = nights_diff($checkin_date, $checkout_date)</code>. Live demonstration video dated May 30, 2019.</p>
-    <div class="img-container full-width">
-            <img src="images-evidences/Part A — short first block.png" alt="Exhibit T006 - Multi Day Parameters" class="img-full" onerror="handleImgError(this, 'ANNEX-T-006')">
-        </div>
-    <div class="img-container full-width">
-            <img src="images-evidences/Part-B.png" alt="Exhibit T005 - Multi Day Parameters" class="img-full" onerror="handleImgError(this, 'ANNEX-T-006')">
-        </div>
-
-        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
-        <p><strong>Source Text Excerpt:</strong> Execution path demonstrating parameter array initialization ($params) for multi-day stay requests, feeding directly into minimum length-of-stay threshold comparisons under Claim 1 and Claim 3 <code>from_date</code>, <code>to_date</code>, check-in, check-out year/month/day, calculating <code>$nights = nights_diff($checkin_date, $checkout_date)</code>. Live demonstration video dated May 30, 2019.</p>
-    <div class="img-container full-width">
-            <img src="images-evidences/Part-C-Exh-05.png" alt="Exhibit T006 - Multi Day Parameters" class="img-full" onerror="handleImgError(this, 'ANNEX-T-006')">
-        </div>
-    <div class="img-container full-width">
-            <img src="images-evidences/Part-B.png" alt="Exhibit T006 - Multi Day Parameters" class="img-full" onerror="handleImgError(this, 'ANNEX-T-006')">
-        </div>
-
-        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
-        <p><strong>Source Text Excerpt:</strong> Receiving a Multi-Day Length-of-Stay Request parsing <code>from_date</code>, <code>to_date</code>, check-in, check-out year/month/day, calculating <code>$nights = nights_diff($checkin_date, $checkout_date)</code>. Live demonstration video dated May 30, 2019.</p>
-    <div class="img-container full-width">
-            <img src="images-evidences/hotel-relocation.png" alt="Exhibit T006 - Multi Day Parameters" class="img-full" onerror="handleImgError(this, 'ANNEX-T-006')">
-        </div>
-
-    <!--Relocation Result-->
-
-    <div class="exhibit-card">
-        <h3>Exhibit T006: Presentation of Relocation Results and Search-Result Sorting</h3>
-        <p><strong>Page Reference:</strong> Page 18 of 27 | <strong>Annex Reference:</strong> ANNEX-T-018</p>
-        
-        <div class="img-container full-width">
-            <img src="images-evidences/t-017-A-B.png" alt="Exhibit T017 - Search Result Renderer" class="img-full" onerror="handleImgError(this, 'ANNEX-T-018')">
-        </div>
-
-        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
-        <p><strong>Source Text Excerpt:</strong> <code>$objRooms->DrawSearchResult($params, 2, false, true)</code>invokes the search-result renderer. The sorting parameters include <code>sort_by, sort_rating, and sort_price</code> </p>
-    </div>
-
-    <div class="exhibit-card">
-        <h3>Exhibit T007: Database Relocation Flags and Interface Language Keys</h3>
-        <p><strong>Page Reference:</strong> Page  of 27 | <strong>Annex Reference:</strong> ANNEX-T-008</p>
-        
-        <div class="img-container full-width">
-            <img src="images-evidences/T-008A-B.png" alt="Exhibit T008 - Conditional Trigger Engine" class="img-full" onerror="handleImgError(this, 'ANNEX-T-008B')">
-        </div>
-
-        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
-        <p><strong>Source Text Excerpt:</strong> <code>Database fields <code><strong>room_relocation</strong></code> and <code><strong>hotel_relocation</strong></code> store relocation settings. Corresponding language keys include <code><strong>_MSN_ALLOW_RELOCATION_TO_OTHER_ROOM</strong></code> and <code><strong>>_MSN_ALLOW_RELOCATION_TO_OTHER_HOTEL</strong></code.</p>
-    </div>
-
-    <!--End Of Core-->-->
-
-    
-
-    <!--Supporting technical path
-    <!--1-->
     <!-- EXHIBIT T003 -->
     <div class="exhibit-card">
-        <h3>Exhibit T008 : Multi-Hotel Listing Records & Owner Registration</h3>
-        <p><strong>Page Reference:</strong> Page  of 27 | <strong>Annex Reference:</strong> ANNEX-T-003</p>
+        <h3>Exhibit T003 (T-003A / T-003B): Multi-Hotel Listing Records & Owner Registration</h3>
+        <p><strong>Page Reference:</strong> Page 3 of 27 | <strong>Annex Reference:</strong> ANNEX-T-003</p>
         
         <div class="img-container full-width">
             <img src="images-evidences/T003A-B.png" alt="Exhibit T003 - Multi-Hotel Listing Records" class="img-full" onerror="handleImgError(this, 'ANNEX-T-003')">
         </div>
 
         <p><strong>Corresponds to Claim:</strong> Claim 1</p>
-        <p><strong>Source Text Excerpt:</strong> <code>uhb_new_hotels</code> stores individual accommodation records, while uhb_new_accounts maintains hotel-owner account records</p>
+        <p><strong>Source Text Excerpt:</strong> Multi-Hotel Listing Records in <code>uhb_new_hotels</code>[cite: 19]. Stores individual accommodation records in <code>uhb_new_hotels</code> and maintains multiple hotel-owner accounts in <code>uhb_new_accounts</code>[cite: 19].</p>
     </div>
 
-    <!--Supporting 2-->
+    <!-- EXHIBIT T004 -->
     <div class="exhibit-card">
-        <h3>Exhibit T009: User and Hotel Account Tables Multi-Property Data Model</h3>
-        <p><strong>Page Reference:</strong> Page 5 of 27 | <strong>Annex Reference:</strong> ANNEX-T-005</p>
-        
-        <div class="img-container full-width">
-            <img src="images-evidences/T-005A-B.png" alt="Exhibit T005 - User and Hotel Account Tables" class="img-full" onerror="handleImgError(this, 'ANNEX-T-005')">
-        </div>
-
-        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
-        <p><strong>Source Text Excerpt:</strong> The database defines <code><strong>room_relocation</strong></code> and <code><strong>hotel_relocation</strong></code> flags, providing configuration fields for room-level and hotel-level relocation</p>   
-    </div>
-    <!--Support-3-->
-
-    <div class="exhibit-card">
-        <h3>Exhibit T010: oom and Hotel Relocation Parameters</h3>
-        <p><strong>Page Reference:</strong> Page  of 27 | <strong>Annex Reference:</strong> ANNEX-T-008</p>
-        
-        <div class="img-container full-width">
-            <img src="images-evidences/T-007A-B.png" alt="Exhibit T007 - Schema Flags and Keys" class="img-full" onerror="handleImgError(this, 'ANNEX-T-008')">
-        </div>
-
-        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
-        <p><strong>Source Text Excerpt:</strong> <code>`room_relocation` tinyint(1) NOT NULL DEFAULT '1'</code>, <code>`hotel_relocation` tinyint(1) NOT NULL DEFAULT '1'</code>. Language keys: <code>_MSN_ALLOW_RELOCATION_TO_OTHER_ROOM</code>, <code>_MSN_ALLOW_RELOCATION_TO_OTHER_HOTEL</code>.</p>
-    </div>
-
-    <!--Suporting 4-->
-
-    <div class="exhibit-card">
-        <h3>Exhibit T011: Relational Database Table Architecture (uhb_new_bookings_rooms) & June 2019 Log</h3>
-        <p><strong>Page Reference:</strong> Page 13 of 27 | <strong>Annex Reference:</strong> ANNEX-T-013</p>
-        
-        <div class="img-container full-width">
-            <img src="images-evidences/T-012A-B.png" alt="Exhibit T012 - Relational DB Architecture" class="img-full" onerror="handleImgError(this, 'ANNEX-T-013')">
-        </div>
-
-        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
-        <p><strong>Source Text Excerpt:</strong> <code>The uhb_new_bookings_rooms</code>table records booking number, hotel, room, check-in, check-out, and price fields, documenting the database structure for room-level booking records.</code>. Account timestamps June 2019</p>
-    </div>
-
-    <!--Supporting 5-->
-    <div class="exhibit-card">
-        <h3>Exhibit T012 : Minimum/Maximum Nights Admin Configuration</h3>
-        <p><strong>Page Reference:</strong> Page 14 of 27 | <strong>Annex Reference:</strong> ANNEX-T-014</p>
-        
-        <div class="img-container half-width">
-            <img src="images-evidences/T-013-A-B.png" alt="Exhibit T013 - Stay Duration Thresholds" class="img-full" onerror="handleImgError(this, 'ANNEX-T-014')">
-        </div>
-
-        <p><strong>Corresponds to Claim:</strong> Claim 3</p>
-        <p><strong>Source Text Excerpt:</strong> The administration interface exposes minimum-night and maximum-night settings. The associated source identifies the minimum-night configuration used in stay-duration processing. <code>Packages::GetMinimumNights(...)</code></p>
-    </div>
-
-    <!--Spporting 6-->
-
-     <div class="exhibit-card">
-        <h3>Exhibit T013 : Minimum-Room Constraint in Availability Processing</h3>
-        <p><strong>Page Reference:</strong> Page 16 of 27 | <strong>Annex Reference:</strong> ANNEX-T-016</p>
-        
-        <div class="img-container half-width">
-            <img src="images-evidences/T-015-A-B.png" alt="Exhibit T015 - Minimum Room Threshold Enforcement" class="img-full" onerror="handleImgError(this, 'ANNEX-T-016')">
-        </div>
-
-        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
-        <p><strong>Source Text Excerpt:</strong> <code>Packages::GetMinimumRooms(...)</code> retrieves the configured minimum-room requirement. The associated validation displays an error when the minimum booking requirement is not met.</p>
-    </div>
-
-    <!--Supporting 7-->
-
-    <div class="exhibit-card">
-        <h3>Exhibit T014: Five-Day Minimum Length-of-Stay Data Schema</h3>
-        <p><strong>Page Reference:</strong> Page 19 of 27 | <strong>Annex Reference:</strong> ANNEX-T-019</p>
-        
-        <div class="img-container full-width">
-            <img src="images-evidences/t-018.png" alt="Exhibit T018 - Five Day Minimum Schema" class="img-full" onerror="handleImgError(this, 'ANNEX-T-019')">
-        </div>
-
-        <p><strong>Corresponds to Claim:</strong> Claim 3</p>
-        <p><strong>Source Text Excerpt:</strong> <code>CREATE TABLE IF NOT EXISTS `<DB_PREFIX>packages` (`minimum_nights` tinyint(1) NOT NULL DEFAULT '0', `maximum_nights` smallint(6) unsigned NOT NULL DEFAULT '0')</code></p>
-    </div>
-
-
-   
-
-
-
-          
-
-     <div class="exhibit-card">
-        <h3>Exhibit T016: Hotel-Owner Registration and Association with hotel_id</h3>
+        <h3>Exhibit T004: Hotel-Owner Registration and Association with hotel_id</h3>
         <p><strong>Page Reference:</strong> Page 4 of 27 | <strong>Annex Reference:</strong> ANNEX-T-004</p>
         
         <div class="img-container full-width">
@@ -436,14 +211,204 @@ The Examiner is invited to assess this evidence against the relevant claims, the
         </div>
 
         <p><strong>Corresponds to Claim:</strong> Claim 1</p>
-        <p><strong>Source Text Excerpt:</strong> Hotel-Owner Registration and Association with <code>hotel_id<)</code></p>
+        <p><strong>Source Text Excerpt:</strong> Search for rooms in one location: <code>$rooms_found && ModulesSettings::Get('rooms', 'allow_relocation_to_other_hotel') == "yes" && !empty($hotel_sel_loc_id)</code>[cite: 20].</p>
     </div>
-    <!--End Of Suppoirting-->
 
-            <!--Additional functionality / separate claim limitations-->
+    <!-- EXHIBIT T005 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T005: User and Hotel Account Tables Multi-Property Data Model</h3>
+        <p><strong>Page Reference:</strong> Page 5 of 27 | <strong>Annex Reference:</strong> ANNEX-T-005</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/T-005A-B.png" alt="Exhibit T005 - User and Hotel Account Tables" class="img-full" onerror="handleImgError(this, 'ANNEX-T-005')">
+        </div>
 
-             <div class="exhibit-card">
-        <h3>Exhibit T017: Coordinate-Based Distance Calculation Function</h3>
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
+        <p><strong>Source Text Excerpt:</strong> Database structure stores hotel-owner accounts and associated property information, supporting the multi-property environment used by the booking system[cite: 21]. Contains <code>room_relocation tinyint(1) NOT NULL DEFAULT '1'</code> and <code>hotel_relocation tinyint(1) NOT NULL DEFAULT '1'</code>[cite: 21].</p>
+    </div>
+
+    <!-- EXHIBIT T006 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T006 (T-005A / T-005B): Multi-Day Request Parameters & Normal Reservation Relocation</h3>
+        <p><strong>Page References:</strong> Page 6 of 27, Page 7 of 27 | <strong>Annex References:</strong> ANNEX-T-006, ANNEX-T-007</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/t-006A.png" alt="Exhibit T006 - Multi Day Parameters" class="img-full" onerror="handleImgError(this, 'ANNEX-T-006')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
+        <p><strong>Source Text Excerpt:</strong> Receiving a Multi-Day Length-of-Stay Request parsing <code>from_date</code>, <code>to_date</code>, check-in, check-out year/month/day, calculating <code>$nights = nights_diff($checkin_date, $checkout_date)</code>[cite: 22]. Live demonstration video dated May 30, 2019[cite: 23].</p>
+    <div class="img-container full-width">
+            <img src="images-evidences/T-006B.png" alt="Exhibit T006 - Multi Day Parameters" class="img-full" onerror="handleImgError(this, 'ANNEX-T-006')">
+        </div>
+    </div>
+
+    <!-- EXHIBIT T007 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T007 (T-007A / T-007B): Database Schema Flags & User Interface Language Keys</h3>
+        <p><strong>Page Reference:</strong> Page 8 of 27 | <strong>Annex Reference:</strong> ANNEX-T-008</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/T-007A-B.png" alt="Exhibit T007 - Schema Flags and Keys" class="img-full" onerror="handleImgError(this, 'ANNEX-T-008')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
+        <p><strong>Source Text Excerpt:</strong> <code>`room_relocation` tinyint(1) NOT NULL DEFAULT '1'</code>, <code>`hotel_relocation` tinyint(1) NOT NULL DEFAULT '1'</code>[cite: 24]. Language keys: <code>_MSN_ALLOW_RELOCATION_TO_OTHER_ROOM</code>, <code>_MSN_ALLOW_RELOCATION_TO_OTHER_HOTEL</code>[cite: 24].</p>
+    </div>
+
+    <!-- EXHIBIT T008 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T008 (T-008B): Conditional Trigger Engine for Continuous Availability Gaps</h3>
+        <p><strong>Page Reference:</strong> Page 9 of 27 | <strong>Annex Reference:</strong> ANNEX-T-008</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/T-008A-B.png" alt="Exhibit T008 - Conditional Trigger Engine" class="img-full" onerror="handleImgError(this, 'ANNEX-T-008B')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
+        <p><strong>Source Text Excerpt:</strong> <code>Specifies whether allow relocation to other room on empty search results</code> and <code>Specifies whether allow relocation to other hotel on empty search results</code>[cite: 25].</p>
+    </div>
+
+    <!-- EXHIBIT T009 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T009 (T-008C / T-009A): Frontend Disclosure Constants & Search Controller Evaluation</h3>
+        <p><strong>Page Reference:</strong> Page 10 of 27 | <strong>Annex Reference:</strong> ANNEX-T-010</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/T-008A-B-.png" alt="Exhibit T009 - Frontend Disclosure Constants" class="img-full" onerror="handleImgError(this, 'ANNEX-T-010')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
+        <p><strong>Source Text Excerpt:</strong> <code>define("_MS_RELOCATION_HOTEL_PROGRAM", "Enjoy 10% off rate when you choose smart relocation program<br>Now get oriented by splitting your holiday in two hotels, same area, same hotel category.")</code>[cite: 26]. Extraction of <code>$_POST['room_relocation']</code> and <code>$_POST['hotel_relocation']</code>[cite: 26].</p>
+    </div>
+
+    <!-- EXHIBIT T010 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T010 (T-009A / T-0010): User/Host Account Model Hydration & Production Account Seeding</h3>
+        <p><strong>Page Reference:</strong> Page 11 of 27 | <strong>Annex Reference:</strong> ANNEX-T-011</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/T010.png" alt="Exhibit T010 - Account Hydration and Seeding" class="img-full" onerror="handleImgError(this, 'ANNEX-T-011')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
+        <p><strong>Source Text Excerpt:</strong> <code>$this->room_relocation = isset($temp['room_relocation']) ?$temp['room_relocation'] : '0';</code>[cite: 27]. Production seed timestamped <code>2019-06-25 23:26:27</code>[cite: 27].</p>
+    </div>
+
+    <!-- EXHIBIT T011 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T011 (T-0011A / T-0011B): System Language Seed Data (28.05.2019) & Property Database Seeding</h3>
+        <p><strong>Page Reference:</strong> Page 12 of 27 | <strong>Annex Reference:</strong> ANNEX-T-012</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/t-011A-B.png" alt="Exhibit T011 - System Language Seed Data" class="img-full" onerror="handleImgError(this, 'ANNEX-T-012')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
+        <p><strong>Source Text Excerpt:</strong> <code>_MS_RELOCATION_HOTEL_PROGRAM</code> dated <code>28.05.2019</code>[cite: 28]. Hotel coordinates insertion with <code>room_relocation = 1, hotel_relocation = 1</code>[cite: 28].</p>
+    </div>
+
+    <!-- EXHIBIT T012 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T012: Relational Database Table Architecture (uhb_new_bookings_rooms) & June 2019 Log</h3>
+        <p><strong>Page Reference:</strong> Page 13 of 27 | <strong>Annex Reference:</strong> ANNEX-T-013</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/T-012A-B.png" alt="Exhibit T012 - Relational DB Architecture" class="img-full" onerror="handleImgError(this, 'ANNEX-T-013')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
+        <p><strong>Source Text Excerpt:</strong> <code>CREATE TABLE `uhb_new_bookings_rooms` (`booking_number`, `hotel_id`, `room_id`, `checkin`, `checkout`, `price`)</code>[cite: 29]. Account timestamps June 2019[cite: 29].</p>
+    </div>
+
+    <!-- EXHIBIT T013 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T013 (T013A / T013B / T013C): Minimum/Maximum Nights Admin Configuration</h3>
+        <p><strong>Page Reference:</strong> Page 14 of 27 | <strong>Annex Reference:</strong> ANNEX-T-014</p>
+        
+        <div class="img-container half-width">
+            <img src="images-evidences/T-013-A-B.png" alt="Exhibit T013 - Stay Duration Thresholds" class="img-full" onerror="handleImgError(this, 'ANNEX-T-014')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 3</p>
+        <p><strong>Source Text Excerpt:</strong> Admin panel for Minimum Nights / Maximum Nights[cite: 30]. <code>Packages::GetMinimumNights(...)</code>[cite: 30].</p>
+    </div>
+
+    <!-- EXHIBIT T014 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T014: Identifying Matching Listings</h3>
+        <p><strong>Page Reference:</strong> Page 15 of 27 | <strong>Annex Reference:</strong> ANNEX-T-015</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/T-014-A-B.png" alt="Exhibit T014 - Matching Listings" class="img-full" onerror="handleImgError(this, 'ANNEX-T-015')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
+        <p><strong>Source Text Excerpt:</strong> <code>$rooms_count = $objRooms->SearchFor ($params);</code>[cite: 31]. Public Demonstration of Availability Search and Matching Results (YouTube, 30 May 2019)[cite: 31].</p>
+    </div>
+
+    <!-- EXHIBIT T015 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T015 (T015A / T015B): Minimum-Room Threshold Enforcement</h3>
+        <p><strong>Page Reference:</strong> Page 16 of 27 | <strong>Annex Reference:</strong> ANNEX-T-016</p>
+        
+        <div class="img-container half-width">
+            <img src="images-evidences/T-015-A-B.png" alt="Exhibit T015 - Minimum Room Threshold Enforcement" class="img-full" onerror="handleImgError(this, 'ANNEX-T-016')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
+        <p><strong>Source Text Excerpt:</strong> <code>Packages::GetMinimumRooms(...)</code>, <code>printError(str_replace('NUM_ROOMS', $minimum_rooms, CONTINUE_MUST_BOOK_MIN));</code>[cite: 32].</p>
+    </div>
+
+    <!-- EXHIBIT T016 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T016 (T-016A / T-016B / T-016C / T-016D): Relocation Activation, Segment Iteration & Two-Part Parameter Construction</h3>
+        <p><strong>Page Reference:</strong> Page 17 of 27 | <strong>Annex Reference:</strong> ANNEX-T-017</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/t-016-A-B-C-B.png" alt="Exhibit T016 - Segment Iteration" class="img-full" onerror="handleImgError(this, 'ANNEX-T-017')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
+        <p><strong>Source Text Excerpt:</strong> <code>$objRooms->SetRelocationType('room'); for ($i=1; $i <$nights; $i++)</code>[cite: 33]. <code>$params['from_date'] = array(1 => $result_room_1['checkin_date'], 2 =>$result_room_2['checkin_date']);</code>[cite: 33]. Demonstrations: "Relocation to Next Door Hotel", Order Confirmations 1IQK4QUSTG / 7K6ZEQW8YB / VZ1M5OKLKD[cite: 33].</p>
+    <div class="exhibit-card">
+        <h3>Exhibit T016 (T-016A / T-016B / T-016C / T-016D): Relocation Activation, Segment Iteration & Two-Part Parameter Construction</h3>
+        <p><strong>Page Reference:</strong> Page 17 of 27 | <strong>Annex Reference:</strong> ANNEX-T-017</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/T-016_Room.png" alt="Exhibit T016 - Segment Iteration" class="img-full" onerror="handleImgError(this, 'ANNEX-T-017')">
+        </div>
+    </div>
+
+    <!-- EXHIBIT T017 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T017 (T017A / T017B): Presentation of Relocation Results Through Search-Result Renderer</h3>
+        <p><strong>Page Reference:</strong> Page 18 of 27 | <strong>Annex Reference:</strong> ANNEX-T-018</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/t-017-A-B.png" alt="Exhibit T017 - Search Result Renderer" class="img-full" onerror="handleImgError(this, 'ANNEX-T-018')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
+        <p><strong>Source Text Excerpt:</strong> <code>$searchResult = $objRooms->DrawSearchResult($params, 2, false, true);</code>[cite: 34]. Sorting parameters array includes <code>sort_by</code>, <code>sort_rating</code>, <code>sort_price</code>[cite: 34].</p>
+    </div>
+
+    <!-- EXHIBIT T018 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T018: Five-Day Minimum Length-of-Stay Data Schema</h3>
+        <p><strong>Page Reference:</strong> Page 19 of 27 | <strong>Annex Reference:</strong> ANNEX-T-019</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/t-018.png" alt="Exhibit T018 - Five Day Minimum Schema" class="img-full" onerror="handleImgError(this, 'ANNEX-T-019')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 3</p>
+        <p><strong>Source Text Excerpt:</strong> <code>CREATE TABLE IF NOT EXISTS `<DB_PREFIX>packages` (`minimum_nights` tinyint(1) NOT NULL DEFAULT '0', `maximum_nights` smallint(6) unsigned NOT NULL DEFAULT '0')</code>[cite: 35].</p>
+    </div>
+
+    <!-- EXHIBIT T019 -->
+    <div class="exhibit-card">
+        <h3>Exhibit T019: Coordinate-Based Distance Calculation Function</h3>
         <p><strong>Page Reference:</strong> Page 20 of 27 | <strong>Annex Reference:</strong> ANNEX-T-020</p>
         
         <div class="img-container full-width">
@@ -451,7 +416,7 @@ The Examiner is invited to assess this evidence against the relevant claims, the
         </div>
 
         <p><strong>Corresponds to Claim:</strong> Claim 12</p>
-        <p><strong>Source Text Excerpt:</strong> <code>function calculateTheDistance(latA, longA, latB, longB) { var EARTH_RADIUS = 6372.795; ... return dist; }</code>.</p>
+        <p><strong>Source Text Excerpt:</strong> <code>function calculateTheDistance(latA, longA, latB, longB) { var EARTH_RADIUS = 6372.795; ... return dist; }</code>[cite: 36].</p>
     </div>
 
     <!-- EXHIBIT T020 -->
@@ -464,61 +429,26 @@ The Examiner is invited to assess this evidence against the relevant claims, the
         </div>
 
         <p><strong>Corresponds to Claim:</strong> Claim 12</p>
-        <p><strong>Source Text Excerpt:</strong> The function calculates the distance between hotel coordinates and configured central-point coordinates, then stores the result in <code>distance_center Hotel_GetDistantionCenterPoint()</code> extracting latitude and longitude center points. <code>$filter_start_distance = 0; $filter_end_distance = 1000;</code>.</p>
-   <p><strong>The evidence does not show that 1000 km is a fixed relocation distance. It shows that 1000 is the default upper value of the distance filter</p>
-  </strong>
-    </div>
-<!--New Exhi-Disctance-->
-
-        <div class="exhibit-card">
-        <h3> Exhibit T020C & T020D: Central Point & Distance — Admin UI & Distance Calculation — Coordinate Inputs </h3>
-        <p><strong>Page Reference:</strong> Page 21-A of 27 | <strong>Annex Reference:</strong> ANNEX-T-021-A</p>
-        
-        <div class="img-container full-width">
-            <img src="images-evidences/Distance-New-2.png" alt="Exhibit T020C - Distance Calculation — Coordinate Inputs & Distance — Admin UI" class="img-full" onerror="handleImgError(this, 'ANNEX-T-021')">
-        </div>
-
-        <p><strong>Corresponds to Claim:</strong> Claim 12</p>
-        <p><strong>Source Text Excerpt:</strong> 
-          <p> <strong>Exhibit T020C</strong>Configurable central-point coordinates and distance-to-centre function.</p> 
-          <p> <strong>Exhibit T020D</strong></p>
-            <code>fHotel_GetDistantionCenterPoint()</code> Hotels Plus calculates the distance between the hotel's coordinates and the configured centre-point coordinates and stores the resulting value in distance_center, rounded to two decimal places/
-            Hotel and centre-point coordinates are supplied to the distance calculation; result is stored as distance_center
-            <code>$filter_start_distance = 0; $filter_end_distance = 1000;</code>.</p>
+        <p><strong>Source Text Excerpt:</strong> <code>function Hotel_GetDistantionCenterPoint()</code> extracting latitude and longitude center points[cite: 37]. <code>$filter_start_distance = 0; $filter_end_distance = 1000;</code>[cite: 37].</p>
     </div>
 
-        <!--New Exhi-Disctance2--> 
-
-        <div class="exhibit-card">
-        <h3> Exhibit T020E: Central Point </h3>
-        <p><strong>Page Reference:</strong> Page 21-B of 27 | <strong>Annex Reference:</strong> ANNEX-T-021-B</p>
-        
-        <div class="img-container full-width">
-            <img src="images-evidences/Distance-NEW.png" alt="Exhibit T020E- Distance Calculation — Coordinate Inputs & Distance — Admin UI" class="img-full" onerror="handleImgError(this, 'ANNEX-T-021E')">
-        </div>
-
-        <p><strong>Corresponds to Claim:</strong> Claim 12</p>
-        <p><strong>Source Text Excerpt:</strong> <code>fHotel_GetDistantionCenterPoint()</code> Hotels Plus calculates the distance between the hotel's coordinates and the configured centre-point coordinates and stores the resulting value in distance_center, rounded to two decimal places/
-Hotel and centre-point coordinates are supplied to the distance calculation; result is stored as distance_center <code>$filter_start_distance = 0; $filter_end_distance = 1000;</code>.</p>
-    </div>
-<!--End of Additional-->
-
-            <div class="exhibit-card">
+    <!-- EXHIBIT T021 -->
+    <div class="exhibit-card">
         <h3>Exhibit T021: Public AJAX Endpoint Capture and Deployment Evidence</h3>
-        <p><strong>Page Reference:</strong> Page  of 27 | <strong>Annex Reference:</strong> ANNEX-T-022</p>
+        <p><strong>Page Reference:</strong> Page 22 of 27 | <strong>Annex Reference:</strong> ANNEX-T-022</p>
         
         <div class="img-container full-width">
             <img src="images-evidences/t-021.png" alt="Exhibit T021 - Public AJAX Endpoint" class="img-full" onerror="handleImgError(this, 'ANNEX-T-022')">
         </div>
 
         <p><strong>Corresponds to Claim:</strong> Claim 13</p>
-        <p><strong>Source Text Excerpt:</strong> Internet Archive capture of <code>/ajax/hotel_location.ajax.php</code> dated 9 June 2019 corroborating public endpoint deployment.</p>
+        <p><strong>Source Text Excerpt:</strong> Internet Archive capture of <code>/ajax/hotel_location.ajax.php</code> dated 9 June 2019 corroborating public endpoint deployment[cite: 38].</p>
     </div>
 
-            <!--End of Adtional-->
-             <div class="exhibit-card">
+    <!-- EXHIBIT T022 -->
+    <div class="exhibit-card">
         <h3>Exhibit T022 (T022 / T022A / T022B): Thematic Categories, Customer Retrieval & Customer-Linked Bookings</h3>
-        <p><strong>Page References:</strong> Page  of 27, Page 24 of 27 | <strong>Annex References:</strong> ANNEX-T-023, ANNEX-T-024</p>
+        <p><strong>Page References:</strong> Page 23 of 27, Page 24 of 27 | <strong>Annex References:</strong> ANNEX-T-023, ANNEX-T-024</p>
         
         <div class="img-container full-width">
             <img src="images-evidences/T-22 all.png" alt="Exhibit T022 - Thematic Categories" class="img-full" onerror="handleImgError(this, 'ANNEX-T-023')">
@@ -527,67 +457,10 @@ Hotel and centre-point coordinates are supplied to the distance calculation; res
         <p><strong>Corresponds to Claim:</strong> Claim 2</p>
         <p><strong>Source Text Excerpt:</strong> Customer group settings ("Kiting"). <code>GetCustomerInfo($customer_id)</code> joining customer groups. Booking query joining customer records: <code>LEFT OUTER JOIN `.TABLE_CUSTOMERS.` c ON b.customer_id = c.id</code>.</p>
     </div>
-            
-   
 
-
-             <div class="exhibit-card">
-        <h3>Exhibit T023: Customer-Linked Booking State and Reservation Monitoring</h3>
-        <p><strong>Page Reference:</strong> Page 27 of 27 | <strong>Annex Reference:</strong> ANNEX-T-027</p>
-        
-        <div class="img-container full-width">
-            <img src="images-evidences/t-25.png" alt="Exhibit T025 - Reservation Monitoring" class="img-full" onerror="handleImgError(this, 'ANNEX-T-027')">
-        </div>
-
-        <p><strong>Corresponds to Claim:</strong> Claim 13</p>
-        <p><strong>Source Text Excerpt:</strong> Expired reservation monitor joining bookings and customer records: <code>LEFT OUTER JOIN `.TABLE_CUSTOMERS.` ON `.TABLE_BOOKINGS.`.customer_id = `.TABLE_CUSTOMERS.`.id</code>.</p>
-    </div>
-<!--Newdiv-->
-
-
-   
-    <!-- EXHIBIT T009 -->
+    <!-- EXHIBIT T023 -->
     <div class="exhibit-card">
-        <h3>Exhibit T009 **** : Conditional Relocation Trigger When Availability Search Returns No Rooms</h3>
-        <p><strong>Page Reference:</strong> Page 10 of 27 | <strong>Annex Reference:</strong> ANNEX-T-010</p>
-        
-        <div class="img-container full-width">
-            <img src="images-evidences/T-008A-B-.png" alt="Exhibit T009 - Frontend Disclosure Constants" class="img-full" onerror="handleImgError(this, 'ANNEX-T-010')">
-        </div>
-
-        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
-        <p><strong>Source Text Excerpt:</strong> <code>The relocation settings specify whether the system may allow relocation to another room or another hotel when the availability search returns no rooms.</p>
-    </div>
-
-    <!-- EXHIBIT T010 -->
-    <div class="exhibit-card">
-        <h3>Exhibit T010 **** : Relocation-Program Interface Text and Search Parameters</h3>
-        <p><strong>Page Reference:</strong> Page 11 of 27 | <strong>Annex Reference:</strong> ANNEX-T-011</p>
-        
-        <div class="img-container full-width">
-            <img src="images-evidences/T010.png" alt="Exhibit T010 - Account Hydration and Seeding" class="img-full" onerror="handleImgError(this, 'ANNEX-T-011')">
-        </div>
-
-        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
-        <p><strong>Source Text Excerpt:</strong> <code>$this->room_relocation = isset($temp['room_relocation']) ?$temp['room_relocation'] : '0';</code>. Production seed timestamped <code>2019-06-25 23:26:27</code>.</p>
-    </div>
-
-    <!-- EXHIBIT T011 -->
-    <div class="exhibit-card">
-        <h3>Exhibit T011****: System Language Seed Data (28.05.2019) & Property Database Seeding</h3>
-        <p><strong>Page Reference:</strong> Page 12 of 27 | <strong>Annex Reference:</strong> ANNEX-T-012</p>
-        
-        <div class="img-container full-width">
-            <img src="images-evidences/t-011A-B.png" alt="Exhibit T011 - System Language Seed Data" class="img-full" onerror="handleImgError(this, 'ANNEX-T-012')">
-        </div>
-
-        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
-        <p><strong>Source Text Excerpt:</strong> <code>_MS_RELOCATION_HOTEL_PROGRAM</code> dated <code>28.05.2019</code>. Hotel coordinates insertion with <code>room_relocation = 1, hotel_relocation = 1</code></p>
-    </div>
-
-    
-    <div class="exhibit-card">
-        <h3>Exhibit T023 ****: Customer Historical Payment Aggregation & Wishlist</h3>
+        <h3>Exhibit T023 (T-023A / T-023B): Customer Historical Payment Aggregation & Wishlist</h3>
         <p><strong>Page Reference:</strong> Page 25 of 27 | <strong>Annex Reference:</strong> ANNEX-T-025</p>
         
         <div class="img-container full-width">
@@ -600,7 +473,7 @@ Hotel and centre-point coordinates are supplied to the distance calculation; res
 
     <!-- EXHIBIT T024 -->
     <div class="exhibit-card">
-        <h3>Exhibit T024 **** Customer Award-Point Structure and Management</h3>
+        <h3>Exhibit T024 (T-024A / T-024B): Customer Award-Point Structure and Management</h3>
         <p><strong>Page Reference:</strong> Page 26 of 27 | <strong>Annex Reference:</strong> ANNEX-T-026</p>
         
         <div class="img-container full-width">
@@ -612,7 +485,17 @@ Hotel and centre-point coordinates are supplied to the distance calculation; res
     </div>
 
     <!-- EXHIBIT T025 -->
-   
+    <div class="exhibit-card">
+        <h3>Exhibit T025: Customer-Linked Booking State and Reservation Monitoring</h3>
+        <p><strong>Page Reference:</strong> Page 27 of 27 | <strong>Annex Reference:</strong> ANNEX-T-027</p>
+        
+        <div class="img-container full-width">
+            <img src="images-evidences/t-25.png" alt="Exhibit T025 - Reservation Monitoring" class="img-full" onerror="handleImgError(this, 'ANNEX-T-027')">
+        </div>
+
+        <p><strong>Corresponds to Claim:</strong> Claim 13</p>
+        <p><strong>Source Text Excerpt:</strong> Expired reservation monitor joining bookings and customer records: <code>LEFT OUTER JOIN `.TABLE_CUSTOMERS.` ON `.TABLE_BOOKINGS.`.customer_id = `.TABLE_CUSTOMERS.`.id</code>.</p>
+    </div>
 <!--claim 14-->
     <div class="exhibit-card">
         <h3>Exhibit T0: Claim 14</h3>
@@ -623,10 +506,10 @@ Hotel and centre-point coordinates are supplied to the distance calculation; res
         </div>
 
         <p><strong>Corresponds to Claim:</strong> Claim 14</p>
-        <p><strong>Source Text Excerpt:</strong> Same evidence d on Claim 1 we Use the relevant Claim-1 technical exhibits:
+        <p><strong>Source Text Excerpt:</strong> Same evidence cited on Claim 1 we Use the relevant Claim-1 technical exhibits:
 
 T003, T004, T005, T006, T007, T008, T009, T010, T011, T012, T014, T015, T016, T017: <code></code>.</p>
-<p>The technical exhibits d for Claim 1 document implementation of the underlying search, availability, segmentation and relocation operations in the historical system. Claim 14 res the corresponding system implementation. The evidence is therefore relevant to the substantive operations of the claimed system, without asserting that each exhibit independently establishes every limitation of Claim 14</p>
+<p>The technical exhibits cited for Claim 1 document implementation of the underlying search, availability, segmentation and relocation operations in the historical system. Claim 14 recites the corresponding system implementation. The evidence is therefore relevant to the substantive operations of the claimed system, without asserting that each exhibit independently establishes every limitation of Claim 14</p>
     </div>
     <!--claim 15-->
     <div class="exhibit-card">
@@ -638,7 +521,7 @@ T003, T004, T005, T006, T007, T008, T009, T010, T011, T012, T014, T015, T016, T0
         </div>
 
         <p><strong>Corresponds to Claim:</strong> Claim 15</p>
-        <p><strong>Source Text Excerpt:</strong> --- <code>The same historical technical evidence is relevant to the machine-readable instructions corresponding to the operations red in Claim 1. The evidence is presented as implementation evidence for those operations; no separate assertion is made that the exhibits independently establish every formal limitation of the storage-device claim</code>.</p>
+        <p><strong>Source Text Excerpt:</strong> --- <code>The same historical technical evidence is relevant to the machine-readable instructions corresponding to the operations recited in Claim 1. The evidence is presented as implementation evidence for those operations; no separate assertion is made that the exhibits independently establish every formal limitation of the storage-device claim</code>.</p>
     </div>
 
     <h2>Claim Mapping Matrix</h2>
@@ -647,575 +530,88 @@ T003, T004, T005, T006, T007, T008, T009, T010, T011, T012, T014, T015, T016, T0
             <tr>
                 <th>Target Claim No.</th>
                 <th>Claim Text (Verbatim)</th>
-                <th>Technical Evidence / Exhibit Reference</th>
+                <th>Corresponding Prior Art Exhibit</th>
                 <th>Annex Page Ref</th>
             </tr>
         </thead>
-<tbody>
-
-    <!-- =========================
-         CLAIM 1 — COMPLETE CLAIM
-         ========================= -->
-
-<div class="exhibit-card">
-        <h3>Claim 1</h3>
-        <p><strong>The exhibits below document different operations within the historical Hotels Plus search and relocation path<strong>AExhibit T016</strong> is the principal exhibit for stay segmentation and the construction of separate stay-period parameters; T006 and T014 document request processing and availability search, while T015 and T017 document the associated inventory constraint and result-presentation functions. The evidence is not presented as asserting that each exhibit, considered individually, discloses every limitation of Claim 1.</p>
-        
-        <div class="img-container full-width">
-        </div>
-    
-
-    <tr>
-        <td><strong>Claim 1</strong></td>
-        <td>
-            "A method comprising: storing (905), by a network site, a plurality of listings from a plurality of different posting end-users; receiving (910), from a searching end-user, a listing request for one or more of the listings posted to the network site, the listing request specifying a multiple-day length of stay parameter; determining (915) that the multiple-day length of stay parameter of the listing request transgresses a minimum length of stay threshold; identifying a set of individual listings of the plurality of listings that match the listing request; determining that a quantity of listings in the set of individual listings fails to satisfy a minimum available inventory threshold; in response to determining that (i) the multiple-day length of stay parameter of the listing request transgresses the minimum length of stay threshold and (ii) the quantity of listings in the set of individual listings fails to satisfy the minimum inventory threshold, generating (920) a combined listing (520) comprising a first listing of the plurality of listings associated with a first portion of the multiple-day length of stay parameter and a second listing of the plurality of listings associated with a second portion of the multiple-day length of stay parameter; and causing (925), on a user device of the searching end-user, presentation of the combined listing together with one or more other listings of the plurality of listings that match the listing request in a ranked order."
-        </td>
-        <td>
-            Exhibits T003 / T004 / T005 / T006 / T007 / T008 / T009 / T010 / T011 / T012 / T014 / T015 / T016 / T017
-        </td>
-        <td>
-            Corresponding technical annexes for the cited exhibits
-        </td>
-    </tr>
-
-    <!-- Claim 1 — feature-level evidence -->
-
-    <tr>
-        <td><strong>Claim 1</strong></td>
-        <td>
-            "...receiving (910), from a searching end-user, a listing request for one or more of the listings posted to the network site, the listing request specifying a multiple-day length of stay parameter..."
-        </td>
-        <td>
-            Exhibit T006 — Multi-Day Request Parameters &amp; Normal Reservation Relocation
-        </td>
-        <td>
-            ANNEX-T-006 (p. 6)<br>
-            ANNEX-T-007 (p. 7)
-        </td>
-    </tr>
-
-    <tr>
-        <td><strong>Claim 1</strong></td>
-        <td>
-            "...determining (915) that the multiple-day length of stay parameter of the listing request transgresses a minimum length of stay threshold..."
-        </td>
-        <td>
-            Exhibit T013 — Minimum/Maximum Nights Admin Configuration;<br>
-            Exhibit T018 — Minimum-Nights Configuration and Executed Threshold Comparison
-        </td>
-        <td>
-            ANNEX-T-014 (p. 14)<br>
-            ANNEX-T-019 (p. 19)
-        </td>
-    </tr>
-
-    <tr>
-        <td><strong>Claim 1</strong></td>
-        <td>
-            "...identifying a set of individual listings of the plurality of listings that match the listing request..."
-        </td>
-        <td>
-            Exhibit T014 — Identifying Matching Listings
-        </td>
-        <td>
-            ANNEX-T-015 (p. 15)
-        </td>
-    </tr>
-
-    <tr>
-        <td><strong>Claim 1</strong></td>
-        <td>
-            "...determining that a quantity of listings in the set of individual listings fails to satisfy a minimum available inventory threshold..."
-        </td>
-        <td>
-            Exhibit T015 — Minimum-Room Threshold Enforcement
-        </td>
-        <td>
-            ANNEX-T-016 (p. 16)
-        </td>
-    </tr>
-
-    <tr>
-        <td><strong>Claim 1</strong></td>
-        <td>
-            "...generating (920) a combined listing (520) comprising a first listing of the plurality of listings associated with a first portion of the multiple-day length of stay parameter and a second listing of the plurality of listings associated with a second portion of the multiple-day length of stay parameter..."
-        </td>
-        <td>
-            Exhibit T016 — Relocation Activation, Segment Iteration &amp; Two-Part Parameter Construction
-        </td>
-        <td>
-            ANNEX-T-017 (p. 17)
-        </td>
-    </tr>
-
-    <tr>
-        <td><strong>Claim 1</strong></td>
-        <td>
-            "...causing (925), on a user device of the searching end-user, presentation of the combined listing together with one or more other listings of the plurality of listings that match the listing request in a ranked order."
-        </td>
-        <td>
-            Exhibit T017 — Presentation of Relocation Results Through Search-Result Renderer
-        </td>
-        <td>
-            ANNEX-T-018 (p. 18)
-        </td>
-    </tr>
-
-
-    <!-- =========================
-         CLAIM 2
-         ========================= -->
-
-    <tr>
-        <td><strong>Claim 2</strong></td>
-        <td>
-            "The method of claim 1, wherein the listing request comprises a destination category, further comprising:
-            determining that the first and second listings match the destination category, wherein the combined listing is generated in response to determining that the first and second listings match the destination category,
-            optionally wherein the destination category comprises at least one of national parks, beaches, surfing, camping, theme parks, or skiing."
-        </td>
-        <td>
-            No presently identified exhibit is relied upon as independently establishing the specific destination-category matching and conditional combined-listing generation recited in this claim.
-        </td>
-        <td>
-            —
-        </td>
-    </tr>
-
-
-    <!-- =========================
-         CLAIM 3
-         ========================= -->
-
-    <tr>
-        <td><strong>Claim 3</strong></td>
-        <td>
-            "The method of claim 1, wherein the multiple-day length of stay parameter specifies a quantity of days or a flexible duration of stay, and wherein the minimum length of stay threshold comprises five days."
-        </td>
-        <td>
-            Exhibit T013 — Minimum/Maximum Nights Admin Configuration;<br>
-            Exhibit T018 — Five-Day Minimum Length-of-Stay Data Schema
-        </td>
-        <td>
-            ANNEX-T-014 (p. 14)<br>
-            ANNEX-T-019 (p. 19)
-        </td>
-    </tr>
-<!--Note Claim 3-->
-     <tr>
-        <td colspan="4">
-            <strong>Claim 3 — Evidence Observation:</strong>
-            Exhibits T013 and T018 document minimum/maximum-night configuration and the associated stay-duration data structure. This evidence is relevant to the use of stay-duration constraints in the availability-processing path. The presence of a configurable constraint does not, by itself, establish that the historical system applied the specific five-day threshold in the same conditional sequence recited in Claim 1. The five-day limitation is therefore treated as an additional condition, distinct from the underlying split-stay segmentation mechanism documented in Exhibit T016</td>
-    </tr>
-
-    <!-- =========================
-         CLAIM 4
-         ========================= -->
-
-    <tr>
-        <td><strong>Claim 4</strong></td>
-        <td>
-            "The method of claim 1, wherein generating the combined listing comprises:
-            identifying a subset of individual listings of the plurality of listings that satisfies one or more search criteria of the listing request independent of the multiple-day length of stay parameter;
-            for each individual listing in the subset, generating a plurality of groups of stays on which the individual listing is available, each group of stays being associated with availability of the individual listing during different portions of the multiple-day length of stay parameter;
-            refining the plurality of groups using an aggregator based on a user profile of the searching end-user;
-            determining that a first combination of the portion of availability of a first refined group of a first individual listing (522) in the subset with the portion of availability of a second refined group of a second individual listing (524) matches the multiple-day length of stay parameter; and
-            in response to determining that the first combination matches the multiple-day length of stay parameter, forming the combined listing based on the first refined group of the first individual listing and the second refined group of the second individual listing,
-            optionally wherein:
-            each of the different portions comprises a set of days starting from a start date and ending prior to an end date, and wherein each of the different portions comprises a set of days starting from a date later than the start date and ending on the end date, or
-            a first group of the stays on which the individual listing is available comprises a first half of the multiple-day length of stay parameter, and wherein a second group of the stays on which the individual listing is available comprises a second half of the multiple-day length of stay parameter."
-        </td>
-        <td>
-            Exhibit T014 — Identifying Matching Listings;<br>
-            Exhibit T016 — Relocation Activation, Segment Iteration &amp; Two-Part Parameter Construction;<br>
-            Exhibits T022 / T023 / T024 — supporting customer/profile/booking functionality
-        </td>
-        <td>
-            ANNEX-T-015 (p. 15)<br>
-            ANNEX-T-017 (p. 17)<br>
-            Corresponding annexes for T022 / T023 / T024
-        </td>
-    </tr>
-
-    <tr>
-        <td><strong>Claim 4</strong></td>
-        <td>
-            "The method of claim 1, wherein generating the combined listing comprises:
-            identifying a subset of individual listings ... forming the combined listing based on the first refined group of the first individual listing and the second refined group of the second individual listing, optionally wherein ..."
-        </td>
-        <td>
-            Exhibit T014 — Identifying Matching Listings;<br>
-            Exhibit T016 — Relocation Activation, Segment Iteration &amp; Two-Part Parameter Construction;<br>
-            Exhibits T022 / T023 / T024 — supporting customer/profile/booking functionality
-        </td>
-        <td>
-            Corresponding technical annexes for the cited exhibits
-        </td>
-    </tr>
-<!--NIOTE Claim 4-->
-     <tr>
-        <td colspan="4">
-            <strong>Claim 4 — Evidence Observation:</strong>
-Exhibits T014 and T016 document availability search and segmented relocation operations. Exhibits T022–T024 document customer-linked records and related account or booking functions. The latter provide contextual evidence of customer-related data structures; they do not, by themselves, establish the specific claimed operation of refining groups of available stay portions through an aggregator based on the searching end-user’s profile. That additional limitation must be assessed separately from the underlying split-stay mechanism.        </td>
-    </tr>
-
-    <!-- =========================
-         CLAIM 5
-         ========================= -->
-
-    <tr>
-        <td><strong>Claim 5</strong></td>
-        <td>
-            "The method of claim 4, further comprising:
-            determining that a second combination of the portion of availability of the first refined group of the first individual listing with the portion of availability of a third refined group of a third individual listing matches the multiple-day length of stay parameter;
-            computing a rank for the first and second combinations; and
-            selecting either the first or second combination to generate the combined listing based on the computed rank of the first and second combinations."
-        </td>
-        <td>
-            Exhibits T-017 and ANNEX-T-018.
-        </td>
-        <td>
-            ANNEX-T-017 (p. 17)<br>
-            ANNEX-T-018 (p. 18)
-        </td>
-    </tr>
-
-    <tr>
-        <td colspan="4">
-            <strong>Claim 5 — Evidence Observation:</strong>
-            The evidence documents segmented availability, relocation handling and general result presentation/sorting functionality. The presently identified record does not separately establish the specific multi-combination rank-and-select mechanism for choosing between two combinations.
-        </td>
-    </tr>
-
-
-    <!-- =========================
-         CLAIM 6
-         ========================= -->
-
-    <tr>
-        <td><strong>Claim 6</strong></td>
-        <td>
-            "The method of claim 5, wherein the rank for the first and second combinations is computed based on individual ranks of the first, second and third individual listings."
-        </td>
-        <td>
-            Exhibit T017 — General Search-Result Sorting,” and distinguish it from ranking alternative combined-stay combinations.
-        </td>
-        <td>
-            ANNEX-T-018 (p. 18)
-        </td>
-    </tr>
-
-    <tr>
-        <td colspan="4">
-            <strong>Claim 6 — Evidence Observation:</strong>
-            General Search-Result Sorting,. The presently identified record does not separately establish a rank computed from the individual ranks of the first, second and third listings as specified in this claim.
-        </td>
-    </tr>
-
-
-    <!-- =========================
-         CLAIM 7
-         ========================= -->
-
-    <tr>
-        <td><strong>Claim 7</strong></td>
-        <td>
-            "The method of claim 5, wherein computing the rank for the first and second combinations comprises:
-            computing a first difference between the portion of availability of the first refined group of the first individual listing and the portion of availability of the second refined group of the second individual listing;
-            computing a second difference between the portion of availability of the first refined group of the first individual listing and the portion of availability of the third refined group of the third individual listing; and
-            associating a first rank with the first combination that is greater than a second rank associated with the second combination in response to determining that the first difference is smaller than the second difference."
-        </td>
-        <td>
-            Exhibits T016 / Relocation Activation, Segment Iteration & Two-Part Parameter Construction
-        </td>
-        <td>
-            ANNEX-T-017 (p. 17)<br>
+        <tbody>
+            <tr>
+                <td><strong>Claim 1</strong></td>
+                <td>"A system comprising: memory storing listing inventory; and one or more processors configured to execute instructions..."</td>
+                <td>Exhibit T003B / Exhibit T004 / Exhibit T005 / Exhibit T010</td>
+                <td>ANNEX-T-003 (p. 3)<br>ANNEX-T-004 (p. 4)<br>ANNEX-T-005 (p. 5)<br>ANNEX-T-011 (p. 11)[cite: 19, 20, 21, 27]</td>
+            </tr>
+            <tr>
+                <td><strong>Claim 1</strong></td>
+                <td>"...receiving a listing request specifying a length of stay..."</td>
+                <td>Exhibit T006 (T-005A)</td>
+                <td>ANNEX-T-006 (p. 6)[cite: 22]</td>
+            </tr>
+            <tr>
+                <td><strong>Claim 1</strong></td>
+                <td>"...determining that available inventory fails to satisfy a minimum availability threshold for the continuous length of stay..."</td>
+                <td>Exhibit T007 / Exhibit T008</td>
+                <td>ANNEX-T-008 (p. 8, p. 9)[cite: 24, 25]</td>
+            </tr>
+            <tr>
+                <td><strong>Claim 1</strong></td>
+                <td>"...generating a combined listing comprising a first portion for a first stay duration at a first listing and a second portion for a second stay duration at a second listing..."</td>
+                <td>Exhibit T009 / Exhibit T011 / Exhibit T014</td>
+                <td>ANNEX-T-010 (p. 10)<br>ANNEX-T-012 (p. 12)<br>ANNEX-T-015 (p. 15)[cite: 26, 28, 31]</td>
+            </tr>
+            <tr>
+                <td><strong>Claim 1</strong></td>
+                <td>"...causing presentation of the combined listing in ranked order."</td>
+                <td>Exhibit T015 (T015A / T015B)</td>
+                <td>ANNEX-T-016 (p. 16)[cite: 32]</td>
+            </tr>
+            <tr>
+                <td><strong>Claim 1</strong></td>
+                <td>"...processing booking requests for multi-leg stay segments."</td>
+                <td>Exhibit T012 / Exhibit T016</td>
+                <td>ANNEX-T-013 (p. 13)<br>ANNEX-T-017 (p. 17)[cite: 29, 33]</td>
+            </tr>
+            <tr>
+                <td><strong>Claim 1</strong></td>
+                <td>"...rendering search results in ranked order based on specified parameters."</td>
+                <td>Exhibit T017 (T017A / T017B)</td>
+                <td>ANNEX-T-018 (p. 18)[cite: 34]</td>
+            </tr>
+            <tr>
+                <td><strong>Claim 2</strong></td>
+                <td>"The system of claim 1, wherein listings are categorized by thematic attributes or user groups."</td>
+                <td>Exhibit T022 (T022 / T022A / T022B)</td>
+                <td>ANNEX-T-023 (p. 23)<br>ANNEX-T-024 (p. 24)</td>
+            </tr>
+            <tr>
+                <td><strong>Claim 3</strong></td>
+                <td>"The system of claim 1, wherein the minimum length of stay threshold is configured as a minimum night duration constraint."</td>
+                <td>Exhibit T013 / Exhibit T018</td>
+                <td>ANNEX-T-014 (p. 14)<br>ANNEX-T-019 (p. 19)[cite: 30, 35]</td>
+            </tr>
+            <tr>
+                <td><strong>Claim 4</strong></td>
+                <td>"The system of claim 1, wherein split availability is evaluated using stored user profiles and historical booking activity."</td>
+                <td>Exhibit T023 / Exhibit T024</td>
+                <td>ANNEX-T-025 (p. 25)<br>ANNEX-T-026 (p. 26)</td>
+            </tr>
+            <tr>
+                <td><strong>Claim 12</strong></td>
+                <td>"The system of claim 1, wherein the second listing is selected within a maximum geographic distance limit from the first listing."</td>
+                <td>Exhibit T019 / Exhibit T020</td>
+                <td>ANNEX-T-020 (p. 20)<br>ANNEX-T-021 (p. 21)[cite: 36, 37]</td>
+            </tr>
+            <tr>
+                <td><strong>Claim 13</strong></td>
+                <td>"The system of claim 1, wherein behavioral inferences or session parameters are monitored dynamically via endpoint requests."</td>
+                <td>Exhibit T021 / Exhibit T025</td>
+                <td>ANNEX-T-022 (p. 22)<br>ANNEX-T-027 (p. 27)[cite: 38]</td>
+            </tr>
             
-        </td>
-    </tr>
+        </tbody>
+    </table>
 
-    <tr>
-        <td colspan="4">
-            <strong>Claim 7 — Evidence Observation:</strong>
-Evidence Observation: The evidence documents segmented availability and relocation handling. The presently identified record does not separately establish the specific difference-based ranking formula comparing the first combination with the second combination.
-        </td>
-    </tr>
+</div>
 
-
-    <!-- =========================
-         CLAIM 8
-         ========================= -->
-
-    <tr>
-        <td><strong>Claim 8</strong></td>
-        <td>
-            "The method of claim 5, wherein computing the rank for the first and second combinations comprises:
-            computing a first compatibility criterion between the first individual listing and the second individual listing;
-            computing a second compatibility criterion between the first individual listing and the third individual listing; and
-            associating a first rank with the first combination that is greater than a second rank associated with the second combination in response to determining that the first compatibility criterion is associated with a higher level of compatibility than the second compatibility criterion,
-            optionally wherein the first and second compatibility criteria represent at least one of: quantity of overlapping listing attributes, quantity of listing attributes that match the user profile, price, image qualities, or distances between locations."
-        </td>
-        <td>
-            Exhibits T017 / T019 / T020
-        </td>
-        <td>
-            ANNEX-T-018 (p. 18)<br>
-            ANNEX-T-020 (p. 20)<br>
-            ANNEX-T-021 (p. 21)
-        </td>
-    </tr>
-
-    <tr>
-        <td colspan="4">
-            <strong>Claim 8 — Evidence Observation:</strong>
-            General price/rating sorting and distance calculation/filtering functionality are documented where applicable. The presently identified record does not separately establish the claimed pairwise compatibility-ranking mechanism between listing combinations.
-        </td>
-    </tr>
-
-
-    <!-- =========================
-         CLAIM 9
-         ========================= -->
-
-    <tr>
-        <td><strong>Claim 9</strong></td>
-        <td>
-            "The method of claim 4, further comprising:
-            determining that a given individual listing matches the listing request; and
-            excluding the given individual listing from being used as a basis to form one or more combined listings."
-        </td>
-        <td>
-            Exhibits T014 / T016
-        </td>
-        <td>
-            ANNEX-T-015 (p. 15)<br>
-            ANNEX-T-017 (p. 17)
-        </td>
-    </tr>
-
-    <tr>
-        <td colspan="4">
-            <strong>Claim 9 — Evidence Observation:</strong>
-            Search, selection and relocation functionality are documented. The presently identified record does not separately establish the claimed rule excluding a matching individual listing from use as a basis for one or more combined listings.
-        </td>
-    </tr>
-
-
-    <!-- =========================
-         CLAIM 10
-         ========================= -->
-
-    <tr>
-        <td><strong>Claim 10</strong></td>
-        <td>
-            "The method of claim 1, wherein:
-            the combined listing is a first combined listing, and the method further comprises preventing presentation of a second combined listing in response to determining that the second combined listing includes the first listing that is also included in the first combined listing to introduce diversity in the presentation of the combined listing together with the one or more other listings; or
-            the method further comprises applying one or more neural networks to generate the combined listing, to generate the ranked order, to compare a first combined listing with a second combined listing, and to select whether to present a given listing as part of a given combined listing or as an individual listing in the presentation."
-        </td>
-        <td>
-            Exhibit T017 — Presentation of Relocation Results Through Search-Result Renderer
-        </td>
-        <td>
-            ANNEX-T-018 (p. 18)
-        </td>
-    </tr>
-
-    <tr>
-        <td colspan="4">
-            <strong>Claim 10 — Evidence Observation:</strong>
-            The presently identified record is not relied upon to establish either the specific diversity rule preventing reuse of a listing across combined listings or the alternative neural-network mechanism.
-        </td>
-    </tr>
-
-
-    <!-- =========================
-         CLAIM 11
-         ========================= -->
-
-    <tr>
-        <td><strong>Claim 11</strong></td>
-        <td>
-            "The method of claim 1, further comprising:
-            determining whether the listing request comprises a destination category; and
-            modifying a level of flexibility in ranking and combining listings to form the combined listing based on determining whether the listing request comprises the destination category,
-            optionally wherein the method further comprises:
-            determining that the level of flexibility in ranking and combining corresponds to an inflexible threshold level; and
-            in response to determining that the level of flexibility in ranking and combining corresponds to the inflexible threshold level, increasing a level of diversity among the listings used to form the combined listing."
-        </td>
-        <td>
-            No presently identified exhibit independently establishes the claimed adaptive flexibility mechanism.
-        </td>
-        <td>
-            —
-        </td>
-    </tr>
-
-
-    <!-- =========================
-         CLAIM 12
-         ========================= -->
-
-    <tr>
-        <td><strong>Claim 12</strong></td>
-        <td>
-            "The method of claim 1, wherein the plurality of listings includes at least one of locations or experiences, optionally wherein the method further comprises determining that a distance between the first and second listings falls within a threshold range comprising a minimum distance and a maximum distance, wherein the combined listing is generated using the first and second listings in response to the distance between the first and second listings being between the minimum distance and the maximum distance of the threshold range."
-        </td>
-        <td>
-            Exhibit T019 — Coordinate-Based Distance Calculation;<br>
-            Exhibit T020 — Hotel-to-Centre Distance Assignment &amp; Distance-Range Filtering
-        </td>
-        <td>
-            ANNEX-T-020 (p. 20)<br>
-            ANNEX-T-021 (p. 21)
-        </td>
-    </tr>
-
-    <tr>
-        <td colspan="4">
-            <strong>Claim 12 — Evidence Observation:</strong>
-            The evidence establishes coordinate-based distance calculation and minimum/maximum distance filtering. The presently identified record does not independently establish that this distance condition controlled generation of the combined listing between the first and second listings.
-        </td>
-    </tr>
-
-
-    <!-- =========================
-         CLAIM 13
-         ========================= -->
-
-    <tr>
-        <td><strong>Claim 13</strong></td>
-        <td>
-            "The method of claim 1, further comprising automatically selecting the destination category based on one or more past interactions of the searching end-user with the network site."
-        </td>
-        <td>
-            Exhibit T022 — Thematic Categories, Customer Retrieval &amp; Customer-Linked Bookings;<br>
-            Exhibit T023 — Customer Historical Payment Aggregation &amp; Wishlist;<br>
-            Exhibit T024 — Customer Award-Point Structure;<br>
-            Exhibit T025 — Customer-Linked Booking State / Reservation Monitoring
-        </td>
-        <td>
-            ANNEX-T-023 (p. 23)<br>
-            ANNEX-T-024 (p. 24)<br>
-            ANNEX-T-025 (p. 25)<br>
-            ANNEX-T-026 (p. 26)
-        </td>
-    </tr>
-
-    <tr>
-        <td colspan="4">
-            <strong>Claim 13 — Evidence Observation:</strong>
-            The evidence documents persistent customer-linked information, including customer records, booking history, customer-associated transactions, wishlist information, and loyalty/award-point state. These records establish a technical user-history/profile layer that can participate in subsequent search or personalization operations. The presently identified exhibits do not, however, independently establish the specific later operation of automatically selecting a destination category from such past interactions. The distinction is therefore between the documented customer-history infrastructure and the particular destination-category selection operation recited in the amended claim.
-        </td>
-    </tr>
-
-
-    <!-- =========================
-         CLAIM 14 — FULL SYSTEM CLAIM
-         ========================= -->
-
-<tr>
-    <td><strong>Claim 14</strong></td>
-    <td>
-        "A system comprising: one or more processors (1110) of a machine (1100);
-        and a memory (1130) storing instruction (1116) that, when executed by the
-        one or more processors, cause the machine to perform operations comprising:
-        storing (905), by a network site, a plurality of listings from a plurality
-        of different posting end-users; receiving (910), from a searching end-user,
-        a listing request for one or more of the listings posted to the network site,
-        the listing request specifying a multiple-day length of stay parameter;
-        determining (915) that the multiple-day length of stay parameter of the
-        listing request transgresses a minimum length of stay threshold;
-        identifying a set of individual listings of the plurality of listings that
-        match the listing request; determining that a quantity of listings in the
-        set of individual listings fails to satisfy a minimum available inventory
-        threshold; in response to determining that (i) the multiple-day length of
-        stay parameter of the listing request transgresses the minimum length of
-        stay threshold and (ii) the quantity of listings in the set of individual
-        listings fails to satisfy the minimum available inventory threshold,
-        generating (920) a combined listing (520) comprising a first listing of
-        the plurality of listings associated with a first portion of the multiple-day
-        length of stay parameter and a second listing of the plurality of listings
-        associated with a second portion of the multiple-day length of stay parameter;
-        and causing (925), on a user device of the searching end-user, presentation
-        of the combined listing together with one or more other listings of the
-        plurality of listings that match the listing request in a ranked order."
-    </td>
-    <td>
-        Exhibits T003 / T004 / T005 / T006 / T007 / T008 / T009 / T010 /
-        T011 / T012 / T014 / T015 / T016 / T017
-    </td>
-    <td>
-        ANNEX-T-003 / ANNEX-T-004 / ANNEX-T-005 /
-        ANNEX-T-006 / ANNEX-T-007 / ANNEX-T-008 /
-        ANNEX-T-009 / ANNEX-T-010 / ANNEX-T-011 /
-        ANNEX-T-012 / ANNEX-T-013 / ANNEX-T-015 /
-        ANNEX-T-016 / ANNEX-T-017 / ANNEX-T-018
-    </td>
-</tr>
-
-<tr>
-    <td colspan="4">
-        <strong>Claim 14 — Evidence Observation:</strong>
-        Claim 14 presents the substantive Claim 1 operation in system form,
-        using one or more processors and memory storing instructions. The same
-        historical technical evidence is therefore relevant to the substantive
-        sequence of operations. The system/processor/memory framing does not
-        require a separate historical technical theory or a separate technical
-        mechanism.
-    </td>
-</tr>
-
-<tr>
-    <td><strong>Claim 15</strong></td>
-    <td>
-        "A machine-readable storage device embodying instructions (1116) that,
-        when executed by a machine (1110), cause a machine to perform operations
-        comprising: storing (905), by a network site, a plurality of listings from
-        a plurality of different posting end-users; receiving (910), from a
-        searching end-user, a listing request for one or more of the listings
-        posted to the network site, the listing request specifying a multiple-day
-        length of stay parameter; determining (915) that the multiple-day length
-        of stay parameter of the listing request transgresses a minimum length of
-        stay threshold; identifying a set of individual listings of the plurality
-        of listings that match the listing request; determining that a quantity of
-        listings in the set of individual listings fails to satisfy a minimum
-        available inventory threshold; in response to determining that (i) the
-        multiple-day length of stay parameter of the listing request transgresses
-        the minimum length of stay threshold and (ii) the quantity of listings in
-        the set of individual listings fails to satisfy the minimum available
-        inventory threshold, generating (920) a combined listing (520) comprising
-        a first listing of the plurality of listings associated with a first portion
-        of the multiple-day length of stay parameter and a second listing of the
-        plurality of listings associated with a second portion of the multiple-day
-        length of stay parameter; and causing (925), on a user device of the
-        searching end-user, presentation of the combined listing together with one
-        or more other listings of the plurality of listings that match the listing
-        request in a ranked order."
-    </td>
-    <td>
-        Exhibits T003 / T004 / T005 / T006 / T007 / T008 / T009 / T010 /
-        T011 / T012 / T014 / T015 / T016 / T017
-    </td>
-    <td>
-        ANNEX-T-003 / ANNEX-T-004 / ANNEX-T-005 /
-        ANNEX-T-006 / ANNEX-T-007 / ANNEX-T-008 /
-        ANNEX-T-009 / ANNEX-T-010 / ANNEX-T-011 /
-        ANNEX-T-012 / ANNEX-T-013 / ANNEX-T-015 /
-        ANNEX-T-016 / ANNEX-T-017 / ANNEX-T-018
-    </td>
-</tr>
-
-<tr>
-    <td colspan="4">
-        <strong>Claim 15 — Evidence Observation:</strong>
-        Claim 15 presents the same substantive operation in machine-readable
-        storage-device form. The same historical software/database evidence is
-        therefore relevant to the substantive sequence of operations. The
-        storage-device framing does not require a separate historical technical
-        mechanism; the evidentiary focus remains on the underlying operations
-        documented by the cited exhibits.
-    </td>
-</tr>
-
-</tbody>
-        </body>
-        </html>
+</body>
+</html>
