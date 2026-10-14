@@ -354,7 +354,9 @@ checks whether room or hotel relocation is enabled by the system settings</h3>
         </div>
 
         <p><strong>Source Text Excerpt:</strong> This configuration mapping governs when empty search results automatically unlock the smart relocation program for guests, defining room- and hotel-relocation options associated with empty search results.</p>
-        <p><strong>Corresponds to Claim:</strong> <strong>Claim 1:</strong> "determining when inventory fails to satisfy minimum availability criteria..."</p>
+        <p><strong>Corresponds to Claim</strong> Claim 1 : CORE split-stay mechanism."</p>
+        <p><strong>Relevant Claim 1</strong>if the quantity of matching listings does not satisfy a minimum inventory threshold … generating a combined listing from a first portion of a first listing and a second portion of a second listing …</p>
+   <p><strong>Classification</strong> CORE SUPPORTING EVIDENCE : the language keys document user-facing messages associated with relocation following an unsuccessful search. They support the operational context of the CORE mechanism but do not, by themselves, establish the underlying search or combined-listing logic</strong></p>
     </div>
 
     <!-- T-009 -->
@@ -367,7 +369,10 @@ checks whether room or hotel relocation is enabled by the system settings</h3>
         </div>
 
         <p><strong>Source Text Excerpt:</strong> These are the exact strings displayed to users offering a 10% discount to split their holiday between two rooms or two hotels in the same area. It documents how the relocation option was presented to users.</p>
-        <p><strong>Corresponds to Claim:</strong> <strong>Claim 1:</strong> User-Facing Text Describing the Relocation Offer.</p>
+        <p><strong>Corresponds to Claim:</strong> <strong>CORE split-stay mechanism; supporting evidence of the user-facing relocation offer.</p>
+    <p><strong>Relevant Claim 1</strong>“presenting the combined listing with the other matching listings in ranked order …”</p>
+ <p><strong>Classification</strong> : CORE SUPPORTING EVIDENCE — the user-facing text and discount constants document how the Hotels Plus system presented its room- and hotel-relocation offer. This supports the presentation stage surrounding the CORE split-stay mechanism, alongside the code demonstrating the generation of combined stay portions.
+   </p>     
     </div>
 
     <!-- T-010 -->
@@ -385,7 +390,12 @@ checks whether room or hotel relocation is enabled by the system settings</h3>
         </div>
 
         <p><strong>Source Text Excerpt:</strong> The property records associate geographic coordinates with room- and hotel-relocation fields, supporting the stored property-data structure.</p>
-        <p><strong>Corresponds to Claim:</strong> <strong>Claim 1:</strong> "storing listing inventory specifying location coordinates and determining split listings within geographic distance limits..."</p>
+       <p><strong>Claim 12 — ADD-ON, inheriting the Claim 1 CORE</strong>
+     <p><strong>Corresponding Claim : </strong> Claim 12  ADD-ON, inheriting the Claim 1 CORE</p>
+        <p><strong>Corresponds to Claim:</strong> <strong> "determining that a distance between the first and second listings falls within a threshold range comprising a minimum distance and a maximum distance”.."</p>
+  
+        <p><strong>Relationship to CORE</strong>: Supporting evidence of the location and relocation data used within the Hotels Plus split-stay system.</p>
+   <p><srong>Classification </srong>: ADD-ON — the property coordinates and relocation flags document location-related functionality surrounding the CORE split-stay mechanism. The distance-range limitation is an additional refinement of the inherited CORE</p>
     </div>
 
     <!-- T-011 -->
@@ -414,7 +424,9 @@ and timestamp. Public availability is addressed by the accompanying
 Documentary and Visual annexes.</strong></p>
         </div>
 
-        <p><strong>Corresponds to Claim:</strong> <strong>Claim 1 & Claims 2-4:</strong> System architecture storing listing availability and configuring dual-mode split-stay operations.</p>
+    <p><strong>Corresponding Claim : </strong> Claim 1 - CORE SUPPORTING EVIDENCE. Claims 2–4 are dependent claims; this exhibit does not directly establish their additional limitations</p>
+        <p><strong>Relevant Claim 1:</strong> "storing (905), by a network site, a plurality of listings from a plurality of different posting end-users</p>
+ <p><strong>Classification:</strong> CORE SUPPORTING EVIDENCE — account-level permissions document the system configuration supporting room and hotel relocation. They corroborate the historical CORE but do not, by themselves, establish the complete split-stay generation sequence.</p>
     </div>
 
     <!-- T-012 -->
@@ -441,7 +453,9 @@ rather than proving runtime account hydration or a completed splitstay
 transaction June 2019."</strong></p>
         </div>
 
-        <p><strong>Corresponds to Claim:</strong> <strong>Claim 1:</strong> Storing listing inventory and processing multi-portion booking requests.</p>
+        <p><strong>Corresponds to Claim 1:</strong> <strong>CORE SUPPORTING EVIDENCE</strong> Storing listing inventory and processing multi-portion booking requests.</p>
+   <p><strong>Relevant Claim 1</strong>"“generating (920) a combined listing (520) comprising a first listing of the plurality of listings associated with a first portion of the multiple-day length of stay parameter and a second listing of the plurality of listings associated with a second portion of the multiple-day length of stay parameter”</p>
+  <p><strong>Classification: CORE SUPPORTING EVIDENCE</strong>he table schema and stay-date fields support the technical recording of separate stay portions. They corroborate the split-stay workflow but do not, alone, establish the logic that generates the combined listing</p>
     </div>
 
     <!-- T-013 -->
@@ -455,7 +469,11 @@ transaction June 2019."</strong></p>
 
         <p><strong>Source Text Excerpt:</strong> The video frame shows the Hotels Plus availability-search interface under ordinary reservation conditions (<a href="https://youtu.be/82XxQouNwQc?si=Uz2omF2w1SGb652v" target="_blank">YouTube Walkthrough at [0:10/1:15]</a>), providing visual context for the search system.</p>
       <p><strong>https://youtu.be/82XxQouNwQc?si=Uz2omF2w1SGb652v at [0:10/1:15] </strong></p>
-        <p><strong>Corresponds to Claim:</strong> <strong>Claim 1:</strong> "identifying matching accommodation when availability is sufficient..."</p>
+        <p><strong>Corresponds to Claim:</strong> <strong>Claim 1:CORE SUPPORTING EVIDENCE</strong> </p>
+        <p><strong>Relevant Claim 1</strong>“identifying a set of individual listings of the plurality of listings that match the listing request;”
+
+“determining that a quantity of listings in the set of individual listings fails to satisfy a minimum available inventory threshold;”</p>
+<p><strong>Classification CORE SUPPORTING EVIDENCE </strong> Documents the standard availability-search stage and its relationship to the split-stay workflow; the cross-referenced video may corroborate operational behavior. The standard search alone does not establish the subsequent generation of a combined listing</p>
     </div>
 
     <!-- T-014 -->
@@ -501,7 +519,11 @@ transaction June 2019."</strong></p>
         </div>
 
         <p><strong>Source Text Excerpt:</strong> Here is the core logic where I set relocation type to room/hotel, loop through the stay nights, search individual segments, and construct the combined two-part parameter array.</p>
-        <p><strong>Corresponds to Claim:</strong> <strong>Claim 1:</strong> Generating the Combined Listing / First & Second Stay Portions.</p>
+        <p><strong>Corresponding Claim: 1 :</strong> <strong>  CORE SUPPORTING EVIDENCE:</strong></strong> </p>
+        <p><strong>Relevant Claim</strong>determining that a quantity of listings in the set of individual listings fails to satisfy a minimum available inventory threshold;”
+
+“generating (920) a combined listing (520) comprising a first listing of the plurality of listings associated with a first portion of the multiple-day length of stay parameter and a second listing of the plurality of listings associated with a second portion of the multiple-day length of stay parameter;</p>
+ <p><strong>Classification: CORE SUPPORTING EVIDENCE</strong>documents room-quantity constraints relevant to inventory processing; these constraints are not, by themselves, proof of the claimed combined-listing generation sequence.</p>
     </div>
 
     <!-- T-016 -->
@@ -564,7 +586,8 @@ mechanism is therefore le􀅌 for assessment by the Examining Division</stron></
         <div class="img-container full-width">
             <img src="Tect-Tech/T-017-E.png" alt="Exhibit T-017-E" class="img-full" onerror="handleImgError(this, 'T-017-E')">
         </div>
-
+<p><strong>Relevant Claim</strong>causing (925), on a user device of the searching end-user, presentation of the combined listing together with one or more other listings of the plurality of listings that match the listing request in a ranked order.</p>
+     <p><strong>Classification CORE SUPPORTING EVIDENCE</strong> "Supports the presentation stage of the Claim 1 CORE workflow. The renderer and sorting parameters support result presentation; the exhibit should be read alongside the evidence documenting the underlying split-stay mechanism</p>
         <p><strong>Corresponds to Claim:</strong> <strong>Claim 3:</strong> "comparing requested stay duration against length-of-stay constraints..."</p>
     </div>
 
@@ -602,8 +625,8 @@ shows that 1000 is the default upper value of the distance filter</Stong></p>
         <p><Stong>Hotels Plus The search parameter array includes filter_start_distance
 and filter_end_distance. These parameters carry the configured
 distance range into the search process</Stong></p>
-        <p><strong>Corresponds to Claim:</strong> <strong>Claim 12:</strong> "computing geographic distance between listings using coordinate geometry..."</p>
-    
+        <p><strong>Corresponds to Claim:</strong> <strong>Claim 12 - ADD-ON inheriting the Claim 1 CORE.</strong> "determining that a distance between the first and second listings falls within a threshold range comprising a minimum distance and a maximum distance”..."</p>
+  <p><strong>Classification: ADD-ON — inherits the Claim 1 CORE.</strong>The geographic-distance calculation documents additional location-related functionality surrounding the historical split-stay mechanism. The calculation supports geographic processing, while the claimed minimum-and-maximum distance threshold is a separate limitation</p>  
     </div>
 
     <!-- T-019 -->
@@ -626,7 +649,6 @@ the distance_center form field</p>
         <p><strong>Admins input center point coordinates in the UI, & the JS helper
 computes rounded distances (toFixed(2)) to construct database query
 clauses (distance_center)</strong></p>
-        <p><strong>Corresponds to Claim:</strong> <strong>Claim 12:</strong> "storing and querying distance to center point parameters..."</p>
   
      <h3>Exhibit T-019-C: Distance-Range Query Conditions & Centre-Point Form Fields</h3>
          <div class="img-container full-width">
@@ -645,6 +667,9 @@ definitions show the centre-point coordinates and distance-to-centre settings.</
 /ajax/hotel_location.ajax.php endpoint in the public archive. It corroborates the
 historical presence of the endpoint, but does not establish its runtime output
 or the underlying distance-calculation logic.</strong></p>
+         <p><strong>Corresponds to Claim:</strong> <strong>Claim 12 - ADD-ON inheriting the Claim 1 CORE.</strong> "determining that a distance between the first and second listings falls within a threshold range comprising a minimum distance and a maximum distance”..."</p>
+  <p><strong>Classification: ADD-ON — inherits the Claim 1 CORE.</strong>inherits the Claim 1 CORE. Map-center configuration and distance queries document additional geographic functionality surrounding the split-stay mechanism. They support the location-processing context but do not, by themselves, establish the claimed minimum-and-maximum distance threshold.</p>  
+  
     </div>
 
     <!-- T-020 -->
@@ -666,7 +691,9 @@ or the underlying distance-calculation logic.</strong></p>
             <img src="Tect-Tech/T-020-C.png" alt="Exhibit T-020" class="img-full" onerror="handleImgError(this, 'T-020')">
         </div>
         <p><strong>Source Text Excerpt:</strong> Admin panel settings managing customer registration alerts, remember-me privileges, and customer group filtering inside the database.</p>
-        <p><strong>Corresponds to Claim:</strong> <strong>Claim 13:</strong> Administering customer profile settings and classification groups.</p>
+<p><strong>Corresponding Claim:</strong> Claim 13 ADD-ON inheriting the Claim 1 CORE.</p>   
+    <p><strong>Relevant Claim 13</strong>The claim concerns automatically determining a destination category based on past interactions of the searching end-user</p>
+   <p><strong>Classification: ADD-ON - inherits the Claim 1 CORE.</strong>The remember-me setting documents general customer-account functionality, not the claimed use of past interactions to determine a destination category.</p>
     </div>
 
     <!-- T-021 -->
@@ -694,8 +721,10 @@ executable add/remove operations for customer-specific selections   </strong></p
         </div>
       
 
-        <p><strong>Source Text Excerpt:</strong> The system links customer IDs to historical booking payments and manages wishlist additions/removals on a per-customer basis.</p>
-        <p><strong>Corresponds to Claim:</strong> <strong>Claim 4:</strong> "associating customer profile history and user selections..."</p>
+        <p><strong>Source Text Excerpt:</strong> This code aggregates customer payment totals within the Hotels Plus system. It documents customer-linked booking and payment processing, providing supporting context for the system’s account and reservation data structures.</p>
+        <p><strong>Corresponding Claim: Claim 13  </strong> <strong>ADD-ON inheriting the Claim 1 CORE</strong> </p>
+    <p><strong>Relevant Claim 13</strong>The claim concerns automatically determining a destination category based on past interactions of the searching end-use</p>
+  <p><strong>Classification: ADD-ON — inherits the Claim 1 CORE.</strong>Customer payment aggregation documents additional customer-related functionality, but does not by itself establish the claimed automatic destination-category determination from past interactions.</p>
     </div>
 
     <!-- T-022 -->
@@ -715,10 +744,8 @@ panel</strong></p>
         
         <div class="img-container full-width">
             <img src="Tect-Tech/t-022-B.png" alt="Exhibit T-022" class="img-full" onerror="handleImgError(this, 'T-022')">
-       <p><strong>Hotels Plus retrieves a specific customer by customer ID and instantiates
-CustomerAwardPoints($customer_id) for that customer, with executable
-operations to create, update, delete and remove customer-specific award-point
-records</strong></p>
+       <p><strong>This code defines customer loyalty and award-point functionality within the Hotels Plus system. It documents customer-related account data and loyalty management as part of the wider accommodation platform.</strong></p>
+        
         </div>
           
                     <h3>Exhibit T-022-C: Loyalty Module Settings Retrieval</h3>
@@ -729,7 +756,8 @@ records</strong></p>
        
         </div>
 
-        <p><strong>Corresponds to Claim:</strong> <strong>Claim 4:</strong> "managing customer profile data and loyalty aggregations..."</p>
+        <p><strong>Corresponds to Claim:</strong> <strong> Claim 13: ADD-ON inheriting the Claim 1 CORE</strong> "The claim concerns automatically determining a destination category based on past interactions of the searching end-user...."</p>
+ <p><strong>Classification ADD-ON — inherits the Claim 1 CORE</strong> Loyalty and award-point management document additional customer-related functionality, but do not by themselves establish automatic destination-category determination from past interactions.</p>
     </div>
 
     <!-- T-023 -->
@@ -752,19 +780,22 @@ and room details.</strong></p>
         </div>
 
         
-        <p><strong>Corresponds to Claim:</strong> <strong>Claim 1:</strong> "receiving search parameters and presenting accommodation options..."</p>
-    </div>
+        <p><strong>Corresponding Claim:</strong> Claim 13 — ADD-ON inheriting the Claim 1 CORE.</p>    
+            <p><strong>Relevant Claim 13:</strong>concerns automatically determining a destination category based on past interactions of the searching end-user.</p>
+  <p><strong>Classification: ADD-ON</strong>documents customer-record functionality within the wider accommodation platform. This feature is considered as an additional limitation surrounding the Claim 1 CORE split-stay mechanism; its relevance to the claimed combination is assessed in that context</p>
+        </div>
 
     <!-- T-024 -->
     <div class="exhibit-card">
-        <h3>Exhibit T-024: CPre-Booking Timeout & Reservation Expiration Engine</h3>
+        <h3>Exhibit T-024: Pre-Booking Timeout & Reservation Expiration Engine</h3>
         <p><strong>Page Reference:</strong>  | <strong>Annex Reference:</strong> </p>
         
         <div class="img-container full-width">
             <img src="Tect-Tech/T-024.png" alt="Exhibit T-024" class="img-full" onerror="handleImgError(this, 'T-024')">
-       <p><strong>Source Text Excerpt:</strong>Hotels Plus "This routine checks pre-booking order timeouts using timestamp
-differences (TIMESTAMPDIFF) to clean up expired orders and alert admins regarding
-pending customer bookings."</p>
+       <p><strong>Source Text Excerpt:</strong>This routine checks pre-booking order timeouts using timestamp differences to identify expired orders and alert administrators to pending customer bookings. It documents reservation-management functionality within the Hotels Plus accommodation platform."</p>
+    <p><strong>Corresponding Claim: Claim 1</strong>supporting system context; no direct correspondence to the core split-stay generation steps is established by this excerp</p>
+ <p><strong>elevant Claim 1:</strong>includes “generating (920) a combined listing (520)” comprising first and second listings associated with different portions of the requested stay.</p>
+ <p><strong>Classification: SUPPORTING EVIDENCE</strong>documents reservation-management functionality within the wider platform. Its relevance is contextual; the timeout and expiration routine is not itself the Claim 1 split-stay mechanism</p>
         </div>
 
        
