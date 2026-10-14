@@ -210,7 +210,7 @@ companies field and room- and hotel-relocation settingst <code>uhb_new_hotels</c
 
     <!-- EXHIBIT T003 -->
     <div class="exhibit-card">
-        <h3>Exhibit T003A&B: Hotel-Owner Registration Workflow & hotel_id Association</h3>
+        <h3>Exhibit T-003-A&B: Hotel-Owner Registration Workflow & hotel_id Association</h3>
         <p><strong>Page Reference:</strong> Page 3 of 31 | <strong>Annex Reference:</strong> ANNEX-T-003</p>
         
         <div class="img-container full-width">
@@ -220,60 +220,62 @@ companies field and room- and hotel-relocation settingst <code>uhb_new_hotels</c
 
         <div class="img-container full-width">
             <img src="images-evidences/T003B.png" alt="Exhibit T-003-A - Hotel Owner Registration" class="img-full" onerror="handleImgError(this, 'ANNEX-T-004')">
-              <p><strong>Source Text Excerpt:</strong> Hotel-Owner Registration Workflow & hotel_id Association
-</p>
-
+              <p><strong>Source Text Excerpt:</strong> Hotel-Owner Registration Workflow & hotel_id Association</p>
+<p><strong>Hotels Plus-The registration workflow retrieves a selected property's
+hotel_id and associates it with the hotel-owner account. The database
+and search exhibits show how accommodation records are stored and processed.</strong></p>
         </div>
 
         <p><strong>Corresponds to Claim:</strong> Claim 1</p>
-        <p><strong>Source Text Excerpt:</strong> Search for rooms in one location: <code>$rooms_found && ModulesSettings::Get('rooms', 'allow_relocation_to_other_hotel') == "yes" && !empty($hotel_sel_loc_id)</code>[cite: 20].</p>
+        <p><strong>Source Text Excerpt:</strong> "storing listing inventory specifying location coordinates and
+availability"</p>
     </div>
 
     <!-- EXHIBIT T005 -->
     <div class="exhibit-card">
-        <h3>Exhibit T005: User and Hotel Account Tables Multi-Property Data Model</h3>
-        <p><strong>Page Reference:</strong> Page 5 of 27 | <strong>Annex Reference:</strong> ANNEX-T-005</p>
+        <h3>Exhibit T-004: Relocation Setting Check & Hotel-Owner Lookup</h3>
+        <p><strong>Page Reference:</strong> Page 4 of 31 | <strong>Annex Reference:</strong> ANNEX-T-004</p>
         
         <div class="img-container full-width">
-            <img src="images-evidences/T-005A-B.png" alt="Exhibit T005 - User and Hotel Account Tables" class="img-full" onerror="handleImgError(this, 'ANNEX-T-005')">
+            <img src="images-evidences/t-004.png" alt="Exhibit T004 - User and Hotel Account Tables" class="img-full" onerror="handleImgError(this, 'ANNEX-T-005')">
         </div>
 
-        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
-        <p><strong>Source Text Excerpt:</strong> Database structure stores hotel-owner accounts and associated property information, supporting the multi-property environment used by the booking system[cite: 21]. Contains <code>room_relocation tinyint(1) NOT NULL DEFAULT '1'</code> and <code>hotel_relocation tinyint(1) NOT NULL DEFAULT '1'</code>[cite: 21].</p>
+        <p><strong>Corresponds to Claim:</strong> Claim 1: determining whether continuous availability satisfies the request...</p>
+        <p><strong>Source Text Excerpt:</strong> The first code fragment checks whether rooms were found and whether hotel
+relocation is enabled. The AJAX fragments retrieve and populate hotelowner
+details. Together, they show a relocation-setting check and a
+separate host-lookup workflow</p>
     </div>
 
-    <!-- EXHIBIT T006 -->
+    <!-- EXHIBIT T005-ALL -->
     <div class="exhibit-card">
-        <h3>Exhibit T006 (T-005A / T-005B): Multi-Day Request Parameters & Normal Reservation Relocation</h3>
-        <p><strong>Page References:</strong> Page 6 of 27, Page 7 of 27 | <strong>Annex References:</strong> ANNEX-T-006, ANNEX-T-007</p>
+        <h3>Exhibit T-005-A,B,C : Multi-Day Request Parameters & Normal Reservation Relocation</h3>
+        <p><strong>Page References:</strong> Page 5 of 317, | <strong>Annex References:</strong> ANNEX-T-005</p>
         
         <div class="img-container full-width">
-            <img src="images-evidences/t-006A.png" alt="Exhibit T006 - Multi Day Parameters" class="img-full" onerror="handleImgError(this, 'ANNEX-T-006')">
-        </div>
+            <img src="images-evidences/T-005A-B.png" alt="Exhibit T006 - Multi Day Parameters" class="img-full" onerror="handleImgError(this, 'ANNEX-T-006')">
+      
+        <p><strong>Hotels Plus-The registration workflow retrieves a selected property's hotel_id and associates it with the hotel-owner account. The database and search exhibits show how accommodation records are stored and processed.
+</strong></p>
+            </div>
 
-        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
-        <p><strong>Source Text Excerpt:</strong> Receiving a Multi-Day Length-of-Stay Request parsing <code>from_date</code>, <code>to_date</code>, check-in, check-out year/month/day, calculating <code>$nights = nights_diff($checkin_date, $checkout_date)</code>[cite: 22]. Live demonstration video dated May 30, 2019[cite: 23].</p>
-    <div class="img-container full-width">
-            <img src="images-evidences/T-006B.png" alt="Exhibit T006 - Multi Day Parameters" class="img-full" onerror="handleImgError(this, 'ANNEX-T-006')">
-        </div>
-    </div>
-
+        
     <!-- EXHIBIT T007 -->
     <div class="exhibit-card">
-        <h3>Exhibit T007 (T-007A / T-007B): Database Schema Flags & User Interface Language Keys</h3>
-        <p><strong>Page Reference:</strong> Page 8 of 27 | <strong>Annex Reference:</strong> ANNEX-T-008</p>
+        <h3>Exhibit T-005-A,B,C: Core Database Schemas for Accounts and Properties</h3>
+        <p><strong>Page Reference:</strong> Page 5 of 31 | <strong>Annex Reference:</strong> ANNEX-T-005</p>
         
         <div class="img-container full-width">
             <img src="images-evidences/T-007A-B.png" alt="Exhibit T007 - Schema Flags and Keys" class="img-full" onerror="handleImgError(this, 'ANNEX-T-008')">
         </div>
 
-        <p><strong>Corresponds to Claim:</strong> Claim 1</p>
+        <p><strong>Corresponds to Claim:</strong> Claim 1: "storing listing inventory and user management structures..</p>
         <p><strong>Source Text Excerpt:</strong> <code>`room_relocation` tinyint(1) NOT NULL DEFAULT '1'</code>, <code>`hotel_relocation` tinyint(1) NOT NULL DEFAULT '1'</code>[cite: 24]. Language keys: <code>_MSN_ALLOW_RELOCATION_TO_OTHER_ROOM</code>, <code>_MSN_ALLOW_RELOCATION_TO_OTHER_HOTEL</code>[cite: 24].</p>
     </div>
 
     <!-- EXHIBIT T008 -->
     <div class="exhibit-card">
-        <h3>Exhibit T008 (T-008B): Conditional Trigger Engine for Continuous Availability Gaps</h3>
+        <h3>Exhibit T008 : Conditional Trigger Engine for Continuous Availability Gaps</h3>
         <p><strong>Page Reference:</strong> Page 9 of 27 | <strong>Annex Reference:</strong> ANNEX-T-008</p>
         
         <div class="img-container full-width">
