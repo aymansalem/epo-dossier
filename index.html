@@ -228,7 +228,7 @@
         <p><strong>Page Reference:</strong> Page 4 of 31 | <strong>Annex Reference:</strong> ANNEX-T-004</p>
         
         <div class="img-container full-width">
-            <img src="Tect-Tech/t-004.png" alt="Exhibit T004 - " class="img-full" onerror="handleImgError(this, 'ANNEX-T-002')">
+            <img src="Tect-Tech/t-004.png" alt="Exhibit T005 - " class="img-full" onerror="handleImgError(this, 'ANNEX-T-005')">
         </div>
 
 
@@ -246,15 +246,13 @@
         <p><strong>Page Reference:</strong> Page 5 of 31 | <strong>Annex Reference:</strong> ANNEX-T-005</p>
         
         <div class="img-container full-width">
-            <img src="Tect-Tech/T-005-A.png" alt="Exhibit T005 - " class="img-full" onerror="handleImgError(this, 'ANNEX-T-005')">
+            <img src="Tect-Tech/T-005-A.png" alt="Exhibit T005 - " class="img-full" onerror="handleImgError(this, 'ANNEX-T-006')">
         </div>
         <h3>Exhibit T-005-B:Account & Hotel Data Relationship</h3>
-<h4>New User Account Table</h4>
           <div class="img-container full-width">
-            <img src="Tect-Tech/T-005-B.png" alt="Exhibit T005 - " class="img-full" onerror="handleImgError(this, 'ANNEX-T-005')">
+            <img src="Tect-Tech/T-005-B.png" alt="Exhibit T006 - " class="img-full" onerror="handleImgError(this, 'ANNEX-T-006')">
         </div>
  <h3>Exhibit T-005-C:User-to-Managed-Hotel Relationship in Database Schema</h3>
-<h4>New User Account Table</h4>
           <div class="img-container full-width">
             <img src="Tect-Tech/T-005-C.png" alt="Exhibit T005 - " class="img-full" onerror="handleImgError(this, 'ANNEX-T-005')">
         </div>
@@ -266,7 +264,7 @@
       
       <!--T-006-->
       <div class="exhibit-card">
-        <h3>Exhibit T-006-AThe search controller reads incoming parameters &
+        <h3>Exhibit T-006-A:"The search controller reads incoming parameters &
 checks whether room or hotel relocation is enabled by the system settings</h3>
         <p><strong>Page Reference:</strong> Page 6 of 31 | <strong>Annex Reference:</strong> ANNEX-T-006</p>
         
@@ -284,11 +282,33 @@ occupancy-reduction condition</h4>
 room or hotel relocation is globally enabled by system settings
 before processing search results
 </strong></p>
+            <h3>Exhibit T-006-C:Empty-Result Handling and Room/Hotel Relocation Suggestions</h4>
+          <div class="img-container full-width">
+            <img src="Tect-Tech/T-006-C.png" alt="Exhibit T006 - " class="img-full" onerror="handleImgError(this, 'ANNEX-T-006')">
+        </div>
+          <p><strong>"When no room is found, the code selects a room- or hotel-relocation
+message according to the configured settings and may offer an
+additional search.</strong></p>
+           <h3>Exhibit T-006-D:Second Room Result & Two-Part Stay Parameter Construction</h4>
+          <div class="img-container full-width">
+            <img src="Tect-Tech/T-006-D.png" alt="Exhibit T006 - " class="img-full" onerror="handleImgError(this, 'ANNEX-T-005')">
+        </div>
+          <p><strong>"When a second room result is found, the code builds arrays containing
+the first and second room results' check-in dates, check-out dates and
+night counts. This supports the technical representation of a two-part stay.</strong></p>
+             <h3>Exhibit T-006-E:Booking Date Parsing & Availability Period Setup</h4>
+          <div class="img-container full-width">
+            <img src="Tect-Tech/T-006-E.png" alt="Exhibit T006 - " class="img-full" onerror="handleImgError(this, 'ANNEX-T-005')">
+        </div>
+          <p><strong>"The booking handler parses the submitted check-in & check-out dates,
+calculates the requested stay length and determines the searchavailability
+period..</strong></p>
               <p><strong>Corresponds to Claim:</strong> <strong>Claim 1:</strong>"evaluating availability parameters and system configuration
 settings"..."</p>
 
     </div>
-      
+      <!--T-07-->
+    
       <!--ENDS-HERE-->
       
 
