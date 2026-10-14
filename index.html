@@ -705,40 +705,35 @@ based on prior interac􀆟ons</p>
 
     <!-- T-024 -->
     <div class="exhibit-card">
-        <h3>Exhibit T-023-A: Customer Record Retrieval by Customer ID    </h3>
+        <h3>Exhibit T-024: CPre-Booking Timeout & Reservation Expiration Engine</h3>
         <p><strong>Page Reference:</strong> Page 29 of 31 | <strong>Annex Reference:</strong> ANNEX-T-027</p>
         
         <div class="img-container full-width">
-            <img src="Tect-Tech/T-023-A.png" alt="Exhibit T-024" class="img-full" onerror="handleImgError(this, 'T-024')">
+            <img src="Tect-Tech/T-024.png" alt="Exhibit T-024" class="img-full" onerror="handleImgError(this, 'T-024')">
         </div>
 
           <h3>Exhibit T-023-B: Customer Record Retrieval & Booking Table Joins    </h3>
         <p><strong>Page Reference:</strong> Page 29 of 31 | <strong>Annex Reference:</strong> ANNEX-T-027</p>
         
-        <div class="img-container full-width">
-            <img src="Tect-Tech/T-023-B.png" alt="Exhibit T-024" class="img-full" onerror="handleImgError(this, 'T-024')">
-        </div>
-        <p><strong>Source Text Excerpt:</strong>Hotels Plus The backend queries join booking records
-(uhb_new_bookings_rooms) directly with customer accounts
-(uhb_new_customers) using customer_id to pull checkin,
-checkout,
-and room details.</p>
-        <p><strong>Corresponds to Claim:</strong> <strong>Claim 13:</strong> "Supporting Context Only: Customer and Booking-History
+      
+        <p><strong>Source Text Excerpt:</strong>Hotels Plus "This routine checks pre-booking order timeouts using timestamp
+differences (TIMESTAMPDIFF) to clean up expired orders and alert admins regarding
+pending customer bookings."</p>
 Retrieval"..."</p>
     </div>
 
     <!-- T-025 -->
     <div class="exhibit-card">
-        <h3>Exhibit T-024: Pre-Booking Timeout & Reservation Expiration Engine</h3>
-        <p><strong>Page Reference:</strong> Page 30-31 of 31 | <strong>Annex Reference:</strong> ANNEX-T-028</p>
+        <h3>Exhibit T-025: Annotated Split Search Sketch: Same Hotel and Cross Hotel Alterna􀆟ves</h3>
+        <p><strong>Page Reference:</strong> Page 31 of 31 | <strong>Annex Reference:</strong> ANNEX-T-028</p>
         
         <div class="img-container full-width">
-            <img src="Tect-Tech/T-025.png" alt="Exhibit T-025" class="img-full" onerror="handleImgError(this, 'T-025')">
+            <img src="Tect-Tech/11-refresh.png" alt="Exhibit T-025" class="img-full" onerror="handleImgError(this, 'T-025')">
         </div>
 
-        <p><strong>Source Text Excerpt:</strong> Hotels Plus "This routine checks pre-booking order timeouts using timestamp
-differences (TIMESTAMPDIFF) to clean up expired orders and alert admins regarding
-pending customer bookings."</p>
+        <p><strong>Source Text Excerpt:</strong>The annotated code comments describe a split-search sequence and
+illustrate separate stay-date and night parameters for single-hotel and cross-hotel alternatives. The displayed lines are comments, so this
+image is an explanatory sketch rather than independent proof that the described operations execute.."</p>
         <p><strong>Corresponds to Claim:</strong> <strong>Claims 14 & 15:</strong> "monitoring reservation status and managing booking lifecycle states..."</p>
     </div>
 
