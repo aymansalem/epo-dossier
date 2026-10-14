@@ -479,30 +479,43 @@
         <h3>Exhibit T-017-B: UI Admin Control Panel Minimum Stay Night Threshold Enforcement</h3>
         <div class="img-container full-width">
             <img src="Tect-Tech/T-017-B.png" alt="Exhibit T-017-B" class="img-full" onerror="handleImgError(this, 'T-017-B')">
+       <p><strong>"Admins can configure minimum and maximum stay
+lengths per package in the control panel, allowing the engine to
+test requested dates against these rules.</strong></p>
         </div>
 
         <h3>Exhibit T-017-C: Configurable Minimum Stay Parameter (`uhb_new_packages`)</h3>
         <div class="img-container full-width">
             <img src="Tect-Tech/T-017-C.png" alt="Exhibit T-017-C" class="img-full" onerror="handleImgError(this, 'T-017-C')">
+        <p><stron>The fiveday
+value is not relied upon as a historical Hotels Plus configura􀆟on.
+Rather, the evidence shows that minimum lengthofstay
+was already an
+administratorconfigurable
+booking parameter, while the splitstay/
+reloca􀆟on
+mechanism was already implemented as part of the booking engine. The
+relevance of specifying “five days” to the technical contribu􀆟on of the claimed
+splitstay
+mechanism is therefore le􀅌 for assessment by the Examining Division</stron></p>
         </div>
 
-        <h3>Exhibit T-017-D: Determine Applicable Minimum & Test Requested Stay</h3>
+        <h3>Exhibit T-017-D:Determine Applicable Minimum</h3>
         <div class="img-container full-width">
             <img src="Tect-Tech/T-017-D.png" alt="Exhibit T-017-D" class="img-full" onerror="handleImgError(this, 'T-017-D')">
         </div>
-                <h3>Exhibit T-017-D: Determine Applicable Minimum & Test Requested Stay</h3>
+                <h3>Exhibit T-017-E: Test Requested Stay Against Minimum</h3>
 
         <div class="img-container full-width">
             <img src="Tect-Tech/T-017-E.png" alt="Exhibit T-017-E" class="img-full" onerror="handleImgError(this, 'T-017-E')">
         </div>
 
-        <p><strong>Source Text Excerpt:</strong> Admins can configure minimum and maximum stay lengths per package in the control panel, allowing the engine to test requested dates against these rules.</p>
         <p><strong>Corresponds to Claim:</strong> <strong>Claim 3:</strong> "comparing requested stay duration against length-of-stay constraints..."</p>
     </div>
 
     <!-- T-018 -->
     <div class="exhibit-card">
-        <h3>Exhibit T-018-A: Earth-Radius Geographic-Distance Calculation Function</h3>
+        <h3>Exhibit T-018-A: Earth-Radius Geographic-Distance Calculation</h3>
         <p><strong>Page Reference:</strong> Page 21 of 31 | <strong>Annex Reference:</strong> ANNEX-T-021</p>
         
         <div class="img-container full-width">
@@ -520,14 +533,12 @@ applying default upper distance limits (1000 km) for filtering</strong></p>
             <img src="Tect-Tech/T-018-B.png" alt="Exhibit T-018-B" class="img-full" onerror="handleImgError(this, 'T-018-B')">
         </div>
 
-        <p><strong>Source Text Excerpt:</strong> Using Earth's radius (6372.795 km), the code calculates the precise distance between a hotel and a central reference point, applying default upper distance limits (1000 km) for filtering.</p>
         <h3>Exhibit T-018-C: Distance-Range Filtering Parameters</h3>
         <div class="img-container full-width">
             <img src="Tect-Tech/T-018-C.png" alt="Exhibit T-018-B" class="img-full" onerror="handleImgError(this, 'T-018-B')">
         </div>
         <p><Stong>The evidence does not show that 1000 km is a fixed relocation distance. It
 shows that 1000 is the default upper value of the distance filter</Stong></p>
-        <p><strong>Corresponds to Claim:</strong> <strong>Claim 12:</strong> "computing geographic distance between listings using coordinate geometry..."</p>
    
      <h3>Exhibit T-018-D: Distance Bounds Passed into the Search Parameters</h3>
         <div class="img-container full-width">
@@ -542,11 +553,12 @@ distance range into the search process</Stong></p>
 
     <!-- T-019 -->
     <div class="exhibit-card">
-        <h3>Exhibit T-019-A: Admin Map Center Coordinate Setup & Distance Queries (`distance_center`)</h3>
+        <h3>Exhibit T-019-A: Admin Map Center Coordinate Setup & Distance Queries</h3>
         <p><strong>Page Reference:</strong> Page 23 of 31 | <strong>Annex Reference:</strong> ANNEX-T-023</p>
         
         <div class="img-container full-width">
             <img src="Tect-Tech/T-019-A.png" alt="Exhibit T-019" class="img-full" onerror="handleImgError(this, 'T-019')">
+      <p><strong>Configurable central-point coordinates & distance-to-centre function</strong></p>
         </div>
 
         <h3>Exhibit T-019-B: Distance Calculation — Coordinate Inputs</h3>
@@ -555,17 +567,17 @@ distance range into the search process</Stong></p>
         </div>
         <p><strong>Source Text Excerpt:</strong> Hotels Plus The JavaScript reads the hotel & centre-point coordinates,
 calculates the distance and rounds it to two decimal places. It then populates
-the distance_center form field.</p>
+the distance_center form field</p>
         <p><strong>Admins input center point coordinates in the UI, & the JS helper
 computes rounded distances (toFixed(2)) to construct database query
 clauses (distance_center)</strong></p>
         <p><strong>Corresponds to Claim:</strong> <strong>Claim 12:</strong> "storing and querying distance to center point parameters..."</p>
   
-     <h3>Exhibit T-019-C: Distance Calculation — Coordinate Inputs</h3>
+     <h3>Exhibit T-019-C: Distance-Range Query Conditions & Centre-Point Form Fields</h3>
          <div class="img-container full-width">
             <img src="Tect-Tech/T-019-C.png" alt="Exhibit T-019" class="img-full" onerror="handleImgError(this, 'T-019')">
         </div>
-        <p><strong>Source Text Excerpt:</strong> Hotels Plus The search conditions compare distance_center with the
+        <p><strong>Source Text Excerpt:</strong>Hotels Plus The search conditions compare distance_center with the
 configured lower and upper distance values. The accompanying form-field
 definitions show the centre-point coordinates and distance-to-centre settings.</strong></p>
 
@@ -582,24 +594,46 @@ or the underlying distance-calculation logic.</strong></p>
 
     <!-- T-020 -->
     <div class="exhibit-card">
-        <h3>Exhibit T-020: Thematic Categories & Administrative Configuration</h3>
-        <p><strong>Page Reference:</strong> Page 25 of 31 | <strong>Annex Reference:</strong> ANNEX-T-023</p>
+        <h3>Exhibit T-020-A: Customer Settings: Remember-Me Option</h3>
+        <p><strong>Page Reference:</strong> Page 26 of 31 | <strong>Annex Reference:</strong> ANNEX-T-026</p>
         
         <div class="img-container full-width">
-            <img src="Tect-Tech/T-020.png" alt="Exhibit T-020" class="img-full" onerror="handleImgError(this, 'T-020')">
+            <img src="Tect-Tech/T-020-A.png" alt="Exhibit T-020" class="img-full" onerror="handleImgError(this, 'T-020')">
         </div>
+        <h3>Exhibit T-020-B: Language Strings for the Remember-Me Setting</h3>
 
+         <div class="img-container full-width">
+            <img src="Tect-Tech/T-020-B.png" alt="Exhibit T-020" class="img-full" onerror="handleImgError(this, 'T-020')">
+        </div>
+          <h3>Exhibit T-020-C: Customer Management Interface with Customer-Group Filter</h3>
+
+         <div class="img-container full-width">
+            <img src="Tect-Tech/T-020-C.png" alt="Exhibit T-020" class="img-full" onerror="handleImgError(this, 'T-020')">
+        </div>
         <p><strong>Source Text Excerpt:</strong> Admin panel settings managing customer registration alerts, remember-me privileges, and customer group filtering inside the database.</p>
         <p><strong>Corresponds to Claim:</strong> <strong>Claim 13:</strong> Administering customer profile settings and classification groups.</p>
     </div>
 
     <!-- T-021 -->
     <div class="exhibit-card">
-        <h3>Exhibit T-021: Customer Payment Totals & Wishlist Integration (`Wishlist::AddToList`)</h3>
-        <p><strong>Page Reference:</strong> Page 26 of 31 | <strong>Annex Reference:</strong> ANNEX-T-024</p>
+        <h3>Exhibit T-021-A: Customer Payment Total Aggregation</h3>
+        <p><strong>Page Reference:</strong> Page 27 of 31 | <strong>Annex Reference:</strong> ANNEX-T-027</p>
         
         <div class="img-container full-width">
-            <img src="Tect-Tech/T-021.png" alt="Exhibit T-021" class="img-full" onerror="handleImgError(this, 'T-021')">
+            <img src="Tect-Tech/T-021-A.png" alt="Exhibit T-021" class="img-full" onerror="handleImgError(this, 'T-021')">
+      <p><strong>Hotels Plus "The code passes customer IDs to
+Bookings::GetTotalPayments() and associates the returned totals with
+those IDs. It shows customer-linked payment history, rather than using
+that history to rank split-stay results    </strong></p>
+
+             <h3>Exhibit T-021-B: Customer-Specific Wishlist Association</h3>
+        <p><strong>Page Reference:</strong> Page 27 of 31 | <strong>Annex Reference:</strong> ANNEX-T-027</p>
+        
+        <div class="img-container full-width">
+            <img src="Tect-Tech/T-021-B.png" alt="Exhibit T-021" class="img-full" onerror="handleImgError(this, 'T-021')">
+      <p><strong>Hotels Plus associates an individual customer ID with a selected
+accommodation/item through the Wishlist subsystem, providing
+executable add/remove operations for customer-specific selections   </strong></p>
         </div>
 
         <p><strong>Source Text Excerpt:</strong> The system links customer IDs to historical booking payments and manages wishlist additions/removals on a per-customer basis.</p>
@@ -608,11 +642,29 @@ or the underlying distance-calculation logic.</strong></p>
 
     <!-- T-022 -->
     <div class="exhibit-card">
-        <h3>Exhibit T-022: Loyalty & Award Points Management Class (`CustomerAwardPoints`)</h3>
+        <h3>Exhibit T-022-A: Loyalty & Award Points Management Class</h3>
         <p><strong>Page Reference:</strong> Page 27 of 31 | <strong>Annex Reference:</strong> ANNEX-T-025</p>
         
         <div class="img-container full-width">
             <img src="Tect-Tech/T-022.png" alt="Exhibit T-022" class="img-full" onerror="handleImgError(this, 'T-022')">
+       <p><strong>Hotels Plus/ "I built a dedicated CustomerAwardPoints class instantiated via
+customer ID to track loyalty funds, vouchers, and comments inside the admin
+panel</strong></p>
+               <h3>Exhibit T-022-B: Customer-Specific Award-Point Record Management</h3>
+        <p><strong>Page Reference:</strong> Page 27 of 31 | <strong>Annex Reference:</strong> ANNEX-T-025</p>
+        
+        <div class="img-container full-width">
+            <img src="Tect-Tech/T-022-B.png" alt="Exhibit T-022" class="img-full" onerror="handleImgError(this, 'T-022')">
+       <p><strong>Hotels Plus retrieves a specific customer by customer ID and instantiates
+CustomerAwardPoints($customer_id) for that customer, with executable
+operations to create, update, delete and remove customer-specific award-point
+records</strong></p>
+                    <h3>Exhibit T-022-C: Loyalty Module Settings Retrieval</h3>
+        <p><strong>Page Reference:</strong> Page 28 of 31 | <strong>Annex Reference:</strong> ANNEX-T-028</p>
+        
+        <div class="img-container full-width">
+            <img src="Tect-Tech/T-022-C.png" alt="Exhibit T-022" class="img-full" onerror="handleImgError(this, 'T-022')">
+       
         </div>
 
         <p><strong>Source Text Excerpt:</strong> I built a dedicated `CustomerAwardPoints` class instantiated via customer ID to track loyalty funds, vouchers, and comments inside the admin panel.</p>
@@ -634,27 +686,40 @@ or the underlying distance-calculation logic.</strong></p>
 
     <!-- T-024 -->
     <div class="exhibit-card">
-        <h3>Exhibit T-024: Customer Record Retrieval & Booking Table Joins</h3>
+        <h3>Exhibit T-023-A: Customer Record Retrieval by Customer ID    </h3>
         <p><strong>Page Reference:</strong> Page 29 of 31 | <strong>Annex Reference:</strong> ANNEX-T-027</p>
         
         <div class="img-container full-width">
-            <img src="Tect-Tech/T-024.png" alt="Exhibit T-024" class="img-full" onerror="handleImgError(this, 'T-024')">
+            <img src="Tect-Tech/T-023-A.png" alt="Exhibit T-024" class="img-full" onerror="handleImgError(this, 'T-024')">
         </div>
 
-        <p><strong>Source Text Excerpt:</strong> The backend queries join booking records (`uhb_new_bookings_rooms`) directly with customer accounts (`uhb_new_customers`) using `customer_id` to pull check-in, check-out, and room details.</p>
-        <p><strong>Corresponds to Claim:</strong> <strong>Claim 13:</strong> "retrieving customer-linked booking records and associated accommodation attributes..."</p>
+          <h3>Exhibit T-023-B: Customer Record Retrieval & Booking Table Joins    </h3>
+        <p><strong>Page Reference:</strong> Page 29 of 31 | <strong>Annex Reference:</strong> ANNEX-T-027</p>
+        
+        <div class="img-container full-width">
+            <img src="Tect-Tech/T-023-B.png" alt="Exhibit T-024" class="img-full" onerror="handleImgError(this, 'T-024')">
+        </div>
+        <p><strong>Source Text Excerpt:</strong>Hotels Plus The backend queries join booking records
+(uhb_new_bookings_rooms) directly with customer accounts
+(uhb_new_customers) using customer_id to pull checkin,
+checkout,
+and room details.</p>
+        <p><strong>Corresponds to Claim:</strong> <strong>Claim 13:</strong> "Supporting Context Only: Customer and Booking-History
+Retrieval"..."</p>
     </div>
 
     <!-- T-025 -->
     <div class="exhibit-card">
-        <h3>Exhibit T-025: Pre-Booking Timeout & Reservation Expiration Engine (`TIMESTAMPDIFF`)</h3>
+        <h3>Exhibit T-024: Pre-Booking Timeout & Reservation Expiration Engine</h3>
         <p><strong>Page Reference:</strong> Page 30-31 of 31 | <strong>Annex Reference:</strong> ANNEX-T-028</p>
         
         <div class="img-container full-width">
             <img src="Tect-Tech/T-025.png" alt="Exhibit T-025" class="img-full" onerror="handleImgError(this, 'T-025')">
         </div>
 
-        <p><strong>Source Text Excerpt:</strong> This routine checks pre-booking order timeouts using timestamp differences (`TIMESTAMPDIFF`) to clean up expired orders and alert admins regarding pending customer bookings.</p>
+        <p><strong>Source Text Excerpt:</strong> Hotels Plus "This routine checks pre-booking order timeouts using timestamp
+differences (TIMESTAMPDIFF) to clean up expired orders and alert admins regarding
+pending customer bookings."</p>
         <p><strong>Corresponds to Claim:</strong> <strong>Claims 14 & 15:</strong> "monitoring reservation status and managing booking lifecycle states..."</p>
     </div>
 
