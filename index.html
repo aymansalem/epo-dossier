@@ -565,6 +565,7 @@ lis􀆟ng must be established from the relevant execu􀆟on logic.</strong></p>
         <div class="img-container full-width">
             <img src="Tect-Tech/T-017-A.png" alt="Exhibit T017 - " class="img-full" onerror="handleImgError(this, 'ANNEX-T-016')">
           <h3>Exhibit T-017-B:"UI Admin Control Panel Minimum Stay Night threshold enforcement"</h3>
+        </div>
             <div class="img-container full-width">
             <img src="Tect-Tech/T-017-B.png" alt="Exhibit T017 - " class="img-full" onerror="handleImgError(this, 'ANNEX-T-051')">
             </div>
@@ -604,22 +605,107 @@ splitstay mechanism is therefore le􀅌 for assessment by the Examining Division
         <div class="img-container full-width">
             <img src="Tect-Tech/T-018-A.png" alt="Exhibit T013 - " class="img-full" onerror="handleImgError(this, 'ANNEX-T-016')">
         </div>
+        <div>
+               <p><strong>"Using Earth's radius (6372.795 km), the code calculates the
+precise distance between a hotel and a central reference point,
+applying default upper distance limits (1000 km) for filtering</strong></p>
+         <p><strong>"Using Earth's radius (6372.795 km), the code calculates the
+precise distance between a hotel and a central reference point,
+applying default upper distance limits (1000 km) for filtering</strong></p>
+            <p><strong>"Using Earth's radius (6372.795 km), the code calculates the
+precise distance between a hotel and a central reference point,
+applying default upper distance limits (1000 km) for filtering</strong></p>
+        </div>
+        
+        </div><h3>Exhibit T-018-B:"Centre-Point Coordinate Inputs to the Distance Function"</h3>
+            <div class="img-container full-width">
+            <img src="Tect-Tech/T-018-B.png" alt="Exhibit T014 - " class="img-full" onerror="handleImgError(this, 'ANNEX-T-051')">
+         
+            </div>
+
+                              </div><h3>Exhibit T-018-C:"Distance-Range Filtering Parameters"</h3>
+            <div class="img-container full-width">
+            <img src="Tect-Tech/T-018-C.png" alt="Exhibit T014 - " class="img-full" onerror="handleImgError(this, 'ANNEX-T-051')">
+         
+            </div>
+                              <p><strong>The evidence does not show that 1000 km is a fixed relocation distance. It
+shows that 1000 is the default upper value of the distance filter</strong></p>
+    </div><h3>Exhibit T-018-D:"Distance Bounds Passed into the Search Parameters"</h3>
+            <div class="img-container full-width">
+            <img src="Tect-Tech/T-018-D.png" alt="Exhibit T014 - " class="img-full" onerror="handleImgError(this, 'ANNEX-T-051')">
+         
+            </div>
+                              <p><strong>Hotels Plus The search parameter array includes filter_start_distance
+and filter_end_distance. These parameters carry the configured
+distance range into the search process</strong></p>
+                                 
+                <p><strong>Claim 12: ""computing geographic distance between listings using
+coordinate geometry"..</strong></p>
+        </div>
+
+            <!--019-->
+
+ <div class="exhibit-card">
+        <h3>Exhibit T-018-A:"Earth-Radius Geographic-Distance Calculation"</h3>
+        <p><strong>Page Reference:</strong> Page 22 of 31 | <strong>Annex Reference:</strong> ANNEX-T-022</p>
+        
+        <div class="img-container full-width">
+            <img src="Tect-Tech/T-018-A.png" alt="Exhibit T013 - " class="img-full" onerror="handleImgError(this, 'ANNEX-T-016')">
+        </div>
         </div><h3>Exhibit T-018-B:"Code Enforcement of Minimum & Maximum Room Quantities"</h3>
             <div class="img-container full-width">
             <img src="Tect-Tech/T-018-B.png" alt="Exhibit T014 - " class="img-full" onerror="handleImgError(this, 'ANNEX-T-051')">
          
             </div>
+    <div>
                                     <p><strong>"Using Earth's radius (6372.795 km), the code calculates the
 precise distance between a hotel and a central reference point,
 applying default upper distance limits (1000 km) for filtering</strong></p>
          <p><strong>"Using Earth's radius (6372.795 km), the code calculates the
 precise distance between a hotel and a central reference point,
 applying default upper distance limits (1000 km) for filtering</strong></p>
+</div>
+    <h3>Exhibit T-018-C:"Code Enforcement of Minimum & Maximum Room Quantities"</h3>
+            <div class="img-container full-width">
+            <img src="Tect-Tech/T-018-C.png" alt="Exhibit T014 - " class="img-full" onerror="handleImgError(this, 'ANNEX-T-051')">
+         
+            </div>
+    <div>
+    <h3>Exhibit T-018-C:"Code Enforcement of Minimum & Maximum Room Quantities"</h3>
+            <div class="img-container full-width">
+            <img src="Tect-Tech/T-018-D.png" alt="Exhibit T014 - " class="img-full" onerror="handleImgError(this, 'ANNEX-T-051')">
+         
+            </div>
                 <p><strong>Claim 12: ""computing geographic distance between listings using
 coordinate geometry"..</strong></p>
         </div>
 
-            
+
+    <!--T19-->
+
+     <div class="exhibit-card">
+        <h3>Exhibit T-019-A:"Admin Map Center Coordinate Setup & Distance Que"</h3>
+        <p><strong>Page Reference:</strong> Page 23 of 31 | <strong>Annex Reference:</strong> ANNEX-T-023</p>
+        
+        <div class="img-container full-width">
+            <img src="Tect-Tech/T-019-A.png" alt="Exhibit T013 - " class="img-full" onerror="handleImgError(this, 'ANNEX-T-016')">
+        </div>
+         <p><strong>Admins input center point coordinates in the UI, & the JS helper
+computes rounded distances (toFixed(2)) to construct database query
+clauses (distance_center)</strong></p>
+        </div><h3>Exhibit T-019-B:"Distance Calculation — Coordinate Inputs"</h3>
+            <div class="img-container full-width">
+            <img src="Tect-Tech/T-018-B.png" alt="Exhibit T014 - " class="img-full" onerror="handleImgError(this, 'ANNEX-T-051')">
+         
+            </div>
+    <div>
+                                    <p><strong>"Hotels Plus The JavaScript reads the hotel & centre-point coordinates,
+calculates the distance and rounds it to two decimal places. It then populates
+the distance_center form field</strong></p>
+</div>
+
+    
+    
       <!--ENDS-HERE-->
       
 
