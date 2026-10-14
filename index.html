@@ -256,7 +256,8 @@
 
     <!-- T-006 -->
     <div class="exhibit-card">
-        <h3>Exhibit T-006-A: The search controller reads incoming parameters & checks whether room or hotel relocation is enabled</h3>
+        <h3>Exhibit T-006-A: The search controller reads incoming parameters &
+checks whether room or hotel relocation is enabled by the system settings</h3>
         <p><strong>Page Reference:</strong> Page 6 of 31 | <strong>Annex Reference:</strong> ANNEX-T-006</p>
         
         <div class="img-container full-width">
@@ -361,14 +362,25 @@
         
         <div class="img-container full-width">
             <img src="Tect-Tech/T-010-A.png" alt="Exhibit T-011-A" class="img-full" onerror="handleImgError(this, 'T-011-A')">
+       <p><strong>(Storing listing inventory... and determining split availability based on system
+configuration and inventory capabilities.*)
+Demonstrates object-oriented runtime instantiation of host account profiles ].
+The system dynamically reads host-level and system-level permissions
+(`room_relocation` and `hotel_relocation`) to determine whether split-stay
+itineraries (intra-hotel or inter-hotel) are permissible during search result
+aggregation</strong></p>
         </div>
 
         <h3>Exhibit T-011-B: Account Seed Record with Active Relocation Permissions (2019-06-25)</h3>
         <div class="img-container full-width">
             <img src="Tect-Tech/T-011-B.png" alt="Exhibit T-011-B" class="img-full" onerror="handleImgError(this, 'T-011-B')">
+     <p><strong>The SQL record shows an owner account with is_active = 1,
+room_relocation = 1 and hotel_relocation = 1, alongside the displayed
+timestamp of 25 June 2019. It establishes the recorded account settings
+and timestamp. Public availability is addressed by the accompanying
+Documentary and Visual annexes.</strong></p>
         </div>
 
-        <p><strong>Source Text Excerpt:</strong> The SQL record shows an owner account with `is_active = 1`, `room_relocation = 1` and `hotel_relocation = 1`, alongside the displayed timestamp of 25 June 2019, establishing recorded account settings.</p>
         <p><strong>Corresponds to Claim:</strong> <strong>Claim 1 & Claims 2-4:</strong> System architecture storing listing availability and configuring dual-mode split-stay operations.</p>
     </div>
 
@@ -379,14 +391,23 @@
         
         <div class="img-container full-width">
             <img src="Tect-Tech/T-012-A.png" alt="Exhibit T-012-A" class="img-full" onerror="handleImgError(this, 'T-012-A')">
+   <p><strong>The uhb_new_bookings_rooms table contains booking, hotel and room
+identifiers, check-in/check-out dates and other reservation fields. It
+supports the storage of room-level booking information, but the schema
+alone does not prove that a master booking was linked to multiple
+executed stay segments</strong></p>
         </div>
 
         <h3>Exhibit T-012-B: Account Seed Record with Room- and Hotel-Relocation Flags</h3>
         <div class="img-container full-width">
             <img src="Tect-Tech/t-012-B.png" alt="Exhibit T-012-B" class="img-full" onerror="handleImgError(this, 't-012-B')">
+        
+        <p><strong>The SQL insert shows account records with stored activation and
+relocation fields. It supports the account-configuration evidence,
+rather than proving runtime account hydration or a completed splitstay
+transaction June 2019."</strong></p>
         </div>
 
-        <p><strong>Source Text Excerpt:</strong> The `uhb_new_bookings_rooms` table contains booking, hotel, and room identifiers, check-in/check-out dates, and other reservation fields supporting room-level booking information storage.</p>
         <p><strong>Corresponds to Claim:</strong> <strong>Claim 1:</strong> Storing listing inventory and processing multi-portion booking requests.</p>
     </div>
 
@@ -400,6 +421,7 @@
         </div>
 
         <p><strong>Source Text Excerpt:</strong> The video frame shows the Hotels Plus availability-search interface under ordinary reservation conditions (<a href="https://youtu.be/82XxQouNwQc?si=Uz2omF2w1SGb652v" target="_blank">YouTube Walkthrough at [0:10/1:15]</a>), providing visual context for the search system.</p>
+      <p><strong>https://youtu.be/82XxQouNwQc?si=Uz2omF2w1SGb652v at [0:10/1:15] </strong></p>
         <p><strong>Corresponds to Claim:</strong> <strong>Claim 1:</strong> "identifying matching accommodation when availability is sufficient..."</p>
     </div>
 
@@ -473,12 +495,12 @@
         <p><strong>Page Reference:</strong> Page 19 of 31 | <strong>Annex Reference:</strong> ANNEX-T-019</p>
         
         <div class="img-container full-width">
-            <img src="Tect-Tech/T-017-A.png" alt="Exhibit T-017-A" class="img-full" onerror="handleImgError(this, 'T-017-A')">
+            <img src="Tect-Tech/t-017-A.png" alt="Exhibit T-017-A" class="img-full" onerror="handleImgError(this, 'T-017-A')">
         </div>
 
         <h3>Exhibit T-017-B: UI Admin Control Panel Minimum Stay Night Threshold Enforcement</h3>
         <div class="img-container full-width">
-            <img src="Tect-Tech/T-017-B.png" alt="Exhibit T-017-B" class="img-full" onerror="handleImgError(this, 'T-017-B')">
+            <img src="Tect-Tech/t-017-B.png" alt="Exhibit T-017-B" class="img-full" onerror="handleImgError(this, 'T-017-B')">
        <p><strong>"Admins can configure minimum and maximum stay
 lengths per package in the control panel, allowing the engine to
 test requested dates against these rules.</strong></p>
