@@ -257,12 +257,12 @@ separate host-lookup workflow</p>
                     <img src="images-evidences/T-005-A.png" alt="Exhibit T006 - Multi Day Parameters" class="img-full" onerror="handleImgError(this, 'ANNEX-T-006')">
                        <div class="img-container full-width">
             <p><strong>New User Account Table</strong></p>
-
+                       </div>
                            <img src="images-evidences/T-005-B.png" alt="Exhibit T006 - Multi Day Parameters" class="img-full" onerror="handleImgError(this, 'ANNEX-T-006')">  
              
         <p><strong>Hotels Plus-The registration workflow retrieves a selected property's hotel_id and associates it with the hotel-owner account. The database and search exhibits show how accommodation records are stored and processed.
 </strong></p>
-           
+                </div>
             <div class="img-container full-width">
             <img src="images-evidences/T-005-C.png" alt="Exhibit T006 - Multi Day Parameters" class="img-full" onerror="handleImgError(this, 'ANNEX-T-006')">
                   <p><strong>User-to-Managed-Hotel Relationship in Database Schema</strong></p>
@@ -271,52 +271,33 @@ separate host-lookup workflow</p>
         <p><strong>Source Text Excerpt:</strong>These SQL schemas define account & accommodation fields, including
 location coordinates, booking policies and relocation settings</p>
                 <p><Strong>Claim 1: <strong> "storing listing inventory and user management structures</strong></Strong></p>
-
+            </div>
         <!--T-006-->
 
 
 <div class="exhibit-card">
-        <h3>Exhibit T-006->T-006-E : The search controller</h3>
-        <p><strong>Page References:</strong> Page 6 of 31, | <strong>Annex References:</strong> ANNEX-T-006</p>
+        <h3>Exhibit T-007-A & B : Dual-Mode Relocation Flags & Language Constants</h3>
+        <p><strong>Page References:</strong> Page 7 of 31, | <strong>Annex References:</strong> ANNEX-T-007</p>
                 <div class="img-container full-width">
-            <p><strong>New Hotel Account Table</strong></p>
+            <p><strong>Dual-Mode Relocation Flags & Language Constants</strong></p>
 
-                    <img src="images-evidences/T-006-A.png" alt="Exhibit T006 - Multi Day Parameters" class="img-full" onerror="handleImgError(this, 'ANNEX-T-006')">
+                    <img src="images-evidences/T-007-A.png" alt="Exhibit T006 - Multi Day Parameters" class="img-full" onerror="handleImgError(this, 'ANNEX-T-006')">
                        <div class="img-container full-width">
             <p><strong>The search controller reads incoming parameters & checks whether room or hotel relocation is enabled by the system settings</strong></p>
-
-                           <img src="images-evidences/T-006-B.png" alt="Exhibit T006 - Multi Day Parameters" class="img-full" onerror="handleImgError(this, 'ANNEX-T-006')">  
+                       </div>
+                           <img src="images-evidences/T-007-B.png" alt="Exhibit T006 - Multi Day Parameters" class="img-full" onerror="handleImgError(this, 'ANNEX-T-006')">  
              
         <p><strong>When the direct search fails, the code checks whether automatic re-search is enabled & repeats the search under the configured occupancy-reduction condition
 </strong></p>
+                                           </div>
+
                            <p><strong>The search controller reads incoming POST variables to check if room or hotel relocation is globally enabled by system settings before processing search results
 </strong></strongg></p>
            
-            <div class="img-container full-width">
-            <img src="images-evidences/T-006-C.png" alt="Exhibit T006 - Multi Day Parameters" class="img-full" onerror="handleImgError(this, 'ANNEX-T-006')">
-                  <p><strong>Empty-Result Handling and Room/Hotel Relocation Suggestions</strong></p>
-
-               
-        <p><strong>Source Text Excerpt:</strong>When no room is found, the code selects a room- or hotel-relocation message according to the configured settings and may offer an additional search.
-</p>
-                <div class="img-container full-width">
-            <img src="images-evidences/T-006-D.png" alt="Exhibit T006 - Multi Day Parameters" class="img-full" onerror="handleImgError(this, 'ANNEX-T-006')">
-                  <p><strong>Second Room Result & Two-Part Stay Parameter Construction</strong></p>
-
-               
-        <p><strong>When a second room result is found, the code builds arrays containing the first and second room results' check-in dates, check-out dates and night counts. This supports the technical representation of a two-part stay</strong></p>
-                <p><Strong>Claim 1: <strong> "storing listing inventory and user management structures</strong></Strong></p>
-
-  <div class="img-container full-width">
-            <img src="images-evidences/T-006-E.png" alt="Exhibit T006 - Multi Day Parameters" class="img-full" onerror="handleImgError(this, 'ANNEX-T-006')">
-                  <p><strong>Booking Date Parsing & Availability Period Setup</strong></p>
-
-               
-        <p><strong>The booking handler parses the submitted check-in & check-out dates, calculates the requested stay length and determines the search-availability period.
-</strong></p>
-                <p><Strong>Claim 1: <strong> "storing listing inventory and user management structures</strong></Strong></p>
-                
-<!--END-->
+      
+      <!--T007-->
+      
+      <!--END-->
         
 
     <h2>Claim Mapping Matrix</h2>
