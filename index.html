@@ -486,10 +486,12 @@
             <img src="Tect-Tech/T-017-C.png" alt="Exhibit T-017-C" class="img-full" onerror="handleImgError(this, 'T-017-C')">
         </div>
 
-        <h3>Exhibit T-017-D/E: Determine Applicable Minimum & Test Requested Stay</h3>
+        <h3>Exhibit T-017-D: Determine Applicable Minimum & Test Requested Stay</h3>
         <div class="img-container full-width">
             <img src="Tect-Tech/T-017-D.png" alt="Exhibit T-017-D" class="img-full" onerror="handleImgError(this, 'T-017-D')">
         </div>
+                <h3>Exhibit T-017-D: Determine Applicable Minimum & Test Requested Stay</h3>
+
         <div class="img-container full-width">
             <img src="Tect-Tech/T-017-E.png" alt="Exhibit T-017-E" class="img-full" onerror="handleImgError(this, 'T-017-E')">
         </div>
@@ -506,6 +508,12 @@
         <div class="img-container full-width">
             <img src="Tect-Tech/T-018-A.png" alt="Exhibit T-018-A" class="img-full" onerror="handleImgError(this, 'T-018-A')">
         </div>
+        <p><strong>The function calculates geographic distance from two latitude/longitude
+coordinate pairs using an Earth-radius calculation. The distance-range
+filtering rules are shown in the following exhibits</strong></p>
+        <p><strong>"Using Earth's radius (6372.795 km), the code calculates the
+precise distance between a hotel and a central reference point,
+applying default upper distance limits (1000 km) for filtering</strong></p>
 
         <h3>Exhibit T-018-B: Centre-Point Coordinate Inputs to the Distance Function</h3>
         <div class="img-container full-width">
@@ -513,20 +521,63 @@
         </div>
 
         <p><strong>Source Text Excerpt:</strong> Using Earth's radius (6372.795 km), the code calculates the precise distance between a hotel and a central reference point, applying default upper distance limits (1000 km) for filtering.</p>
+        <h3>Exhibit T-018-C: Distance-Range Filtering Parameters</h3>
+        <div class="img-container full-width">
+            <img src="Tect-Tech/T-018-C.png" alt="Exhibit T-018-B" class="img-full" onerror="handleImgError(this, 'T-018-B')">
+        </div>
+        <p><Stong>The evidence does not show that 1000 km is a fixed relocation distance. It
+shows that 1000 is the default upper value of the distance filter</Stong></p>
         <p><strong>Corresponds to Claim:</strong> <strong>Claim 12:</strong> "computing geographic distance between listings using coordinate geometry..."</p>
+   
+     <h3>Exhibit T-018-D: Distance Bounds Passed into the Search Parameters</h3>
+        <div class="img-container full-width">
+            <img src="Tect-Tech/T-018-D.png" alt="Exhibit T-018-B" class="img-full" onerror="handleImgError(this, 'T-018-B')">
+        </div>
+        <p><Stong>Hotels Plus The search parameter array includes filter_start_distance
+and filter_end_distance. These parameters carry the configured
+distance range into the search process</Stong></p>
+        <p><strong>Corresponds to Claim:</strong> <strong>Claim 12:</strong> "computing geographic distance between listings using coordinate geometry..."</p>
+    
     </div>
 
     <!-- T-019 -->
     <div class="exhibit-card">
-        <h3>Exhibit T-019: Admin Map Center Coordinate Setup & Distance Queries (`distance_center`)</h3>
-        <p><strong>Page Reference:</strong> Page 22-24 of 31 | <strong>Annex Reference:</strong> ANNEX-T-022</p>
+        <h3>Exhibit T-019-A: Admin Map Center Coordinate Setup & Distance Queries (`distance_center`)</h3>
+        <p><strong>Page Reference:</strong> Page 23 of 31 | <strong>Annex Reference:</strong> ANNEX-T-023</p>
         
         <div class="img-container full-width">
-            <img src="Tect-Tech/T-019.png" alt="Exhibit T-019" class="img-full" onerror="handleImgError(this, 'T-019')">
+            <img src="Tect-Tech/T-019-A.png" alt="Exhibit T-019" class="img-full" onerror="handleImgError(this, 'T-019')">
         </div>
 
-        <p><strong>Source Text Excerpt:</strong> Admins input center point coordinates in the UI, and the JavaScript helper computes rounded distances (`toFixed(2)`) to construct database query clauses (`distance_center`).</p>
+        <h3>Exhibit T-019-B: Distance Calculation — Coordinate Inputs</h3>
+         <div class="img-container full-width">
+            <img src="Tect-Tech/T-019-B.png" alt="Exhibit T-019" class="img-full" onerror="handleImgError(this, 'T-019')">
+        </div>
+        <p><strong>Source Text Excerpt:</strong> Hotels Plus The JavaScript reads the hotel & centre-point coordinates,
+calculates the distance and rounds it to two decimal places. It then populates
+the distance_center form field.</p>
+        <p><strong>Admins input center point coordinates in the UI, & the JS helper
+computes rounded distances (toFixed(2)) to construct database query
+clauses (distance_center)</strong></p>
         <p><strong>Corresponds to Claim:</strong> <strong>Claim 12:</strong> "storing and querying distance to center point parameters..."</p>
+  
+     <h3>Exhibit T-019-C: Distance Calculation — Coordinate Inputs</h3>
+         <div class="img-container full-width">
+            <img src="Tect-Tech/T-019-C.png" alt="Exhibit T-019" class="img-full" onerror="handleImgError(this, 'T-019')">
+        </div>
+        <p><strong>Source Text Excerpt:</strong> Hotels Plus The search conditions compare distance_center with the
+configured lower and upper distance values. The accompanying form-field
+definitions show the centre-point coordinates and distance-to-centre settings.</strong></p>
+
+        <h3>Exhibit T-019-D: Wayback Machine AJAX Endpoint Public Verification</h3>
+         <div class="img-container full-width">
+            <img src="Tect-Tech/T-019-D.png" alt="Exhibit T-019" class="img-full" onerror="handleImgError(this, 'T-019')">
+        </div>
+        <p><strong>Source Text Excerpt:</strong>Supplementary Technical Evidence — Archived AJAX Endpoint.</strong></p>
+        <p><strong>The Wayback Machine capture dated 9 June 2019 shows the Hotels Plus
+/ajax/hotel_location.ajax.php endpoint in the public archive. It corroborates the
+historical presence of the endpoint, but does not establish its runtime output
+or the underlying distance-calculation logic.</strong></p>
     </div>
 
     <!-- T-020 -->
