@@ -162,14 +162,17 @@ Read together with the Documentary and Visual annexes, the Tech Annex presents t
   <p><strong>Classification principle: Exhibits are identified as BASE / CORE, ADD-ON, or SUPPORTING according to their evidentiary relationship to the split-stay mechanism. ADD-ON features are assessed as additions to the Claim 1 CORE, not treated as independent inventions merely because they introduce further functionality. The evidence is intended to establish the historical implementation and context of the CORE; the patentability of additional claim limitations remains for assessment by the Examining Division.</strong></p>
     <div class="chain-box">
         <ol>
-            <li><strong>ANNEX-T-002, ANNEX-T-003, ANNEX-T-005</strong> — The database stores account-level and hotel-level relocation permissions.</li>
-            <li><strong>ANNEX-T-004, ANNEX-T-008, ANNEX-T-014</strong> — The system has database fields and administrator settings to enable relocation.</li>
-            <li><strong>ANNEX-T-007, ANNEX-T-010, ANNEX-T-012, ANNEX-T-023</strong> — The user-facing interface describes room relocation and hotel relocation.</li>
-            <li><strong>ANNEX-T-006, ANNEX-T-011</strong> — The backend reads relocation parameters and applies account-level permissions.</li>
-            <li><strong>ANNEX-T-015, ANNEX-T-016, ANNEX-T-017</strong> — The system activates relocation, searches segments, and builds a combined booking.</li>
-            <li><strong>ANNEX-T-013, ANNEX-T-024, ANNEX-T-025, ANNEX-T-026, ANNEX-T-027</strong> — Booking records and public demonstrations corroborate the transactional workflow.</li>
-            <li><strong>ANNEX-T-018, ANNEX-T-020, ANNEX-T-021, ANNEX-T-022</strong> — The result is presented through the search-result renderer.</li>
-        </ol>
+           
+    <li><strong>ANNEX-T-002, ANNEX-T-003, ANNEX-T-005</strong> — The database architecture stores account-level and property-level records and relocation settings, supporting the historical implementation context of the Claim 1 CORE.</li>
+    <li><strong>ANNEX-T-004, ANNEX-T-007, ANNEX-T-008, ANNEX-T-011, ANNEX-T-014</strong> — Relocation settings, account permissions, and room-quantity controls support the configuration and control surrounding the Claim 1 CORE.</li>
+    <li><strong>ANNEX-T-006, ANNEX-T-015</strong> — Backend search logic and split-stay parameter construction provide the central technical evidence for the Claim 1 CORE: searching successive stay portions and constructing a combined stay through room or hotel relocation.</li>
+    <li><strong>ANNEX-T-009, ANNEX-T-013, ANNEX-T-016</strong> — User-facing relocation disclosures, the availability-search demonstration, and result rendering support the search and presentation stages surrounding the Claim 1 CORE.</li>
+    <li><strong>ANNEX-T-010, ANNEX-T-018, ANNEX-T-019</strong> — Property coordinates, geographic calculations, and distance-range filtering provide ADD-ON context relevant to Claim 12, which inherits the Claim 1 CORE. The evidence is not presented as independently proving a distance test between the first and second listings.</li>
+    <li><strong>ANNEX-T-020, ANNEX-T-021, ANNEX-T-022, ANNEX-T-023</strong> — Customer records, booking history, payment, wishlist, and loyalty data provide contextual evidence relevant to Claim 13’s user-interaction limitation, assessed in the context of the Claim 1 CORE.</li>
+    <li><strong>ANNEX-T-012, ANNEX-T-024</strong> — Booking records and reservation-timeout handling provide supporting transactional context; they are not presented as independent proof of the split-stay generation mechanism.</li>
+    <li><strong>ANNEX-T-017</strong> — Configurable minimum-stay rules provide ADD-ON context relevant to Claim 3, which inherits the Claim 1 CORE. The specific five-day value is not asserted as a historically implemented Hotels Plus setting.</li>
+    <li><strong>ANNEX-T-025</strong> — The annotated split-search sketch provides explanatory support for the Claim 1 CORE and its corresponding system and storage-device forms in Claims 14 and 15; it should be read alongside the executable-code and historical operational evidence.</li>
+</ol>
     </div>
 
     <h2>Evidentiary Annex Grouping & Claims Mapping</h2>
@@ -204,6 +207,7 @@ Read together with the Documentary and Visual annexes, the Tech Annex presents t
         <h3>Exhibit T-002-B: Hotel-Owner Account Records & Multi-Property Association</h3>
         <div class="img-container full-width">
             <img src="Tect-Tech/T-002-b.png" alt="Exhibit T-002-B" class="img-full" onerror="handleImgError(this, 'T-002-b')">
+       <p><strong>he account records document the association between accommodation owners and their managed properties, supporting the multi-property data structure used by the Hotels Plus system.</strong></p>
         </div>
 
         <h3>Exhibit T-002-C: Hotels Management Interface Displaying Individual Hotel Records</h3>
@@ -491,7 +495,7 @@ transaction June 2019."</strong></p>
         </div>
 
         <p><strong>Source Text Excerpt:</strong> The code and admin screen show how minimum and maximum room quantities are configured and checked. These are room-count constraints enforced by package rules.</p>
-        <p><strong>Corresponds to Claim:</strong> <strong>Claim 3:</strong> "evaluating minimum room count thresholds..."</p>
+        <p><strong>Corresponds to Claim: 1</strong> <strong> SUPPORTING EVIDENCE. Classification: SUPPORTING</strong> "Documents room-quantity configuration within the accommodation system; it is not presented as the Claim 1 CORE split-stay generation mechanism.</strong> "evaluating minimum room count thresholds..."</p>
     </div>
 
     <!-- T-015 -->
@@ -523,7 +527,7 @@ transaction June 2019."</strong></p>
         <p><strong>Relevant Claim</strong>determining that a quantity of listings in the set of individual listings fails to satisfy a minimum available inventory threshold;”
 
 “generating (920) a combined listing (520) comprising a first listing of the plurality of listings associated with a first portion of the multiple-day length of stay parameter and a second listing of the plurality of listings associated with a second portion of the multiple-day length of stay parameter;</p>
- <p><strong>Classification: CORE SUPPORTING EVIDENCE</strong>documents room-quantity constraints relevant to inventory processing; these constraints are not, by themselves, proof of the claimed combined-listing generation sequence.</p>
+ <p><strong>Classification: CORE SUPPORTING EVIDENCE</strong>Corresponding Claim: Claim 1 — BASE / CORE. Classification: CORE EVIDENCE — documents the split-stay sequence of searching successive stay portions and constructing combined-stay parameters for room or hotel relocation. This is the central technical evidence and should be assessed together with the Documentary and Visual annexes..</p>
     </div>
 
     <!-- T-016 -->
@@ -541,7 +545,7 @@ transaction June 2019."</strong></p>
         </div>
 
         <p><strong>Source Text Excerpt:</strong> The code passes search results through the ordinary result-rendering process and includes conventional sorting and filtering parameters, such as distance, rating, and price.</p>
-        <p><strong>Corresponds to Claim:</strong> <strong>Claim 1:</strong> "causing presentation of combined listing options..."</p>
+        <p><strong>Corresponding Claim: Claim 1 — CORE SUPPORTING EVIDENCE. Classification: SUPPORTING </strong> <strong> Documents result rendering and conventional sorting or filtering surrounding the CORE split-stay mechanism; these presentation features do not displace the central question of whether the CORE was already disclosed or obviou..."</strong></p>
     </div>
 
     <!-- T-017 -->
@@ -588,7 +592,8 @@ mechanism is therefore le􀅌 for assessment by the Examining Division</stron></
         </div>
 <p><strong>Relevant Claim</strong>causing (925), on a user device of the searching end-user, presentation of the combined listing together with one or more other listings of the plurality of listings that match the listing request in a ranked order.</p>
      <p><strong>Classification CORE SUPPORTING EVIDENCE</strong> "Supports the presentation stage of the Claim 1 CORE workflow. The renderer and sorting parameters support result presentation; the exhibit should be read alongside the evidence documenting the underlying split-stay mechanism</p>
-        <p><strong>Corresponds to Claim:</strong> <strong>Claim 3:</strong> "comparing requested stay duration against length-of-stay constraints..."</p>
+     <p><strong>Classification: ADD-ON — the evidence documents configurable minimum-stay rules surrounding the CORE. The specific five-day value is not asserted as a historical Hotels Plus setting; its contribution to the claimed combination remains for assessment by the Examining Division.</strong></p>
+        <p><strong>Corresponds to Claim:</strong> <strong>Claims 1 and 3 /  Claim 3 is an ADD-ON inheriting the Claim 1 CORE:</strong> "comparing requested stay duration against length-of-stay constraints..."</p>
     </div>
 
     <!-- T-018 -->
@@ -813,7 +818,8 @@ and room details.</strong></p>
         <p><strong>Source Text Excerpt:</strong>The annotated code comments describe a split-search sequence and
 illustrate separate stay-date and night parameters for single-hotel and cross-hotel alternatives. The displayed lines are comments, so this
 image is an explanatory sketch rather than independent proof that the described operations execute.."</p>
-        <p><strong>Corresponds to Claim:</strong> <strong>Claims 14 & 15:</strong> "monitoring reservation status and managing booking lifecycle states..."</p>
+        <p><strong>Corresponds to Claim:</strong> <strong>Claims 14 & 15:</strong> "ndependent system and storage-device claims reciting the Claim 1 CORE in corresponding forms..."</p>
+ <p><strong>lassification: CORE SUPPORTING EVIDENCE </strong> "The annotated sketch illustrates the split-search concept; read it alongside the executable-code evidence rather than treating comments alone as proof of executionx</p>
     </div>
 
 </div>
